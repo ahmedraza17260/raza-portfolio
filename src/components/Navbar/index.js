@@ -13,8 +13,6 @@ import {
 } from "./NavbarElements";
 import Slide from "react-reveal/Slide";
 
-import Logo from "../../images/logo.png";
-
 function Navbar({ toggle }) {
   const [scrollNav, setScrollNav] = useState(true);
 
