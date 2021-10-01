@@ -1,5 +1,6 @@
 # dev-portfolio
-To view a live example, [click here]().
+To view a live example,
+<a href="https://ahmedrazaportfolio.netlify.app/">CLICK HERE</a>
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
@@ -10,7 +11,7 @@ You'll need Git and Node.js (which comes with npm) installed on your computer
 From your command line
 
 # Clone this repository
-git clone 
+git clone https://github.com/ahmedraza17260/raza-portfolio.git
 
 # Go into the repository
 cd raza-portfolio
