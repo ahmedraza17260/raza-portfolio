@@ -54,7 +54,8 @@ export const instagramURL = "https://www.instagram.com/ahmedraza17260/";
 export const twitterURL = "https://twitter.com/AhmedRaza17260";
 
 export const resumeURL =
-  "https://drive.google.com/file/d/1fb9mK1l6KILIsaLiy1u16dvx3UU_QqTf/view?usp=sharing";
+  "https://drive.google.com/file/d/1pFcJVejUgiHiNfwdxxlcal_6B32YHbku/view";
+  // "https://drive.google.com/file/d/1fb9mK1l6KILIsaLiy1u16dvx3UU_QqTf/view?usp=sharing";
 // "https://drive.google.com/file/d/1a8OEERo6VZbneOW52PRN19rJ34k89_ZI/view?usp=sharing";
 
 // Skills
