@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
+import Certificates from "./components/Certificate";
 import Sidebar from "./components/Sidebar";
 import Skills from "./components/Skills";
 
@@ -22,6 +23,7 @@ function App() {
       <HeroSection />
       <Skills />
       <Experience />
+      <Certificates />
       <Projects />
       <Contact />
       <Footer />

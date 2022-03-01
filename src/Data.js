@@ -25,10 +25,19 @@ import { IoLogoPwa } from "react-icons/io5";
 import { DiMysql, DiSass } from "react-icons/di";
 import { FaNode } from "react-icons/fa";
 
-import { FaSchool } from "react-icons/fa";
+import { FaSchool, FaCertificate } from "react-icons/fa";
 import { MdSchool, MdWork } from "react-icons/md";
 
 import { SiMaterialUi, SiNodeRed } from "react-icons/si";
+
+// Certificates
+import linux from "./images/LINUX.jpg";
+import gd from "./images/GD.jpg";
+import bbsydp from "./images/BBSYDP.jpg";
+import cit from "./images/NOOR.jpg";
+import sdc from "./images/SDC.jpg";
+import sdc_ms from "./images/SDC_MS.jpg";
+import agile from "./images/AGILESCRUM.jpg";
 
 // HeroSection
 
@@ -149,7 +158,7 @@ export const experience = [
   {
     id: 3,
     type: "education",
-    date: "January 2019 - Continue",
+    date: "January 2019 - 2023",
     icon: <MdSchool />,
     bckgrnd: false,
     title: "Karachi University",
@@ -157,20 +166,70 @@ export const experience = [
     desc: "Continue",
     workdesc: [],
   },
+  {
+    id: 4,
+    type: "work",
+    date: "May 2017 - June 2018",
+    icon: <MdWork />,
+    bckgrnd: true,
+    title: "Ayaan Corporation",
+    subtitle: "Sale Supervisor",
+    desc: "Used QuickBooks Software.",
+    workdesc: [],
+  },
+];
+
+// Certificate
+export const certificate = [
+  {
+    id: 1,
+    icon: <FaCertificate />,
+    bckgrnd: false,
+    title: "Skill Development Council",
+    image: [sdc],
+  },
+  {
+    id: 2,
+    icon: <FaCertificate />,
+    bckgrnd: false,
+    title: "SDC MarkSheet",
+    image: [sdc_ms],
+  },
+  {
+    id: 3,
+    icon: <FaCertificate />,
+    bckgrnd: false,
+    title: "Linux",
+    image: [linux],
+  },
+  {
+    id: 4,
+    icon: <FaCertificate />,
+    bckgrnd: false,
+    title: "Agile Scrum",
+    image: [agile],
+  },
   // {
-  //   id: 4,
-  //   type: "work",
-  //   date: "May 2020 - June 2020",
-  //   icon: <MdWork />,
-  //   bckgrnd: true,
-  //   title: "SmartBridge Educational Services Pvt. Ltd. Hyderabad, Telangana",
-  //   subtitle: "Internship",
-  //   desc: "Project Internship",
-  //   workdesc: [
-  //     "Used IBM Watson to write the ML code.",
-  //     "NodeRed to deploy the application.",
-  //   ],
+  //   id: 5,
+  //   icon: <FaCertificate />,
+  //   bckgrnd: false,
+  //   title: "Graphic Design",
+  //   image: [gd],
   // },
+  {
+    id: 5,
+    icon: <FaCertificate />,
+    bckgrnd: false,
+    title: "CIT",
+    image: [cit],
+  },
+  {
+    id: 6,
+    icon: <FaCertificate />,
+    bckgrnd: false,
+    title: "BBSYDP",
+    image: [bbsydp],
+  },
 ];
 
 // Projects

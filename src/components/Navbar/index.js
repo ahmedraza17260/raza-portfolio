@@ -85,6 +85,18 @@ function Navbar({ toggle }) {
 
           <NavItem>
             <NavLinks
+              to="Certificate"
+              smooth={true}
+              duration={500}
+              spy={true}
+              exact="true"
+              offset={-80}
+            >
+              Certificates
+            </NavLinks>
+          </NavItem>
+          <NavItem>
+            <NavLinks
               to="projects"
               smooth={true}
               duration={500}
