@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const AboutContainer = styled.div`
-  background: #1f2833;
+  background: #0b0c10;
+  // background: #1f2833;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -68,7 +69,7 @@ export const Column2 = styled.div`
     padding-right: 0;
     border-radius: 10%;
     border: 3px solid #c5c6c7;
-
+    // border: 5px solid #1f2833;
     @media screen and (max-width: 940px) {
       width: 250px;
     }
@@ -112,6 +113,8 @@ export const SocialIcons = styled.div`
   margin-top: 20px;
   display: flex;
   align-items: center;
+  // background: #1f2833;
+  // width: auto; ;
 `;
 
 export const NavBtn = styled.a`

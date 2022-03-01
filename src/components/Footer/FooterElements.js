@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const FooterContainer = styled.div`
   // background: linear-gradient(90deg, #74ebd5 0%, #9face6 100%) !important;
-  background: #0b0c10;
+  // background: #0b0c10;
+  background: #1f2833;
   display: flex;
   flex-direction: column;
   align-items: center;

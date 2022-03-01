@@ -60,7 +60,14 @@ function Contact() {
 
             <SocialIcons>
               <NavBtn href={githubURL} target="_blank">
-                <img src={github} alt="" />
+                <img
+                  style={{
+                    filter: "invert(100%)",
+                    webkitFilter: "invert(100%)",
+                  }}
+                  src={github}
+                  alt=""
+                />
               </NavBtn>
               <NavBtn href={linkedinURL} target="_blank">
                 <img src={linkedin} alt="" />

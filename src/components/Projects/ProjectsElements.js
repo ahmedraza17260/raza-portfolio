@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const ProjectsContainer = styled.div`
-  background: #0b0c10;
+  background: #1f2833;
+  // background: #0b0c10;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,7 +31,8 @@ export const AllProject = styled.div`
 `;
 
 export const Project = styled.div`
-  background: #1f2833;
+  background: #0b0c10;
+  // background: #1f2833;
   display: flex;
   flex-direction: column;
   align-items: left;
