@@ -26,6 +26,9 @@ function Sidebar({ isOpen, toggle }) {
           <SidebarLink to="experience" onClick={toggle}>
             Experience
           </SidebarLink>
+          <SidebarLink to="Certificate" onClick={toggle}>
+            Certificates
+          </SidebarLink>
           <SidebarLink to="projects" onClick={toggle}>
             Projects
           </SidebarLink>
