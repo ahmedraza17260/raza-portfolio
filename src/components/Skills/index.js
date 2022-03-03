@@ -61,7 +61,7 @@ function Skills() {
       </Fade>
       <Fade right>
         <SkillElement>
-          <img src={skillElement} alt="" />
+          <img src={skillElement} alt="skillImage" />
         </SkillElement>
       </Fade>
     </SkillsContainer>

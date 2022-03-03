@@ -51,20 +51,20 @@ function HeroSection() {
                     webkitFilter: "invert(100%)",
                   }}
                   src={github}
-                  alt=""
+                  alt="Github"
                 />
               </NavBtn>
               <NavBtn href={linkedinURL} target="_blank">
-                <img src={linkedin} alt="" />
+                <img src={linkedin} alt="Linkedin" />
               </NavBtn>
               <NavBtn href={mailtoURL} target="_blank">
-                <img src={gmail} alt="" />
+                <img src={gmail} alt="Gmail" />
               </NavBtn>
               <NavBtn href={twitterURL} target="_blank">
-                <img src={twitter} alt="" />
+                <img src={twitter} alt="Twitter" />
               </NavBtn>
               <NavBtn href={fbURL} target="_blank">
-                <img src={facebook} alt="" />
+                <img src={facebook} alt="Facebook" />
               </NavBtn>
             </SocialIcons>
 
@@ -75,7 +75,7 @@ function HeroSection() {
               </a>
             </ResumeSection>
           </div>
-          <HomeElement src={homeElement} alt="" />
+          <HomeElement src={homeElement} alt="image" />
         </Fade>
       </HeroContent>
     </HeroContainer>

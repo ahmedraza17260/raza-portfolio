@@ -36,6 +36,7 @@ export const Certificate = styled.div`
   align-items: left;
   justify-content: center;
   padding: 5px 20px;
+  padding-bottom: 20px;
   margin: 0px 20px;
   width: 400px;
   margin-bottom: 20px;
