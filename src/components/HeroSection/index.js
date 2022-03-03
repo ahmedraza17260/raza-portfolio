@@ -70,7 +70,7 @@ function HeroSection() {
 
             <ResumeSection>
               <span> See my Resume</span>
-              <a href={resumeURL} target="__blank">
+              <a href={resumeURL} target="__blank" alt="Cv Preview">
                 <BsArrowRightShort />
               </a>
             </ResumeSection>

@@ -12,9 +12,11 @@ import {
   NavLinks,
 } from "./NavbarElements";
 import Slide from "react-reveal/Slide";
+// import DayNightToggle from "react-day-and-night-toggle";
 
 function Navbar({ toggle }) {
   const [scrollNav, setScrollNav] = useState(true);
+  // const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
     var prevScrollpos = window.pageYOffset;
@@ -45,6 +47,10 @@ function Navbar({ toggle }) {
         </MobileIcon>
 
         <NavMenu>
+          {/* <DayNightToggle
+            onChange={() => setIsDarkMode(!isDarkMode)}
+            checked={isDarkMode}
+          /> */}
           <NavItem>
             <NavLinks
               to="home"
