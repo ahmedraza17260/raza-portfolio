@@ -1,22 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <!-- <link rel="icon" href="%PUBLIC_URL%/logo.ico" /> -->
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
+
+<head>
+  <meta charset="utf-8" />
+  <!-- <link rel="icon" href="%PUBLIC_URL%/logo.ico" /> -->
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- <meta name="theme-color" content="#000000" /> -->
+  <!-- <meta
       name="description"
       content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
+    /> -->
+  <title>AhmedRazaPortfolio 🚀 || Ahmed Raza Portfolio Template</title>
+  <meta name="title" content="AhmedRazaPortfolio | Ahmed Raza Portfolio Template" />
+  <meta name="description" content="Web Developer Portfolio Template that show your work & skills" />
+  <meta name="msapplication-TileColor" content="#603cba" />
+  <meta name="theme-color" content="#6c63ff" />
+  <meta name="keywords" content="BestPortfolio ,HTML, CSS, JavaScript, Portfolio, FreeWebPortfolio" />
+  <meta name="author" content="Ahmed Raza" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="”robots”" content="”index," follow” />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ahmedrazaportfolio.netlify.app/" />
+  <meta property="og:title" content="AhmedRazaPortfolio| Ahmed Raza Portfolio Template" />
+  <meta property="og:description"
+    content="Web Developer Portfolio Template that helps you showcase your work and skills" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://ahmedrazaportfolio.netlify.app/" />
+  <meta property="twitter:title" content="AhmedRazaPortfolio| Ahmed Raza Portfolio Template" />
+  <meta property="twitter:description"
+    content="Web Developer Portfolio Template that helps you showcase your work and skills" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <link rel="stylesheet" href="loading.css" />
+  <!-- <link rel="stylesheet" href="loading.css.map" /> -->
+
+  <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -25,12 +48,128 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>Ahmed Raza Portfolio</title>
-  </head>
+  <!-- <title>Ahmed Raza Portfolio</title>-->
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
 
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    .loader-wrapper {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      /* background-color: #242f3f; */
+      /* background-color: #1f2833; */
+      /* background-color: #c0c0c0; */
+      /* background-color: #4717f6; */
+      /* background-color: #3F00FF; */
+      background-color: #5D3FD3;
+      place-items: center;
+      justify-content: center;
+      align-items: center;
+      display: grid;
+    }
+
+    .loader {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      position: relative;
+      border: 6px solid #fff;
+      animation: loader 3s infinite ease;
+    }
+
+    .loader-inner {
+      vertical-align: top;
+      display: inline-block;
+      width: 100%;
+      background-color: #fff;
+      animation: loader-inner 3s infinite ease-in;
+    }
+
+    @keyframes loader {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      25% {
+        transform: rotate(180deg);
+      }
+
+      50% {
+        transform: rotate(360deg);
+      }
+
+      75% {
+        transform: rotate(540deg);
+      }
+
+      100% {
+        transform: rotate(720deg);
+      }
+    }
+
+    @keyframes loader-inner {
+      0% {
+        height: 0%;
+      }
+
+      25% {
+        height: 0%;
+      }
+
+      50% {
+        height: 100%;
+      }
+
+      75% {
+        height: 100%;
+      }
+
+      100% {
+        height: 0%;
+      }
+    }
+  </style>
+
+  <script src="jquery-2.1.4.js"></script>
+  <script>
+    $(window).on("load", function () {
+      $(".loader-wrapper").fadeOut("slow");
+    });
+  </script>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root">
+    <div class="loader-wrapper">
+      <div class="loader">
+        <span class="loader-inner"></span>
+      </div>
+      <h1 style="color: white"> Please Recite Darood Shareef </h1>
+    </div>
+    <!-- <div className="centerContent">
+        <div className="sk-circle">
+          <div className="sk-circle1 sk-child"></div>
+          <div className="sk-circle2 sk-child"></div>
+          <div className="sk-circle3 sk-child"></div>
+          <div className="sk-circle4 sk-child"></div>
+          <div className="sk-circle5 sk-child"></div>
+          <div className="sk-circle6 sk-child"></div>
+          <div className="sk-circle7 sk-child"></div>
+          <div className="sk-circle8 sk-child"></div>
+          <div className="sk-circle9 sk-child"></div>
+          <div className="sk-circle10 sk-child"></div>
+          <div className="sk-circle11 sk-child"></div>
+          <div className="sk-circle12 sk-child"></div>
+        </div>
+      </div>
+    </div> -->
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -41,5 +180,6 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  </body>
+</body>
+
 </html>

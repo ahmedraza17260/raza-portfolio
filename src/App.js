@@ -8,6 +8,7 @@ import Projects from "./components/Projects";
 import Certificates from "./components/Certificate";
 import Sidebar from "./components/Sidebar";
 import Skills from "./components/Skills";
+
 // import DayNightToggle from "react-day-and-night-toggle";
 
 function App() {
