@@ -1,4 +1,4 @@
-# dev-portfolio
+# raza-portfolio
 To view a live example,
 <a href="https://ahmedrazaportfolio.netlify.app/">CLICK HERE</a>
 
