@@ -63,7 +63,7 @@ export const instagramURL = "https://www.instagram.com/ahmedraza17260/";
 export const twitterURL = "https://twitter.com/AhmedRaza17260";
 
 export const resumeURL =
-  "https://drive.google.com/file/d/1pFcJVejUgiHiNfwdxxlcal_6B32YHbku/view";
+  "https://drive.google.com/file/d/1an1bGso-QNqirTYNyv2RVAG3_O22fF4c/view";
 // "https://drive.google.com/file/d/1fb9mK1l6KILIsaLiy1u16dvx3UU_QqTf/view?usp=sharing";
 // "https://drive.google.com/file/d/1a8OEERo6VZbneOW52PRN19rJ34k89_ZI/view?usp=sharing";
 
@@ -158,16 +158,38 @@ export const experience = [
   {
     id: 3,
     type: "education",
-    date: "January 2019 - 2023",
+    date: "January 2019 - 2021",
     icon: <MdSchool />,
     bckgrnd: false,
     title: "Karachi University",
     subtitle: "BSC. APPLIED CHEMISTRY ",
-    desc: "Continue",
+    desc: "59.1 %",
     workdesc: [],
   },
   {
     id: 4,
+    type: "education",
+    date: "January 2022 - 2023",
+    icon: <MdSchool />,
+    bckgrnd: false,
+    title: "Karachi University",
+    subtitle: "MSC. APPLIED CHEMISTRY ",
+    desc: "Last Semester",
+    workdesc: [],
+  },
+  {
+    id: 5,
+    type: "work",
+    date: "January 2023 - March 2023",
+    icon: <MdWork />,
+    bckgrnd: true,
+    title: "Dalda Food",
+    subtitle: "Internship",
+    desc: "Internship at Engineering Department",
+    workdesc: [],
+  },
+  {
+    id: 6,
     type: "work",
     date: "May 2017 - June 2018",
     icon: <MdWork />,
@@ -274,61 +296,62 @@ export const projects = [
     source: "https://github.com/ahmedraza17260/ahmedrazaelectronics",
     demo: "https://ahmedrazaelectronics-17.web.app/",
   },
-  {
-    id: 5,
-    title: "Ecommerce Shopping Basket",
-    desc: "Ecommerce Shopping Basket using React and Redux Toolkit with TypeScript ",
-    stacks: [
-      <SiReact />,
-      <SiStyledComponents />,
-      <SiFirebase />,
-      <SiRedux />,
-      <SiTypescript />,
-    ],
-    source: "https://github.com/ahmedraza17260/shopping-basket",
-    demo: "https://shopping-basket-raza-app.netlify.app/",
-  },
-  {
-    id: 6,
-    title: "Space X React App",
-    desc: "Space X Client Application with React, TypeScript, Apollo Client 3, and SpaceX API using Test-Driven Development (TDD) and deployed as a PWA ",
-    stacks: [
-      <SiReact />,
-      <SiStyledComponents />,
-      <SiTypescript />,
-      <SiApollographql />,
-    ],
-    source: "https://github.com/ahmedraza17260/spacex-launches-app",
-    demo: "https://spaces-x-react-app.netlify.app/",
-  },
-  {
-    id: 7,
-    title: "Quiz App",
-    desc: "Quiz App with React/TypeScript it should be a Progressive Web App (PWA) with Offline Capability and Push Notifications",
-    stacks: [
-      <SiReact />,
-      <SiStyledComponents />,
-      <SiFirebase />,
-      <SiTypescript />,
-      <IoLogoPwa />,
-    ],
-    source: "https://github.com/ahmedraza17260/quiz-app-pwa",
-    demo: "https://react-quiz-pwa.web.app/",
-  },
-  {
-    id: 8,
-    title: "Expense Tracker",
-    desc: "Expense Tracker App with React/TypeScript it should be a Progressive Web App (PWA) with Offline Capability and Push Notifications",
-    stacks: [
-      <SiReact />,
-      <SiStyledComponents />,
-      <SiFirebase />,
-      <SiTypescript />,
-      <IoLogoPwa />,
-    ],
-    source: "https://github.com/ahmedraza17260/expense-tracker-pwa",
-    demo: "https://expense-tracker-pwa-2fee8.web.app/",
-  },
+
+  // {
+  //   id: 5,
+  //   title: "Ecommerce Shopping Basket",
+  //   desc: "Ecommerce Shopping Basket using React and Redux Toolkit with TypeScript ",
+  //   stacks: [
+  //     <SiReact />,
+  //     <SiStyledComponents />,
+  //     <SiFirebase />,
+  //     <SiRedux />,
+  //     <SiTypescript />,
+  //   ],
+  //   source: "https://github.com/ahmedraza17260/shopping-basket",
+  //   demo: "https://shopping-basket-raza-app.netlify.app/",
+  // },
+  // {
+  //   id: 6,
+  //   title: "Space X React App",
+  //   desc: "Space X Client Application with React, TypeScript, Apollo Client 3, and SpaceX API using Test-Driven Development (TDD) and deployed as a PWA ",
+  //   stacks: [
+  //     <SiReact />,
+  //     <SiStyledComponents />,
+  //     <SiTypescript />,
+  //     <SiApollographql />,
+  //   ],
+  //   source: "https://github.com/ahmedraza17260/spacex-launches-app",
+  //   demo: "https://spaces-x-react-app.netlify.app/",
+  // },
+  // {
+  //   id: 7,
+  //   title: "Quiz App",
+  //   desc: "Quiz App with React/TypeScript it should be a Progressive Web App (PWA) with Offline Capability and Push Notifications",
+  //   stacks: [
+  //     <SiReact />,
+  //     <SiStyledComponents />,
+  //     <SiFirebase />,
+  //     <SiTypescript />,
+  //     <IoLogoPwa />,
+  //   ],
+  //   source: "https://github.com/ahmedraza17260/quiz-app-pwa",
+  //   demo: "https://react-quiz-pwa.web.app/",
+  // },
+  // {
+  //   id: 8,
+  //   title: "Expense Tracker",
+  //   desc: "Expense Tracker App with React/TypeScript it should be a Progressive Web App (PWA) with Offline Capability and Push Notifications",
+  //   stacks: [
+  //     <SiReact />,
+  //     <SiStyledComponents />,
+  //     <SiFirebase />,
+  //     <SiTypescript />,
+  //     <IoLogoPwa />,
+  //   ],
+  //   source: "https://github.com/ahmedraza17260/expense-tracker-pwa",
+  //   demo: "https://expense-tracker-pwa-2fee8.web.app/",
+  // },
   // {
   //   id: 9,
   //   title: "OLX Clone",
