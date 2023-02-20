@@ -19,9 +19,9 @@ import {
   SiTypescript,
   SiNextDotJs,
   SiApollographql,
-  SlChemistry,
 } from "react-icons/si";
 
+import { SlChemistry } from "react-icons/sl";
 import { GiTestTubes } from "react-icons/gi";
 import { GrTest } from "react-icons/gr";
 import { FiPackage } from "react-icons/fi";
