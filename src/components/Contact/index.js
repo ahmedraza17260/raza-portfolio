@@ -9,6 +9,7 @@ import {
   Subtitle,
   NavBtn,
   SocialIcons,
+  Justify,
 } from "./ContactElements";
 import Fade from "react-reveal/Fade";
 import Zoom from "react-reveal/Zoom";
@@ -43,11 +44,11 @@ function Contact() {
               DISCUSS A PROJECT? E-MAIL ME
               <BiMailSend size={25} />
             </p>
-            <Subtitle>
-              I am Frontend Developer, a passionate person when it comes to
-              working and my goal is to expand my skills and knowledge in Web
-              Development, I am a hard worker and eager to learn to make a
-              valuable asset in any team.
+            <Subtitle className="Justify">
+              I am Applied Chemistry Students, a passionate person when it comes
+              to working and my goal is to expand my skills and knowledge in
+              Quality Department, I am a hard worker and eager to learn to make
+              a valuable asset in any team.
               <br />
               <br />
               Open for opportunities: Yes

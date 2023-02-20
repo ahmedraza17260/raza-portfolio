@@ -109,6 +109,10 @@ export const Subtitle = styled.p`
   }
 `;
 
+export const Justify = styled.div`
+  text-align: justify;
+`;
+
 export const SocialIcons = styled.div`
   margin-top: 20px;
   display: flex;

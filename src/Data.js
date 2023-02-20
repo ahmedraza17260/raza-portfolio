@@ -19,6 +19,10 @@ import {
   SiTypescript,
   SiNextDotJs,
   SiApollographql,
+  GiTestTubes,
+  GrTest,
+  SlChemistry,
+  FiPackage,
 } from "react-icons/si";
 import { IoLogoPwa } from "react-icons/io5";
 
@@ -44,9 +48,13 @@ import agile from "./images/AGILESCRUM.jpg";
 export const Name = "Ahmed Raza";
 
 export const MainSkills = [
-  "a Web Developer💻",
+  "Applied Chemistry Students 👨🏻‍🎓",
   2000,
-  "a Frontend Developer💻",
+  "Quality Control Inspector 🥼",
+  2000,
+  "Quality Assurance Inspector 🧪 ",
+  2000,
+  "a Frontend Developer 💻",
   2000,
 ];
 
@@ -68,6 +76,25 @@ export const resumeURL =
 // "https://drive.google.com/file/d/1a8OEERo6VZbneOW52PRN19rJ34k89_ZI/view?usp=sharing";
 
 // Skills
+
+export const Quality = [
+  {
+    icon: <SlChemistry className="icon" />,
+    name: "Laboratory Skill",
+  },
+  {
+    icon: <SlChemistry className="icon" />,
+    name: "Analytical Skill",
+  },
+  {
+    icon: <GiTestTubes className="icon" />,
+    name: "Quality Control",
+  },
+  {
+    icon: <FiPackage className="icon" />,
+    name: "Quality Assurance",
+  },
+];
 
 export const Languages = [
   {
@@ -100,10 +127,6 @@ export const FrontendTools = [
   {
     icon: <SiReact className="icon" />,
     name: "ReactJS",
-  },
-  {
-    icon: <SiNextDotJs className="icon" />,
-    name: "NextJS",
   },
   {
     icon: <SiStyledComponents className="icon" />,
