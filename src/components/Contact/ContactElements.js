@@ -103,14 +103,16 @@ export const Subtitle = styled.p`
   }
   @media screen and (max-width: 770px) {
     font-size: 15px;
+    text-align: justify;
   }
   @media screen and (max-width: 350px) {
     font-size: 13px;
+    text-align: justify;
   }
 `;
 
 export const Justify = styled.div`
-  text-align: justify;
+text-align: justify;
 `;
 
 export const SocialIcons = styled.div`

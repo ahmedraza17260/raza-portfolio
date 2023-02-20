@@ -44,12 +44,13 @@ function Contact() {
               DISCUSS A PROJECT? E-MAIL ME
               <BiMailSend size={25} />
             </p>
-            <Subtitle className="Justify">
-              I am Applied Chemistry Students, a passionate person when it comes
-              to working and my goal is to expand my skills and knowledge in
-              Quality Department, I am a hard worker and eager to learn to make
-              a valuable asset in any team.
-              <br />
+            <Subtitle>
+              <Justify>
+                I am Applied Chemistry Students, a passionate person when it
+                comes to working and my goal is to expand my skills and
+                knowledge in Quality Department, I am a hard worker and eager to
+                learn to make a valuable asset in any team.
+              </Justify>
               <br />
               Open for opportunities: Yes
             </Subtitle>

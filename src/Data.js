@@ -1,61 +1,57 @@
 import {
-  SiCplusplus,
   SiCsharp,
   SiCss3,
   SiFirebase,
   SiHtml5,
   SiJavascript,
-  SiPython,
   SiReact,
-  SiStyledComponents,
   SiBootstrap,
-  SiPostman,
   SiC,
   SiGit,
-  SiMongodb,
-  SiHeroku,
   SiRedux,
   SiGithub,
   SiTypescript,
-  SiNextDotJs,
-  SiApollographql,
+  SiStyledcomponents,
 } from "react-icons/si";
+
+// SiCplusplus, SiPython, SiPostman, SiMongodb, SiHeroku, SiNextDotJs, SiApollographql, DiSass, SiNodeRed,
+// import { SiStyledcomponents } from "react-icons/si";
+// import { GrTest } from "react-icons/gr";
+// import { IoLogoPwa } from "react-icons/io5";
 
 import { SlChemistry } from "react-icons/sl";
 import { GiTestTubes } from "react-icons/gi";
-import { GrTest } from "react-icons/gr";
 import { FiPackage } from "react-icons/fi";
-import { IoLogoPwa } from "react-icons/io5";
 
-import { DiMysql, DiSass } from "react-icons/di";
-import { FaNode } from "react-icons/fa";
+import { DiMysql } from "react-icons/di";
+// import { FaNode } from "react-icons/fa";
 
 import { FaSchool, FaCertificate } from "react-icons/fa";
 import { MdSchool, MdWork } from "react-icons/md";
 
-import { SiMaterialUi, SiNodeRed } from "react-icons/si";
+import { SiMaterialui } from "react-icons/si";
 
 // Certificates
 import linux from "./images/LINUX.jpg";
-import gd from "./images/GD.jpg";
 import bbsydp from "./images/BBSYDP.jpg";
 import cit from "./images/NOOR.jpg";
 import sdc from "./images/SDC.jpg";
 import sdc_ms from "./images/SDC_MS.jpg";
 import agile from "./images/AGILESCRUM.jpg";
+// import gd from "./images/GD.jpg";
 
 // HeroSection
 
 export const Name = "Ahmed Raza";
 
 export const MainSkills = [
-  "Applied Chemistry Students 👨🏻‍🎓",
+  "Applied Chemistry Students👨🏻‍🎓",
   2000,
-  "Quality Control Inspector 🥼",
+  "Quality Control Inspector🥼",
   2000,
-  "Quality Assurance Inspector 🧪 ",
+  "Quality Assurance Inspector🧪 ",
   2000,
-  "a Frontend Developer 💻",
+  "a Frontend Developer💻",
   2000,
 ];
 
@@ -72,9 +68,7 @@ export const instagramURL = "https://www.instagram.com/ahmedraza17260/";
 export const twitterURL = "https://twitter.com/AhmedRaza17260";
 
 export const resumeURL =
-  "https://drive.google.com/file/d/1an1bGso-QNqirTYNyv2RVAG3_O22fF4c/view";
-// "https://drive.google.com/file/d/1fb9mK1l6KILIsaLiy1u16dvx3UU_QqTf/view?usp=sharing";
-// "https://drive.google.com/file/d/1a8OEERo6VZbneOW52PRN19rJ34k89_ZI/view?usp=sharing";
+  "https://drive.google.com/file/d/1foVdPDuJGFtls-ociSXvZYut5hqpuBp1/view";
 
 // Skills
 
@@ -130,7 +124,7 @@ export const FrontendTools = [
     name: "ReactJS",
   },
   {
-    icon: <SiStyledComponents className="icon" />,
+    icon: <SiStyledcomponents className="icon" />,
     name: "Styled-components",
   },
   {
@@ -285,7 +279,7 @@ export const projects = [
     id: 1,
     title: "My Portfolio",
     desc: "Personal portfolio build using ReactJS.",
-    stacks: [<SiReact />, <SiStyledComponents />, <SiGithub />],
+    stacks: [<SiReact />, <SiStyledcomponents />, <SiGithub />],
     source: "https://github.com/ahmedraza17260/react-portfolio",
     demo: "https://ahmedraza-portfolio.netlify.app/",
   },
@@ -293,7 +287,7 @@ export const projects = [
     id: 2,
     title: "Amazon Clone",
     desc: "Clone of famous E-comm site Amazon with basic functionalities signup/login using mail and purchasing product.",
-    stacks: [<SiReact />, <SiCss3 />, <SiFirebase />, <SiMaterialUi />],
+    stacks: [<SiReact />, <SiCss3 />, <SiFirebase />, <SiMaterialui />],
     source: "https://github.com/ahmedraza17260/amazon-clone",
     demo: "https://clone-76219.web.app/",
   },
@@ -306,7 +300,7 @@ export const projects = [
       <SiReact />,
       <SiCss3 />,
       <SiFirebase />,
-      <SiMaterialUi />,
+      <SiMaterialui />,
       <SiRedux />,
     ],
     source: "https://github.com/ahmedraza17260/linkedin-clone",
@@ -316,7 +310,7 @@ export const projects = [
     id: 4,
     title: "Ahmed Raza Electronics",
     desc: "Ahmed Raza Electronics with React Javascript ",
-    stacks: [<SiReact />, <SiStyledComponents />, <SiFirebase />],
+    stacks: [<SiReact />, <SiStyledcomponents />, <SiFirebase />],
     source: "https://github.com/ahmedraza17260/ahmedrazaelectronics",
     demo: "https://ahmedrazaelectronics-17.web.app/",
   },
@@ -392,7 +386,7 @@ export const projects = [
   //     <SiReact />,
   //     <SiStyledComponents />,
   //     <SiFirebase />,
-  //     <SiMaterialUi />,
+  //     <SiMaterialui />,
   //   ],
   //   source: "https://github.com/ahmedraza17260/covid-19-raza-app",
   //   // "https://github.com/phoenixx1/website-clones/tree/master/covid-19-tracker",
