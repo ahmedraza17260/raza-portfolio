@@ -19,11 +19,12 @@ import {
   SiTypescript,
   SiNextDotJs,
   SiApollographql,
-  GiTestTubes,
-  GrTest,
   SlChemistry,
-  FiPackage,
 } from "react-icons/si";
+
+import { GiTestTubes } from "react-icons/gi";
+import { GrTest } from "react-icons/gr";
+import { FiPackage } from "react-icons/fi";
 import { IoLogoPwa } from "react-icons/io5";
 
 import { DiMysql, DiSass } from "react-icons/di";
