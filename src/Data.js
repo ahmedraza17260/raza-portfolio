@@ -57,7 +57,7 @@ export const MainSkills = [
 
 export const githubURL = "https://github.com/ahmedraza17260";
 
-export const linkedinURL = "https://www.linkedin.com/in/ahmed-raza-17260a/";
+export const linkedinURL = "https://www.linkedin.com/in/ahmedraza17260/";
 
 export const mailtoURL = "mailto:ahmedraza17260@gmail.com";
 
