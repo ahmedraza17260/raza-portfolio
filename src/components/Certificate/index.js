@@ -2,7 +2,9 @@ import React from "react";
 import Zoom from "react-reveal/Zoom";
 import Fade from "react-reveal/Fade";
 import { GoRepo } from "react-icons/go";
-import { Button } from "@material-ui/core";
+
+// import { Button } from "@material-ui/core";
+
 // import GD from "../../images/GD CERTIFICATE.jpg";
 // import LINUX from "../../images/LINUX CERTIFICATE.jpg";
 // import NOOR from "../../images/";
@@ -11,17 +13,26 @@ import { Button } from "@material-ui/core";
 // import SDC from "../../images/GD CERTIFICATE.jpg";
 // import SDC_MS from "../../images/GD CERTIFICATE.jpg";
 
+// import {
+//   CertificateContainer,
+//   Heading,
+//   CertificateProject,
+//   Certificate,
+//   AllCertificate,
+//   CertificateDesc,
+//   CertificateTitle,
+//   Stacks,
+//   SourceButtons,
+//   CertificateDetails,
+//   MoreButton,
+// } from "./CertificateElements";
+
 import {
   CertificateContainer,
   Heading,
-  CertificateProject,
   Certificate,
   AllCertificate,
-  CertificateDesc,
   CertificateTitle,
-  Stacks,
-  SourceButtons,
-  CertificateDetails,
   MoreButton,
 } from "./CertificateElements";
 import { certificate } from "../../Data";

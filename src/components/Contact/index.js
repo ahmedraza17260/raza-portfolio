@@ -3,7 +3,6 @@ import {
   Column1,
   Column2,
   Heading,
-  Img,
   AboutContainer,
   AboutWrapper,
   Subtitle,
@@ -12,17 +11,20 @@ import {
   Justify,
 } from "./ContactElements";
 import Fade from "react-reveal/Fade";
-import Zoom from "react-reveal/Zoom";
+// import Zoom from "react-reveal/Zoom";
 import { ImLocation2 } from "react-icons/im";
 import { BiMailSend } from "react-icons/bi";
 
-import profile from "../../images/profile.jpg";
+// import profile from "../../images/profile.jpg";
+
+import profile from "../../images/profile1.jpg";
 import github from "../../images/github.png";
 import gmail from "../../images/gmail.png";
 import instagram from "../../images/instagram.png";
 import linkedin from "../../images/linkedin.png";
 import facebook from "../../images/facebook.png";
 import twitter from "../../images/twitter.png";
+import pinterest from "../../images/pinterest.png";
 
 import {
   fbURL,
@@ -31,6 +33,7 @@ import {
   linkedinURL,
   twitterURL,
   mailtoURL,
+  pinterestURL,
 } from "../../Data";
 
 function Contact() {
@@ -85,6 +88,9 @@ function Contact() {
               </NavBtn>
               <NavBtn href={fbURL} target="_blank">
                 <img src={facebook} alt="" />
+              </NavBtn>
+              <NavBtn href={pinterestURL} target="_blank">
+                <img src={pinterest} alt="Instagram" />
               </NavBtn>
             </SocialIcons>
           </Column1>

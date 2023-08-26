@@ -19,6 +19,9 @@ import gmail from "../../images/gmail.png";
 import linkedin from "../../images/linkedin.png";
 import facebook from "../../images/facebook.png";
 import twitter from "../../images/twitter.png";
+import instagram from "../../images/instagram.png";
+import pinterest from "../../images/pinterest.png";
+
 import {
   fbURL,
   githubURL,
@@ -26,8 +29,10 @@ import {
   mailtoURL,
   MainSkills,
   twitterURL,
+  instagramURL,
   Name,
   resumeURL,
+  pinterestURL,
 } from "../../Data";
 
 function HeroSection() {
@@ -65,6 +70,12 @@ function HeroSection() {
               </NavBtn>
               <NavBtn href={fbURL} target="_blank">
                 <img src={facebook} alt="Facebook" />
+              </NavBtn>
+              <NavBtn href={instagramURL} target="_blank">
+                <img src={instagram} alt="Instagram" />
+              </NavBtn>
+              <NavBtn href={pinterestURL} target="_blank">
+                <img src={pinterest} alt="Instagram" />
               </NavBtn>
             </SocialIcons>
 

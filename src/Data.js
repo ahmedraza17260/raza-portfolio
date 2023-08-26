@@ -45,14 +45,16 @@ import agile from "./images/AGILESCRUM.jpg";
 export const Name = "Ahmed Raza";
 
 export const MainSkills = [
-  "Applied Chemistry Students👨🏻‍🎓",
-  2000,
-  "Quality Control Inspector🥼",
-  2000,
-  "Quality Assurance Inspector🧪 ",
-  2000,
-  "a Frontend Developer💻",
-  2000,
+  "Applied Chemistry Student 👨🏻‍🎓",
+  4000,
+  "Quality Control Inspector 🥼",
+  4000,
+  "Quality Assurance Inspector 🧪 ",
+  4000,
+  "Applied Chemist 🥼",
+  4000,
+  "a Frontend Developer 💻",
+  3000,
 ];
 
 export const githubURL = "https://github.com/ahmedraza17260";
@@ -66,6 +68,8 @@ export const fbURL = "https://www.facebook.com/ahmedraza263";
 export const instagramURL = "https://www.instagram.com/ahmedraza17260/";
 
 export const twitterURL = "https://twitter.com/AhmedRaza17260";
+
+export const pinterestURL = "https://pinterest.com/ahmedraz17260/";
 
 export const resumeURL =
            "https://drive.google.com/file/d/1V_H6p9DV_7EwtQ26MTz7pFTJBeNoRRsR/view";
@@ -181,8 +185,8 @@ export const experience = [
     icon: <MdSchool />,
     bckgrnd: false,
     title: "Karachi University",
-    subtitle: "BSC. APPLIED CHEMISTRY ",
-    desc: "59.1 %",
+    subtitle: "BSC. HONS. APPLIED CHEMISTRY ",
+    desc: "58.3 %",
     workdesc: [],
   },
   {
@@ -192,32 +196,60 @@ export const experience = [
     icon: <MdSchool />,
     bckgrnd: false,
     title: "Karachi University",
-    subtitle: "MSC. APPLIED CHEMISTRY ",
-    desc: "Last Semester",
+    subtitle: "MSC. HONS. APPLIED CHEMISTRY ",
+    desc: "56.8 %",
     workdesc: [],
   },
+];
+
+export const work = [
   {
-    id: 5,
-    type: "work",
-    date: "January 2023 - March 2023",
-    icon: <MdWork />,
-    bckgrnd: true,
-    title: "Dalda Food",
-    subtitle: "Internship",
-    desc: "Internship at Engineering Department",
-    workdesc: [],
-  },
-  {
-    id: 6,
+    id: 1,
     type: "work",
     date: "May 2017 - June 2018",
     icon: <MdWork />,
     bckgrnd: true,
     title: "Ayaan Corporation",
     subtitle: "Sale Supervisor",
-    desc: "Used QuickBooks Software.",
+    desc: "Worked under Management to achieve sales targets and drive revenue growth",
+    desc1: "Learning Sales Processes and Strategies",
+    desc2: "Analyze Sales Data",
+    desc3: "Invoicing, Sales Reports",
+    desc4: "Managing Accounts",
+    
     workdesc: [],
   },
+  {
+    id: 2,
+    type: "work",
+    date: "20th January 2023 - 3rd March 2023",
+    icon: <MdWork />,
+    bckgrnd: true,
+    title: "Dalda Food",
+    subtitle: "Six Weeks Internship at Quality Department",
+    desc: "Free Fatty Acid (FFA), Soap Content, Detection of Nickel & Iron Content",
+    desc1: "Moisture & Impurities (M&I), Slip Melting Point (SMP)",
+    desc2: "Fatty Acid Methyl Ester (FAME), Vitamin A",
+    desc3: "Strength of Citric Acid, Bleaching, Peroxide Value (POV)",
+    desc4: "Line QDI, Packaging QDI",
+    workdesc: [],
+  },
+  {
+    id: 3,
+    type: "work",
+    date: "26th May 2023 - Present",
+    icon: <MdWork />,
+    bckgrnd: true,
+    title: "Global Exports ",
+    subtitle: "MTO",
+    desc: "Dyeing Performance & Process Control Reports",
+    desc1: "Supervising Dyeing Machines",
+    desc2: "Purity of Formic Acid & Acetic Acid",
+    desc3: "Purity of Caustic Soda",
+    desc4: "Wetting Agent (Absorbency Test, Solid Content)",
+    workdesc: [],
+  },
+  
 ];
 
 // Certificate

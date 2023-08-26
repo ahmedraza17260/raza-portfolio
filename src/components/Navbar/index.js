@@ -4,14 +4,12 @@ import { FaBars } from "react-icons/fa";
 
 import {
   Nav,
-  NavLogo,
   NavbarContainer,
   MobileIcon,
   NavMenu,
   NavItem,
   NavLinks,
 } from "./NavbarElements";
-import Slide from "react-reveal/Slide";
 // import DayNightToggle from "react-day-and-night-toggle";
 
 function Navbar({ toggle }) {

@@ -1,5 +1,4 @@
 import React from "react";
-import Zoom from "react-reveal/Zoom";
 import Fade from "react-reveal/Fade";
 
 import {
