@@ -35,6 +35,8 @@ export const HomeElement = styled.img`
   @media screen and (max-width: 930px) {
     display: none;
   }
+
+
 `;
 
 export const HeroContent = styled.div`
@@ -77,6 +79,7 @@ export const HeroP = styled.p`
   width: 600px;
   max-width: 700px;
 
+
   @media screen and (max-width: 1180px) {
     font-size: 16px;
     width: 500px;
@@ -99,6 +102,8 @@ export const HeroP = styled.p`
 
 export const SocialIcons = styled.div`
   display: flex;
+  flex-wrap: wrap;
+
 `;
 
 export const NavBtn = styled.a`

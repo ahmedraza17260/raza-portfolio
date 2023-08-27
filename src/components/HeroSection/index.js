@@ -75,7 +75,7 @@ function HeroSection() {
                 <img src={instagram} alt="Instagram" />
               </NavBtn>
               <NavBtn href={pinterestURL} target="_blank">
-                <img src={pinterest} alt="Instagram" />
+                <img src={pinterest} alt="Pinterest" />
               </NavBtn>
             </SocialIcons>
 
