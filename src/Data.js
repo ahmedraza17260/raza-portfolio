@@ -186,7 +186,7 @@ export const experience = [
     bckgrnd: false,
     title: "Karachi University",
     subtitle: "BSC. HONS. APPLIED CHEMISTRY ",
-    desc: "58.3 %",
+    desc: "58.31 %",
     workdesc: [],
   },
   {
@@ -197,7 +197,7 @@ export const experience = [
     bckgrnd: false,
     title: "Karachi University",
     subtitle: "MSC. HONS. APPLIED CHEMISTRY ",
-    desc: "56.8 %",
+    desc: "55.10 %",
     workdesc: [],
   },
 ];
