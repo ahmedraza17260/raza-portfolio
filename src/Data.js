@@ -63,7 +63,7 @@ export const linkedinURL = "https://www.linkedin.com/in/ahmedraza17260/";
 
 export const mailtoURL = "mailto:ahmedraza17260@gmail.com";
 
-export const fbURL = "https://www.facebook.com/ahmedraza263";
+export const fbURL = "https://www.facebook.com/ahmedraza1726";
 
 export const instagramURL = "https://www.instagram.com/ahmedraza17260/";
 
