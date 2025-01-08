@@ -39,6 +39,11 @@ import sdc from "./images/SDC.jpg";
 import sdc_ms from "./images/SDC_MS.jpg";
 import agile from "./images/AGILESCRUM.jpg";
 // import gd from "./images/GD.jpg";
+import iso from "./images/ISO.JPG";
+import haccp_1 from "./images/HACCP Level 1.pdf";
+import h_v_t from "./images/HACCP,VACCP,TACCP.pdf";
+
+
 
 // HeroSection
 
@@ -302,6 +307,27 @@ export const certificate = [
     bckgrnd: false,
     title: "BBSYDP",
     image: [bbsydp],
+  },
+  {
+    id: 7,
+    icon: <FaCertificate />,
+    bckgrnd: false,
+    title: "ISO 9001",
+    image: [iso],
+  },
+  {
+    id: 8,
+    icon: <FaCertificate />,
+    bckgrnd: false,
+    title: "HACCP VACCP TACCP",
+    image: [h_v_t],
+  },
+  {
+    id: 9,
+    icon: <FaCertificate />,
+    bckgrnd: false,
+    title: "HACCP LEVEL 1",
+    image: [haccp_1],
   },
 ];
 
