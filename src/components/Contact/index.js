@@ -10,8 +10,9 @@ import {
   SocialIcons,
   Justify,
 } from "./ContactElements";
-import Fade from "react-reveal/Fade";
+// import Fade from "react-reveal/Fade";
 // import Zoom from "react-reveal/Zoom";
+import { motion } from "framer-motion";
 import { ImLocation2 } from "react-icons/im";
 import { BiMailSend } from "react-icons/bi";
 
@@ -40,7 +41,12 @@ function Contact() {
   return (
     <AboutContainer id="contact">
       <AboutWrapper>
-        <Fade left>
+      <motion.div
+          initial={{ x: -50, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+        >
+        {/* <Fade left> */}
           <Column1>
             <Heading>Reach Out to Me</Heading>
             <p className="sub">
@@ -94,12 +100,19 @@ function Contact() {
               </NavBtn>
             </SocialIcons>
           </Column1>
-        </Fade>
-        <Fade right>
+        {/* </Fade> */}
+        </motion.div>
+        <motion.div
+          initial={{ x: 50, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+        >
+        {/* <Fade right> */}
           <Column2>
             <img src={profile} alt="ahmed raza" />
           </Column2>
-        </Fade>
+        </motion.div>
+        {/* </Fade> */}
       </AboutWrapper>
     </AboutContainer>
   );

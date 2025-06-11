@@ -1,6 +1,9 @@
 import React from "react";
-import Zoom from "react-reveal/Zoom";
-import Fade from "react-reveal/Fade";
+// import Zoom from "react-reveal/Zoom";
+// import Fade from "react-reveal/Fade";
+
+import { motion } from "framer-motion";
+
 import { GoRepo } from "react-icons/go";
 
 // import { Button } from "@material-ui/core";
@@ -40,13 +43,27 @@ import { certificate } from "../../Data";
 function Certificates() {
   return (
     <CertificateContainer id="Certificate">
-      <Heading>
+      {/* <Heading>
         <Zoom>CERTIFICATE</Zoom>
+      </Heading> */}
+      <Heading>
+        <motion.div
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.6 }}
+        >
+          CERTIFICATE
+        </motion.div>
       </Heading>
 
       <AllCertificate>
         {certificate.map((values) => (
-          <Fade top>
+          // <Fade top>
+          <motion.div
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          >
             <Certificate id={values.id}>
               <CertificateTitle>
                 <GoRepo />
@@ -54,7 +71,8 @@ function Certificates() {
               </CertificateTitle>
               <img src={values.image} alt="certificates" />
             </Certificate>
-          </Fade>
+          </motion.div>
+          // </Fade>
         ))}
       </AllCertificate>
       <MoreButton

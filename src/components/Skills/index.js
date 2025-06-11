@@ -1,5 +1,7 @@
 import React from "react";
-import Fade from "react-reveal/Fade";
+// import Fade from "react-reveal/Fade";
+import { motion } from "framer-motion";
+
 
 import {
   SkillsContainer,
@@ -16,7 +18,13 @@ import { BackendTools, FrontendTools, Languages, Quality } from "../../Data";
 function Skills() {
   return (
     <SkillsContainer id="skills">
-      <Fade left>
+      {/* <Fade left> */}
+      <motion.div
+        initial={{ x: -80, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
         <AllSkills>
           <Heading>What I do</Heading>
 
@@ -70,12 +78,20 @@ function Skills() {
             Firebase. <br />
           </p>
         </AllSkills>
-      </Fade>
-      <Fade right>
+        </motion.div>
+      {/* </Fade> */}
+      {/* <Fade right> */}
+       <motion.div
+        initial={{ x: 80, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
         <SkillElement>
           <img src={skillElement} alt="skillImage" />
         </SkillElement>
-      </Fade>
+      {/* </Fade> */}
+      </motion.div>
     </SkillsContainer>
   );
 }

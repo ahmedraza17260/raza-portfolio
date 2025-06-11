@@ -4,7 +4,10 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import Zoom from "react-reveal/Zoom";
+
+// import Zoom from "react-reveal/Zoom";
+import { motion } from "framer-motion";
+
 
 import { ExperienceContainer, Heading } from "./ExperienceElements";
 import { experience } from "../../Data";
@@ -14,8 +17,18 @@ function Experience() {
   return (
     <ExperienceContainer id="experience">
       <Heading>
-        <Zoom>EXPERIENCE</Zoom>
+        <motion.div
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          EXPERIENCE
+        </motion.div>
       </Heading>
+
+      {/* <Heading>
+        <Zoom>EXPERIENCE</Zoom>
+      </Heading> */}
       <VerticalTimeline>
         {work
           .slice()
@@ -63,8 +76,17 @@ function Experience() {
           ))}
       </VerticalTimeline> <br />
       <Heading>
-        <Zoom>EDUCATION</Zoom>
+        <motion.div
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          EDUCATION
+        </motion.div>
       </Heading>
+      {/* <Heading>
+        <Zoom>EDUCATION</Zoom>
+      </Heading> */}
       <VerticalTimeline>
         {experience
           .slice()

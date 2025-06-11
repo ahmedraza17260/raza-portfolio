@@ -1,7 +1,11 @@
 import React from "react";
-import Typical from "react-typical";
-import Fade from "react-reveal/Fade";
+// import Typical from "react-typical";
+import { Typewriter } from "react-simple-typewriter";
+// import Fade from "react-reveal/Fade";
 import { BsArrowRightShort } from "react-icons/bs";
+
+import { motion } from "framer-motion";
+
 
 import {
   HeroContainer,
@@ -39,15 +43,34 @@ function HeroSection() {
   return (
     <HeroContainer id="home">
       <HeroContent>
-        <Fade right>
+        <motion.div
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+        {/* <Fade right> */}
           <div>
             <HeroH1>
               Hey!, I'm <br />
               {Name}
             </HeroH1>
             <HeroP>
-              I'm <Typical loop={Infinity} wrapper="b" steps={MainSkills} />
+              I'm{" "}
+              <span style={{ color: "#00FFAB", fontWeight: "bold" }}>
+                <Typewriter
+                  words={MainSkills}
+                  loop={Infinity}
+                  cursor
+                  cursorStyle="_"
+                  typeSpeed={70}
+                  deleteSpeed={50}
+                  delaySpeed={1000}
+                />
+              </span>
             </HeroP>
+            {/* <HeroP>
+              I'm <Typical loop={Infinity} wrapper="b" steps={MainSkills} />
+            </HeroP> */}
             <SocialIcons>
               <NavBtn href={githubURL} target="_blank">
                 <img
@@ -87,7 +110,8 @@ function HeroSection() {
             </ResumeSection>
           </div>
           <HomeElement src={homeElement} alt="image" />
-        </Fade>
+        {/* </Fade> */}
+        </motion.div>
       </HeroContent>
     </HeroContainer>
   );

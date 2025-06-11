@@ -1,8 +1,9 @@
 import React from "react";
-import Zoom from "react-reveal/Zoom";
-import Fade from "react-reveal/Fade";
 import { GoRepo } from "react-icons/go";
-import { Button } from "@material-ui/core";
+// import { Button } from "@material-ui/core";
+import { Button } from "@mui/material";
+
+import { motion } from "framer-motion";
 
 import {
   ProjectsContainer,
@@ -21,13 +22,26 @@ import { projects } from "../../Data";
 function Projects() {
   return (
     <ProjectsContainer id="projects">
-      <Heading>
+      {/* <Heading>
         <Zoom>PROJECTS</Zoom>
+      </Heading> */}
+      <Heading>
+        <motion.div
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.6 }}
+        >
+          PROJECTS
+        </motion.div>
       </Heading>
 
       <AllProject>
         {projects.map((values) => (
-          <Fade top>
+          <motion.div
+            initial={{ y: -50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
             <Project id={values.id}>
               <PrjTitle>
                 <GoRepo />
@@ -51,7 +65,7 @@ function Projects() {
                 ))}
               </Stacks>
             </Project>
-          </Fade>
+          </motion.div>
         ))}
       </AllProject>
       <MoreButton

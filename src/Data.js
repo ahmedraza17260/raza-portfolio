@@ -1,5 +1,4 @@
 import {
-  SiCsharp,
   SiCss3,
   SiFirebase,
   SiHtml5,
@@ -13,7 +12,7 @@ import {
   SiTypescript,
   SiStyledcomponents,
 } from "react-icons/si";
-
+import { TbBrandCSharp } from "react-icons/tb";
 // SiCplusplus, SiPython, SiPostman, SiMongodb, SiHeroku, SiNextDotJs, SiApollographql, DiSass, SiNodeRed,
 // import { SiStyledcomponents } from "react-icons/si";
 // import { GrTest } from "react-icons/gr";
@@ -29,7 +28,10 @@ import { DiMysql } from "react-icons/di";
 import { FaSchool, FaCertificate } from "react-icons/fa";
 import { MdSchool, MdWork } from "react-icons/md";
 
-import { SiMaterialui } from "react-icons/si";
+// import { SiMaterialui } from "react-icons/si";
+// import { DiVisualstudio } from "react-icons/di";
+import { SiMui } from 'react-icons/si';
+
 
 // Certificates
 import linux from "./images/LINUX.jpg";
@@ -50,16 +52,10 @@ import h_v_t from "./images/HACCP,VACCP,TACCP.pdf";
 export const Name = "Ahmed Raza";
 
 export const MainSkills = [
-  "Applied Chemistry Student 👨🏻‍🎓",
-  4000,
-  "Quality Control Inspector 🥼",
-  4000,
-  "Quality Assurance Inspector 🧪 ",
-  4000,
   "Applied Chemist 🥼",
-  4000,
-  "a Frontend Developer 💻",
-  3000,
+  "Quality Control Inspector 🥼",
+  "Quality Assurance Inspector 🧪",
+  "Frontend Developer 💻"
 ];
 
 export const githubURL = "https://github.com/ahmedraza17260";
@@ -107,7 +103,7 @@ export const Languages = [
     name: "C",
   },
   {
-    icon: <SiCsharp className="icon" />,
+    icon: <TbBrandCSharp className="icon" />,
     name: "C#",
   },
   {
@@ -346,7 +342,7 @@ export const projects = [
     id: 2,
     title: "Amazon Clone",
     desc: "Clone of famous E-comm site Amazon with basic functionalities signup/login using mail and purchasing product.",
-    stacks: [<SiReact />, <SiCss3 />, <SiFirebase />, <SiMaterialui />],
+    stacks: [<SiReact />, <SiCss3 />, <SiFirebase />, <SiMui />],
     source: "https://github.com/ahmedraza17260/amazon-clone",
     demo: "https://clone-76219.web.app/",
   },
@@ -359,7 +355,7 @@ export const projects = [
       <SiReact />,
       <SiCss3 />,
       <SiFirebase />,
-      <SiMaterialui />,
+      <SiMui />,
       <SiRedux />,
     ],
     source: "https://github.com/ahmedraza17260/linkedin-clone",
@@ -445,7 +441,7 @@ export const projects = [
   //     <SiReact />,
   //     <SiStyledComponents />,
   //     <SiFirebase />,
-  //     <SiMaterialui />,
+  //     <SiMui />,
   //   ],
   //   source: "https://github.com/ahmedraza17260/covid-19-raza-app",
   //   // "https://github.com/phoenixx1/website-clones/tree/master/covid-19-tracker",
