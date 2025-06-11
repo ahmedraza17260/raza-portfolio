@@ -48,7 +48,7 @@ function HeroSection() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
         >
-        {/* <Fade right> */}
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-around", width: "100%" }}>
           <div>
             <HeroH1>
               Hey!, I'm <br />
@@ -68,9 +68,7 @@ function HeroSection() {
                 />
               </span>
             </HeroP>
-            {/* <HeroP>
-              I'm <Typical loop={Infinity} wrapper="b" steps={MainSkills} />
-            </HeroP> */}
+         
             <SocialIcons>
               <NavBtn href={githubURL} target="_blank">
                 <img
@@ -110,7 +108,7 @@ function HeroSection() {
             </ResumeSection>
           </div>
           <HomeElement src={homeElement} alt="image" />
-        {/* </Fade> */}
+        </div>
         </motion.div>
       </HeroContent>
     </HeroContainer>
