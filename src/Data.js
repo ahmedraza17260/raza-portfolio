@@ -39,7 +39,7 @@ import sdc from "./images/SDC.jpg";
 import sdc_ms from "./images/SDC_MS.jpg";
 import agile from "./images/AGILESCRUM.jpg";
 // import gd from "./images/GD.jpg";
-import iso from "./images/ISO.JPG";
+import iso from "./images/ISO.jpg";
 import haccp_1 from "./images/HACCP Level 1.pdf";
 import h_v_t from "./images/HACCP,VACCP,TACCP.pdf";
 
