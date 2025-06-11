@@ -71,6 +71,7 @@ function Projects() {
       <MoreButton
         href="https://github.com/ahmedraza17260?tab=repositories"
         target="_blank"
+        aria-label="More Repositories"
       >
         More Projects
       </MoreButton>

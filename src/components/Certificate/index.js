@@ -78,6 +78,7 @@ function Certificates() {
       <MoreButton
         href="https://drive.google.com/drive/folders/1AFSUpGwUWIf2IIm_Jup5tcHA3eVzgcTM?usp=sharing"
         target="_blank"
+        aria-label="More Certificate"
       >
         More Certificates
       </MoreButton>

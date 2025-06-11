@@ -70,7 +70,7 @@ function HeroSection() {
             </HeroP>
          
             <SocialIcons>
-              <NavBtn href={githubURL} target="_blank">
+              <NavBtn href={githubURL} target="_blank" aria-label="Github_Logo">
                 <img
                   style={{
                     filter: "invert(100%)",
@@ -80,29 +80,29 @@ function HeroSection() {
                   alt="Github"
                 />
               </NavBtn>
-              <NavBtn href={linkedinURL} target="_blank">
+              <NavBtn href={linkedinURL} target="_blank" aria-label="Linkedin_Logo" >
                 <img src={linkedin} alt="Linkedin" />
               </NavBtn>
-              <NavBtn href={mailtoURL} target="_blank">
+              <NavBtn href={mailtoURL} target="_blank" aria-label="Gmail_Logo">
                 <img src={gmail} alt="Gmail" />
               </NavBtn>
-              <NavBtn href={twitterURL} target="_blank">
+              <NavBtn href={twitterURL} target="_blank" aria-label="Twitter_Logo">
                 <img src={twitter} alt="Twitter" />
               </NavBtn>
-              <NavBtn href={fbURL} target="_blank">
+              <NavBtn href={fbURL} target="_blank" aria-label="Facebook_Logo">
                 <img src={facebook} alt="Facebook" />
               </NavBtn>
-              <NavBtn href={instagramURL} target="_blank">
+              <NavBtn href={instagramURL} target="_blank" aria-label="Instagram_Logo">
                 <img src={instagram} alt="Instagram" />
               </NavBtn>
-              <NavBtn href={pinterestURL} target="_blank">
+              <NavBtn href={pinterestURL} target="_blank" aria-label="Pinterest_Logo">
                 <img src={pinterest} alt="Pinterest" />
               </NavBtn>
             </SocialIcons>
 
             <ResumeSection>
               <span> See my Resume</span>
-              <a href={resumeURL} target="__blank" alt="Cv Preview">
+              <a href={resumeURL} target="__blank" alt="Cv Preview" aria-label="Cv Preview">
                 <BsArrowRightShort />
               </a>
             </ResumeSection>
