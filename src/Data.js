@@ -214,13 +214,19 @@ export const work = [
     bckgrnd: true,
     title: "Ayaan Corporation",
     subtitle: "Sale Supervisor",
-    desc: "Worked under Management to achieve sales targets and drive revenue growth",
-    desc1: "Learning Sales Processes and Strategies",
-    desc2: "Analyze Sales Data",
-    desc3: "Invoicing, Sales Reports",
-    desc4: "Managing Accounts",
+    // desc: "Worked under Management to achieve sales targets and drive revenue growth",
+    // desc1: "Learning Sales Processes and Strategies",
+    // desc2: "Analyze Sales Data",
+    // desc3: "Invoicing, Sales Reports",
+    // desc4: "Managing Accounts",
     
-    workdesc: [],
+    workdesc: [
+      "Worked under Management to achieve sales targets and drive revenue growth",
+      "Learning Sales Processes and Strategies",
+      "Analyze Sales Data",
+      "Invoicing, Sales Reports",
+      "Managing Accounts"
+    ],
   },
   {
     id: 2,
@@ -230,12 +236,16 @@ export const work = [
     bckgrnd: true,
     title: "Dalda Food",
     subtitle: "Six Weeks Internship at Quality Department.",
-    desc: "Performed quality tests (FFA, Soap Content, M&I, SMP, FAME, POV, Citric Acid) on edible oil products, ensuring adherence to food safety standards.",
-    desc1: "Conducted Line and Packaging Quality Departure Inspections.",
-    desc2: "Collaborated with QA team to document findings.",
-    desc3: "",
-    desc4: "",
-    workdesc: [],
+    // desc: "Performed quality tests (FFA, Soap Content, M&I, SMP, FAME, POV, Citric Acid) on edible oil products, ensuring adherence to food safety standards.",
+    // desc1: "Conducted Line and Packaging Quality Departure Inspections.",
+    // desc2: "Collaborated with QA team to document findings.",
+    // desc3: "",
+    // desc4: "",
+    workdesc: [
+      "Performed quality tests (FFA, Soap Content, M&I, SMP, FAME, POV, Citric Acid) on edible oil products, ensuring adherence to food safety standards.",
+      "Conducted Line and Packaging Quality Departure Inspections.",
+      "Collaborated with QA team to document findings."
+    ],
   },
   {
     id: 3,
@@ -245,12 +255,15 @@ export const work = [
     bckgrnd: true,
     title: "Global Exports ",
     subtitle: "MTO",
-    desc: "Optimized dyeing performance by analyzing real-time data.",
-    desc1: "Conducted quality control tests (Formic Acid, Acetic Acid, Caustic Soda purity; absorbency and solid content analysis), ensuring 100% compliance with industry standards.",
-    desc2: "",
-    desc3: "",
-    desc4: "",
-    workdesc: [],
+    // desc: "Optimized dyeing performance by analyzing real-time data.",
+    // desc1: "Conducted quality control tests (Formic Acid, Acetic Acid, Caustic Soda purity; absorbency and solid content analysis), ensuring 100% compliance with industry standards.",
+    // desc2: "",
+    // desc3: "",
+    // desc4: "",
+    workdesc: [
+      "Optimized dyeing performance by analyzing real-time data.",
+      "Conducted quality control tests (Formic Acid, Acetic Acid, Caustic Soda purity; absorbency and solid content analysis), ensuring 100% compliance with industry standards."
+    ],
   },
   {
     id: 4,
@@ -260,12 +273,16 @@ export const work = [
     bckgrnd: true,
     title: "Global Exports ",
     subtitle: "Ass.Manager Processing",
-    desc: "Managed production costing for dyeing operations.",
-    desc1: "Planned and scheduled dyeing operations, ensuring on-time delivery.",
-    desc2: "Created comprehensive production performance reports.",
-    desc3: "",
-    desc4: "",
-    workdesc: [],
+    // desc: "Managed production costing for dyeing operations.",
+    // desc1: "Planned and scheduled dyeing operations, ensuring on-time delivery.",
+    // desc2: "Created comprehensive production performance reports.",
+    // desc3: "",
+    // desc4: "",
+    workdesc: [
+      "Managed production costing for dyeing operations.",
+      "Planned and scheduled dyeing operations, ensuring on-time delivery.",
+      "Created comprehensive production performance reports."
+    ],
   },
   
 ];

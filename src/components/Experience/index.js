@@ -64,13 +64,22 @@ function Experience() {
               </h4>
 
               <p>
+                {/* <ul> */}
+                {/* <li>{values.desc}<br /></li> */}
+                {/* <li>{values.desc1}<br /></li> */}
+                {/* <li>{values.desc2}<br /></li> */}
+                {/* <li>{values.desc3}<br /></li> */}
+                {/* <li>{values.desc4}<br /></li> */}
+                {/* </ul> */}
                 <ul>
-                <li>{values.desc}<br /></li>
-                <li>{values.desc1}<br /></li>
-                <li>{values.desc2}<br /></li>
-                <li>{values.desc3}<br /></li>
-                <li>{values.desc4}<br /></li>
+                  {values.workdesc.map((item, index) => (
+                    <li key={index}>
+                      {item}
+                      <br />
+                    </li>
+                  ))}
                 </ul>
+
               </p>
             </VerticalTimelineElement>
           ))}

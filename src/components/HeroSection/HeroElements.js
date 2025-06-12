@@ -26,23 +26,32 @@ export const HeroContainer = styled.div`
   }
 `;
 
+export const HeroTextWrapper = styled.div`
+  max-width: 100%;
+  margin-left: 0rem;
+
+  @media screen and (max-width: 930px) {
+    margin-left: 0;
+    max-width: 100%;
+    text-align: center;
+  }
+`;
+
 export const HomeElement = styled.img`
-  width: 550px;
+  width: 500px;
 
   @media screen and (max-width: 1180px) {
-    width: 400px;
+    width: 350px;
   }
   @media screen and (max-width: 930px) {
     display: none;
   }
-
-
 `;
 
 export const HeroContent = styled.div`
-  z-index: 3;
+  z-index: 1;
   width: 100%;
-  position: absolute;
+  position: relative;
   display: flex;
   padding: 8px 24px;
   align-items: center;
@@ -76,8 +85,8 @@ export const HeroP = styled.p`
   color: #66fcf1;
   font-size: 25px;
   text-align: left;
-  width: 600px;
-  max-width: 700px;
+  width: 725px;
+  max-width: 750px;
 
 
   @media screen and (max-width: 1180px) {
@@ -103,12 +112,15 @@ export const HeroP = styled.p`
 export const SocialIcons = styled.div`
   display: flex;
   flex-wrap: wrap;
-
+  position: relative;
+  z-index: 2;
 `;
 
 export const NavBtn = styled.a`
   cursor: pointer;
   padding: 8px;
+  position: relative;
+  z-index: 2;
   margin-right: 10px;
   transition: all 0.2s ease-in-out;
 
@@ -134,6 +146,8 @@ export const ResumeSection = styled.div`
   background-color: #0b0c10;
   color: #66fcf1;
   border-radius: 50px;
+  position: relative;
+  z-index: 2;
 
   span {
     margin-left: 10px;
