@@ -7,11 +7,13 @@ import {
   SiBootstrap,
   SiC,
   SiGit,
-  SiRedux,
   SiGithub,
   SiTypescript,
   SiStyledcomponents,
 } from "react-icons/si";
+// import { SiRedux} from "react-icons/si";
+
+
 import { TbBrandCSharp } from "react-icons/tb";
 // SiCplusplus, SiPython, SiPostman, SiMongodb, SiHeroku, SiNextDotJs, SiApollographql, DiSass, SiNodeRed,
 // import { SiStyledcomponents } from "react-icons/si";
@@ -30,7 +32,7 @@ import { MdSchool, MdWork } from "react-icons/md";
 
 // import { SiMaterialui } from "react-icons/si";
 // import { DiVisualstudio } from "react-icons/di";
-import { SiMui } from 'react-icons/si';
+// import { SiMui } from 'react-icons/si';
 
 
 // Certificates
@@ -187,7 +189,7 @@ export const experience = [
     bckgrnd: false,
     title: "Karachi University",
     subtitle: "BSC. HONS. APPLIED CHEMISTRY ",
-    desc: "58.31 %",
+    desc: "Obtained: 58.31 %",
     workdesc: [],
   },
   {
@@ -198,7 +200,7 @@ export const experience = [
     bckgrnd: false,
     title: "Karachi University",
     subtitle: "MSC. HONS. APPLIED CHEMISTRY ",
-    desc: "55.10 %",
+    desc: "Obtained: 55.10 %",
     workdesc: [],
   },
 ];
@@ -227,27 +229,42 @@ export const work = [
     icon: <MdWork />,
     bckgrnd: true,
     title: "Dalda Food",
-    subtitle: "Six Weeks Internship at Quality Department",
-    desc: "Free Fatty Acid (FFA), Soap Content, Detection of Nickel & Iron Content",
-    desc1: "Moisture & Impurities (M&I), Slip Melting Point (SMP)",
-    desc2: "Fatty Acid Methyl Ester (FAME), Vitamin A",
-    desc3: "Strength of Citric Acid, Bleaching, Peroxide Value (POV)",
-    desc4: "Line QDI, Packaging QDI",
+    subtitle: "Six Weeks Internship at Quality Department.",
+    desc: "Performed quality tests (FFA, Soap Content, M&I, SMP, FAME, POV, Citric Acid) on edible oil products, ensuring adherence to food safety standards.",
+    desc1: "Conducted Line and Packaging Quality Departure Inspections.",
+    desc2: "Collaborated with QA team to document findings.",
+    desc3: "",
+    desc4: "",
     workdesc: [],
   },
   {
     id: 3,
     type: "work",
-    date: "26th May 2023 - Present",
+    date: "26th May 2023 - Dec 2024",
     icon: <MdWork />,
     bckgrnd: true,
     title: "Global Exports ",
     subtitle: "MTO",
-    desc: "Dyeing Performance & Process Control Reports",
-    desc1: "Supervising Dyeing Machines",
-    desc2: "Purity of Formic Acid & Acetic Acid",
-    desc3: "Purity of Caustic Soda",
-    desc4: "Wetting Agent (Absorbency Test, Solid Content)",
+    desc: "Optimized dyeing performance by analyzing real-time data.",
+    desc1: "Conducted quality control tests (Formic Acid, Acetic Acid, Caustic Soda purity; absorbency and solid content analysis), ensuring 100% compliance with industry standards.",
+    desc2: "",
+    desc3: "",
+    desc4: "",
+    workdesc: [],
+  },
+  {
+    id: 4,
+    type: "work",
+    date: "Jan 2025 - Present",
+    icon: <MdWork />,
+    bckgrnd: true,
+    title: "Global Exports ",
+    subtitle: "Ass.Manager Processing",
+    desc: "Managed production costing for dyeing operations.",
+    desc1: "Planned and scheduled dyeing operations, ensuring on-time delivery.",
+    desc2: "Created comprehensive production performance reports.",
+    desc3: "",
+    desc4: "",
     workdesc: [],
   },
   
@@ -338,37 +355,37 @@ export const projects = [
     source: "https://github.com/ahmedraza17260/react-portfolio",
     demo: "https://ahmedraza-portfolio.netlify.app/",
   },
-  {
-    id: 2,
-    title: "Amazon Clone",
-    desc: "Clone of famous E-comm site Amazon with basic functionalities signup/login using mail and purchasing product.",
-    stacks: [<SiReact />, <SiCss3 />, <SiFirebase />, <SiMui />],
-    source: "https://github.com/ahmedraza17260/amazon-clone",
-    demo: "https://clone-76219.web.app/",
-  },
+  // {
+  //   id: 2,
+  //   title: "Amazon Clone",
+  //   desc: "Clone of famous E-comm site Amazon with basic functionalities signup/login using mail and purchasing product.",
+  //   stacks: [<SiReact />, <SiCss3 />, <SiFirebase />, <SiMui />],
+  //   source: "https://github.com/ahmedraza17260/amazon-clone",
+  //   demo: "https://clone-76219.web.app/",
+  // },
 
-  {
-    id: 3,
-    title: "Linkedin Clone",
-    desc: "Linkedin Clone with React Javascript & Redux",
-    stacks: [
-      <SiReact />,
-      <SiCss3 />,
-      <SiFirebase />,
-      <SiMui />,
-      <SiRedux />,
-    ],
-    source: "https://github.com/ahmedraza17260/linkedin-clone",
-    demo: "https://linkedin-clone-874a2.web.app/",
-  },
-  {
-    id: 4,
-    title: "Ahmed Raza Electronics",
-    desc: "Ahmed Raza Electronics with React Javascript ",
-    stacks: [<SiReact />, <SiStyledcomponents />, <SiFirebase />],
-    source: "https://github.com/ahmedraza17260/ahmedrazaelectronics",
-    demo: "https://ahmedrazaelectronics-17.web.app/",
-  },
+  // {
+  //   id: 3,
+  //   title: "Linkedin Clone",
+  //   desc: "Linkedin Clone with React Javascript & Redux",
+  //   stacks: [
+  //     <SiReact />,
+  //     <SiCss3 />,
+  //     <SiFirebase />,
+  //     <SiMui />,
+  //     <SiRedux />,
+  //   ],
+  //   source: "https://github.com/ahmedraza17260/linkedin-clone",
+  //   demo: "https://linkedin-clone-874a2.web.app/",
+  // },
+  // {
+  //   id: 4,
+  //   title: "Ahmed Raza Electronics",
+  //   desc: "Ahmed Raza Electronics with React Javascript ",
+  //   stacks: [<SiReact />, <SiStyledcomponents />, <SiFirebase />],
+  //   source: "https://github.com/ahmedraza17260/ahmedrazaelectronics",
+  //   demo: "https://ahmedrazaelectronics-17.web.app/",
+  // },
 
   // {
   //   id: 5,
