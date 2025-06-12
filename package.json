@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "raza-portfolio",
   "private": true,
   "dependencies": {
