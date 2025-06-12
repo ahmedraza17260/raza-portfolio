@@ -34,10 +34,10 @@ function Navbar({ toggle }) {
   };
 
   return (
-    <Nav scrollNav={scrollNav}>
+    <Nav $scrollNav={scrollNav}>
       <NavbarContainer>
         <></>
-        <NavLinks onClick={toggleHome}>
+        <NavLinks as="a" href="#home" onClick={toggleHome}>
           <b style={{ fontSize: "2.5rem" }}>PORTFOLIO</b>
         </NavLinks>
         <MobileIcon onClick={toggle}>
@@ -52,6 +52,7 @@ function Navbar({ toggle }) {
           <NavItem>
             <NavLinks
               to="home"
+              href="#home"
               smooth={true}
               duration={500}
               spy={true}
@@ -64,6 +65,7 @@ function Navbar({ toggle }) {
           <NavItem>
             <NavLinks
               to="skills"
+              href="#skills"
               smooth={true}
               duration={500}
               spy={true}
@@ -77,6 +79,7 @@ function Navbar({ toggle }) {
           <NavItem>
             <NavLinks
               to="experience"
+              href="#experience"
               smooth={true}
               duration={500}
               spy={true}
@@ -90,6 +93,7 @@ function Navbar({ toggle }) {
           <NavItem>
             <NavLinks
               to="Certificate"
+              href="#Certificate"
               smooth={true}
               duration={500}
               spy={true}
@@ -102,6 +106,7 @@ function Navbar({ toggle }) {
           <NavItem>
             <NavLinks
               to="projects"
+              href="#projects"
               smooth={true}
               duration={500}
               spy={true}
@@ -114,6 +119,7 @@ function Navbar({ toggle }) {
           <NavItem>
             <NavLinks
               to="contact"
+              href="#contact"
               smooth={true}
               duration={500}
               spy={true}

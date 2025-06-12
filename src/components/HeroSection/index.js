@@ -144,7 +144,7 @@ export default HeroSection;
 //                   <img
 //                     style={{
 //                       filter: "invert(100%)",
-//                       webkitFilter: "invert(100%)",
+//                       WebkitFilter: "invert(100%)",
 //                     }}
 //                     src={github}
 //                     alt="Github"

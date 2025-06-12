@@ -1,13 +1,16 @@
 import styled from "styled-components";
 
 export const AboutContainer = styled.div`
-  background: #0b0c10;
-  // background: #1f2833;
+ background: #0b0c10;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
   width: 100%;
+
+  @media screen and (max-width: 600px) {
+    padding: 0px 10px;
+  }
 `;
 
 export const AboutWrapper = styled.div`
@@ -58,6 +61,10 @@ export const Column1 = styled.div`
       font-size: 12px;
     }
   }
+
+  @media screen and (max-width: 600px) {
+    padding: 0 20px; // add more space on mobile
+  }
 `;
 
 export const Column2 = styled.div`
@@ -65,16 +72,19 @@ export const Column2 = styled.div`
   margin-right: 20px;
 
   img {
-    width: 260px;
+    width: 100%;
+    max-width: 260px;
+    height: auto;
     padding-right: 0;
     border-radius: 10%;
     border: 3px solid #c5c6c7;
-    // border: 5px solid #1f2833;
+
     @media screen and (max-width: 940px) {
-      width: 250px;
+      max-width: 250px;
     }
+
     @media screen and (max-width: 350px) {
-      width: 200px;
+      max-width: 200px;
     }
   }
 `;
@@ -97,7 +107,7 @@ export const Heading = styled.h1`
 export const Subtitle = styled.p`
   font-size: 18px;
   max-width: 800px;
-  color: "#45a29e";
+  color: #45a29e;
   @media screen and (max-width: 940px) {
     text-align: justify;
   }
@@ -112,15 +122,28 @@ export const Subtitle = styled.p`
 `;
 
 export const Justify = styled.div`
-text-align: justify;
+  text-align: justify;
+  width: 100%;
+
+ @media screen and (max-width: 600px) {
+    padding-right: 30px;
+  }
+
+  @media screen and (max-width: 350px) {
+    padding-right: 30px;
+  }
+
 `;
 
 export const SocialIcons = styled.div`
   margin-top: 20px;
   display: flex;
-  align-items: center;
-  // background: #1f2833;
-  // width: auto; ;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+
+  @media screen and (max-width: 600px) {
+    justify-content: center;
 `;
 
 export const NavBtn = styled.a`

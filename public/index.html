@@ -72,16 +72,14 @@
       position: fixed;
       top: 0;
       left: 0;
-      /* background-color: #242f3f; */
-      /* background-color: #1f2833; */
-      /* background-color: #c0c0c0; */
-      /* background-color: #4717f6; */
-      /* background-color: #3F00FF; */
       background-color: #5D3FD3;
-      place-items: center;
+      display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      display: grid;
+      padding: 20px;
+      box-sizing: border-box;
+      text-align: center;
     }
 
     .loader {
@@ -91,6 +89,7 @@
       position: relative;
       border: 6px solid #fff;
       animation: loader 3s infinite ease;
+      margin-bottom: 20px;
     }
 
     .loader-inner {
@@ -99,6 +98,26 @@
       width: 100%;
       background-color: #fff;
       animation: loader-inner 3s infinite ease-in;
+    }
+
+    h1 {
+      color: white;
+      font-size: 24px;
+      margin: 0;
+      padding: 0 10px;
+      word-wrap: break-word;
+    }
+
+    @media screen and (max-width: 480px) {
+      .loader {
+        width: 30px;
+        height: 30px;
+        border-width: 4px;
+      }
+
+      h1 {
+        font-size: 18px;
+      }
     }
 
     @keyframes loader {
@@ -146,15 +165,34 @@
     }
   </style>
 
+  <!-- Google Ads -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9004285372762378"
     crossorigin="anonymous">
     </script>
-  <script src="jquery-2.1.4.js"></script>
+  <!-- End Google Ads -->
+
+  <!-- J-Query Replacement -->
   <script>
-    $(window).on("load", function () {
-      $(".loader-wrapper").fadeOut("slow");
+    window.addEventListener("load", function () {
+      const loader = document.querySelector(".loader-wrapper");
+      if (loader) {
+        loader.style.transition = "opacity 0.6s ease";
+        loader.style.opacity = "0";
+        setTimeout(() => {
+          loader.style.display = "none";
+        }, 600); // match the transition duration
+      }
     });
   </script>
+  <!-- End J-Query Replacement -->
+
+  <!-- <script src="jquery-2.1.4.js"></script>
+    <script>
+      $(window).on("load", function () {
+        $(".loader-wrapper").fadeOut("slow");
+      });
+    </script> -->
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KDFWX9ZQT8"></script>
   <script>
@@ -164,6 +202,7 @@
 
     gtag('config', 'G-KDFWX9ZQT8');
   </script>
+  <!-- End Global site tag (gtag.js) - Google Analytics -->
 
   <!-- Google Tag Manager -->
   <script>(function (w, d, s, l, i) {
@@ -175,6 +214,7 @@
           'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-KSC9W6J');</script>
   <!-- End Google Tag Manager -->
+
 </head>
 
 <body>
@@ -302,3 +342,10 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+<!-- <script src="jquery-2.1.4.js"></script>
+  <script>
+    $(window).on("load", function () {
+      $(".loader-wrapper").fadeOut("slow");
+    });
+  </script> -->

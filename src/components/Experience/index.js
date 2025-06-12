@@ -62,15 +62,6 @@ function Experience() {
               <h4 className="vertical-timeline-element-subtitle">
                 {values.subtitle}
               </h4>
-
-              <p>
-                {/* <ul> */}
-                {/* <li>{values.desc}<br /></li> */}
-                {/* <li>{values.desc1}<br /></li> */}
-                {/* <li>{values.desc2}<br /></li> */}
-                {/* <li>{values.desc3}<br /></li> */}
-                {/* <li>{values.desc4}<br /></li> */}
-                {/* </ul> */}
                 <ul>
                   {values.workdesc.map((item, index) => (
                     <li key={index}>
@@ -79,8 +70,6 @@ function Experience() {
                     </li>
                   ))}
                 </ul>
-
-              </p>
             </VerticalTimelineElement>
           ))}
       </VerticalTimeline> <br />
@@ -137,7 +126,7 @@ function Experience() {
                 {values.workdesc.length > 0 ? (
                   <ul>
                     {values.workdesc.map((work) => (
-                      <li>{work}</li>
+                      <li key={work}>{work}</li>
                     ))}
                   </ul>
                 ) : (

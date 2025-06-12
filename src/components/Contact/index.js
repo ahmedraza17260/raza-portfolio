@@ -55,10 +55,7 @@ function Contact() {
             </p>
             <Subtitle>
               <Justify>
-                I am Applied Chemistry Students, a passionate person when it
-                comes to working and my goal is to expand my skills and
-                knowledge in Quality Department, I am a hard worker and eager to
-                learn to make a valuable asset in any team.
+                Highly motivated professional with 2+ years of experience in process control, dyeing planning, and production costing within the textile industry. Seeking a role to improve operational efficiency, minimize rework, and drive continuous improvement in manufacturing operations.             
               </Justify>
               <br />
               Open for opportunities: Yes
@@ -74,7 +71,7 @@ function Contact() {
                 <img
                   style={{
                     filter: "invert(100%)",
-                    webkitFilter: "invert(100%)",
+                    WebkitFilter: "invert(100%)",
                   }}
                   src={github}
                   alt=""

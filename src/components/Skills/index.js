@@ -33,7 +33,7 @@ function Skills() {
             Quality Control / Assurance
             <SubPart>
               {Quality.map((data) => (
-                <SkillIcon>
+                <SkillIcon key={data.name}>
                   {data.icon}
                   <p>{data.name}</p>
                 </SkillIcon>
@@ -46,7 +46,7 @@ function Skills() {
             Languages
             <SubPart>
               {Languages.map((data) => (
-                <SkillIcon>
+                <SkillIcon key={data.name}>
                   {data.icon}
                   <p>{data.name}</p>
                 </SkillIcon>
@@ -55,7 +55,7 @@ function Skills() {
             Frontend Tools
             <SubPart>
               {FrontendTools.map((data) => (
-                <SkillIcon>
+                <SkillIcon key={data.name}>
                   {data.icon}
                   <p>{data.name}</p>
                 </SkillIcon>
@@ -64,7 +64,7 @@ function Skills() {
             Backend Tools
             <SubPart>
               {BackendTools.map((data) => (
-                <SkillIcon>
+                <SkillIcon key={data.name}>
                   {data.icon}
                   <p>{data.name}</p>
                 </SkillIcon>
