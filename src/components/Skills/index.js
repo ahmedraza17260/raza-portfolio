@@ -15,10 +15,20 @@ import {
 import skillElement from "../../images/5.gif";
 import { BackendTools, FrontendTools, Languages, Quality } from "../../Data";
 
+import styled from "styled-components";
+
+const Section = styled.section`
+  background-color: ${({ theme, alt }) => (alt ? theme.sectionAlt : theme.background)};
+  color: ${({ theme }) => theme.text};
+  padding: 2rem;
+`;
+
+
 function Skills() {
   return (
+     <Section alt id="skills">
     <SkillsContainer id="skills">
-      {/* <Fade left> */}
+
       <motion.div
         initial={{ x: -80, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
@@ -79,8 +89,6 @@ function Skills() {
           </p>
         </AllSkills>
         </motion.div>
-      {/* </Fade> */}
-      {/* <Fade right> */}
        <motion.div
         initial={{ x: 80, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
@@ -90,9 +98,9 @@ function Skills() {
         <SkillElement>
           <img src={skillElement} alt="skillImage" />
         </SkillElement>
-      {/* </Fade> */}
       </motion.div>
     </SkillsContainer>
+    </Section>
   );
 }
 

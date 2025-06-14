@@ -40,9 +40,25 @@ import {
   pinterestURL,
 } from "../../Data";
 
+import styled from "styled-components";
+import { useTheme } from 'styled-components';
+
+
+const Section = styled.section`
+  background-color: ${({ theme, alt }) => (alt ? theme.sectionAlt : theme.background)};
+  color: ${({ theme }) => theme.text};
+  padding: 2rem;
+`;
+
+  
+
 function HeroSection() {
+  const theme = useTheme(); // ✅ Now `theme` is defined
+  const isDarkMode = theme.mode === "dark"; // depends on your theme object structure
   return (
-    <HeroContainer id="home">
+    <header>
+     <Section alt id="home">
+    <HeroContainer>
   <HeroContent>
     <motion.div
       initial={{ opacity: 0, x: 100 }}
@@ -56,7 +72,7 @@ function HeroSection() {
         </HeroH1>
         <HeroP>
           I'm{" "}
-          <span style={{ color: "#00FFAB", fontWeight: "bold" }}>
+          <span style={{ color: "", fontWeight: "bold" }}>
             <Typewriter
               words={MainSkills}
               loop={Infinity}
@@ -71,7 +87,7 @@ function HeroSection() {
         <br />
         <SocialIcons>
           <NavBtn href={githubURL} target="_blank" aria-label="Github_Logo">
-            <img style={{ filter: "invert(100%)" }} src={github} alt="Github" />
+            <img style={{ filter: isDarkMode === "light" ? "invert(100%)" : "invert(0%)" }} src={github} alt="Visit my GitHub profile" />
           </NavBtn>
           <NavBtn href={linkedinURL} target="_blank" aria-label="Linkedin_Logo">
             <img src={linkedin} alt="Linkedin" />
@@ -95,7 +111,7 @@ function HeroSection() {
         <br />
         <ResumeSection>
           <span> See my Resume</span>
-          <a href={resumeURL} target="__blank" aria-label="Cv Preview">
+          <a href={resumeURL} target="_blank" rel="noopener noreferrer" aria-label="Cv Preview">
             <BsArrowRightShort />
           </a>
         </ResumeSection>
@@ -105,6 +121,8 @@ function HeroSection() {
     <HomeElement src={homeElement} alt="image" />
   </HeroContent>
 </HeroContainer>
+</Section>
+</header>
   );
 }
 

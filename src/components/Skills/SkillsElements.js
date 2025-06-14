@@ -6,7 +6,10 @@ export const SkillsContainer = styled.div`
   overflow-x: hidden;
   padding: 20px 10px;
   height: 100%;
-  background: #0b0c1a;
+  // background: #0b0c1a;
+  background-color: ${({ theme, alt }) => (alt ? theme.sectionAlt : theme.background)};
+  color: ${({ theme }) => theme.text};
+  padding: 2rem;
   justify-content: space-around;
   /* width: 100%; */
 

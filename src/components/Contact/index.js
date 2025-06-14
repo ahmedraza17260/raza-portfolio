@@ -37,8 +37,19 @@ import {
   pinterestURL,
 } from "../../Data";
 
+import styled from "styled-components";
+
+const Section = styled.section`
+  background-color: ${({ theme, alt }) => (alt ? theme.sectionAlt : theme.background)};
+  color: ${({ theme }) => theme.text};
+  padding: 2rem;
+`;
+
+
+
 function Contact() {
   return (
+    <Section alt id="contact">
     <AboutContainer id="contact">
       <AboutWrapper>
       <motion.div
@@ -46,7 +57,7 @@ function Contact() {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
-        {/* <Fade left> */}
+       
           <Column1>
             <Heading>Reach Out to Me</Heading>
             <p className="sub">
@@ -74,44 +85,45 @@ function Contact() {
                     WebkitFilter: "invert(100%)",
                   }}
                   src={github}
-                  alt=""
+                  alt="Github_Logo"
                 />
               </NavBtn>
               <NavBtn href={linkedinURL} target="_blank" aria-label="Linkedin_Logo">
-                <img src={linkedin} alt="" />
+                <img src={linkedin} alt="Linkedin_Logo" />
               </NavBtn>
               <NavBtn href={mailtoURL} target="_blank" aria-label="Gmail_Logo">
-                <img src={gmail} alt="" />
+                <img src={gmail} alt="Gmail_Logo" />
               </NavBtn>
               <NavBtn href={twitterURL} target="_blank" aria-label="Twitter_Logo">
-                <img src={twitter} alt="" />
+                <img src={twitter} alt="Twitter_Logo" />
               </NavBtn>
               <NavBtn href={instagramURL} target="_blank" aria-label="Instagram_Logo">
-                <img src={instagram} alt="" />
+                <img src={instagram} alt="Instagram_Logo" />
               </NavBtn>
               <NavBtn href={fbURL} target="_blank" aria-label="Facebook_Logo">
-                <img src={facebook} alt="" />
+                <img src={facebook} alt="Facebook_Logo" />
               </NavBtn>
               <NavBtn href={pinterestURL} target="_blank" aria-label="Pinterest_Logo">
-                <img src={pinterest} alt="Instagram" />
+                <img src={pinterest} alt="Pinterest_Logo" />
               </NavBtn>
             </SocialIcons>
           </Column1>
-        {/* </Fade> */}
+ 
         </motion.div>
         <motion.div
           initial={{ x: 50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
-        {/* <Fade right> */}
+      
           <Column2>
             <img src={profile} alt="ahmed raza" />
           </Column2>
         </motion.div>
-        {/* </Fade> */}
+       
       </AboutWrapper>
     </AboutContainer>
+    </Section>
   );
 }
 

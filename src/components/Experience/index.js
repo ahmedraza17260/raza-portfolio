@@ -13,8 +13,18 @@ import { ExperienceContainer, Heading } from "./ExperienceElements";
 import { experience } from "../../Data";
 import { work } from "../../Data";
 
+import styled from "styled-components";
+
+const Section = styled.section`
+  background-color: ${({ theme, alt }) => (alt ? theme.sectionAlt : theme.background)};
+  color: ${({ theme }) => theme.text};
+  padding: 2rem;
+`;
+
+
 function Experience() {
   return (
+    <Section alt id="experience">
     <ExperienceContainer id="experience">
       <Heading>
         <motion.div
@@ -139,6 +149,8 @@ function Experience() {
 
 
     </ExperienceContainer>
+    </Section>
+
   );
 }
 

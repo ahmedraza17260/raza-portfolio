@@ -12,3 +12,43 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/* #1f2833 */
+
+/* Toggle Track */
+.react-toggle-track {
+  background-color: #f0f0f0;
+}
+
+.react-toggle--checked .react-toggle-track {
+  background-color: #1e3a82; /* your dark blue or theme color */
+}
+
+/* Toggle Thumb */
+.react-toggle-thumb {
+  border: 1px solid #ccc;
+  background-color: white;
+  box-shadow: 0px 0px 2px #aaa;
+}
+
+.react-toggle--checked .react-toggle-thumb {
+  background-color: #66fcf1; /* teal for dark mode */
+  border-color: #45a29e;
+}
+
+/* Optional: smoother animation */
+.react-toggle--checked .react-toggle-track,
+.react-toggle-track {
+  transition: background-color 0.3s ease-in-out;
+}
+
+
+/* body.dark-mode {
+  background-color: #0b0c10 !important;
+  color: #c5c6c7 !important;
+}
+
+body.light-mode {
+  background-color: #ffffff !important;
+  color: #0b0c10 !important;
+} */

@@ -3,19 +3,21 @@ import { FaTimes } from "react-icons/fa";
 import { Link } from "react-scroll";
 
 export const SidebarContainer = styled.aside`
-  background: hsla(228, 19%, 5%, 1);
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#1E3A82", endColorstr="#213D87", GradientType=1 );
   position: fixed;
   z-index: 999;
   width: 100%;
   height: 100%;
+  background: #0d0d0d;
+  // background-color: ${({ theme, alt }) => (alt ? theme.sectionAlt : theme.background)};
+  // color: ${({ theme }) => theme.text};
+  // padding: 2rem;
   display: grid;
   align-items: center;
+  top: 0;
   left: 0;
   transition: 0.3s ease-in-out;
   opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
   top: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
-  overflow-y: auto;
 `;
 
 export const CloseIcon = styled(FaTimes)`
@@ -39,15 +41,24 @@ export const SidebarWrapper = styled.div`
   padding-bottom: 20px;
 `;
 export const SidebarMenu = styled.ul`
-  display: grid;
-  grid-template-rows: repeat(6, 70px);
+  // display: grid;
   text-align: center;
+  grid-template-rows: repeat(6, 70px);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
 
   @media screen and (max-width: 280px) {
   grid-template-rows: repeat(6, 50px);
 }
 
 `;
+
 export const SidebarLink = styled(Link)`
   display: flex;
   align-items: center;

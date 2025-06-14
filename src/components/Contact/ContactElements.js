@@ -1,7 +1,11 @@
 import styled from "styled-components";
 
 export const AboutContainer = styled.div`
- background: #0b0c10;
+//  background: #0b0c10;
+ background-color: ${({ theme, alt }) => (alt ? theme.sectionAlt : theme.background)};
+ color: ${({ theme }) => theme.text};
+  padding: 2rem;
+//  color: ${({ theme }) => theme.primary};
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -1,4 +1,4 @@
-.sk-circle {
+/* .sk-circle {
   margin: 100px auto;
   width: 40px;
   height: 40px;
@@ -161,7 +161,9 @@
   }
 }
 
+*/
+
 /* Change colors in this file to style to your needs on a global level. 
 Certain colors are used for different and multiply types of elements. 
-For greater control over colors visit each components .scss file. */
-/*# sourceMappingURL=loading.css.map */
+For greater control over colors visit each components .scss file.
+# sourceMappingURL=loading.css.map */

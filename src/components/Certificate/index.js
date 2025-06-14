@@ -40,9 +40,18 @@ import {
 } from "./CertificateElements";
 import { certificate } from "../../Data";
 
+import styled from "styled-components";
+
+const Section = styled.section`
+  background-color: ${({ theme, alt }) => (alt ? theme.sectionAlt : theme.background)};
+  color: ${({ theme }) => theme.text};
+  padding: 2rem;
+`;
+
 function Certificates() {
   return (
-    <CertificateContainer id="Certificate">
+    <Section id="Certificate">
+    <CertificateContainer alt id="Certificate">
       {/* <Heading>
         <Zoom>CERTIFICATE</Zoom>
       </Heading> */}
@@ -83,6 +92,7 @@ function Certificates() {
         More Certificates
       </MoreButton>
     </CertificateContainer>
+    </Section>
   );
 }
 

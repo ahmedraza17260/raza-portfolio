@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { animateScroll as scroll } from "react-scroll";
 import { FaBars } from "react-icons/fa";
+import Toggle from "react-toggle";
+import "react-toggle/style.css";
 
 import {
   Nav,
@@ -10,33 +12,32 @@ import {
   NavItem,
   NavLinks,
 } from "./NavbarElements";
-// import DayNightToggle from "react-day-and-night-toggle";
 
-function Navbar({ toggle }) {
+function Navbar({ toggle, isDarkMode, toggleTheme }) {
   const [scrollNav, setScrollNav] = useState(true);
-  // const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
-    var prevScrollpos = window.pageYOffset;
-    window.addEventListener("scroll", function () {
-      var currentScrollPos = window.pageYOffset;
-      if (prevScrollpos > currentScrollPos) {
-        setScrollNav(true);
-      } else {
-        setScrollNav(false);
-      }
+    let prevScrollpos = window.pageYOffset;
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      setScrollNav(prevScrollpos > currentScrollPos);
       prevScrollpos = currentScrollPos;
-    });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const toggleHome = () => {
     scroll.scrollToTop();
   };
 
+  // ✅ LOG GOES HERE
+  // console.log("NavbarElements loaded");
+
   return (
-    <Nav $scrollNav={scrollNav}>
+    <Nav style={{ zIndex: 1000 }} themeMode={isDarkMode ? "dark" : "light"} $scrollNav={scrollNav}>
       <NavbarContainer>
-        <></>
         <NavLinks as="a" href="#home" onClick={toggleHome}>
           <b style={{ fontSize: "2.5rem" }}>PORTFOLIO</b>
         </NavLinks>
@@ -45,10 +46,22 @@ function Navbar({ toggle }) {
         </MobileIcon>
 
         <NavMenu>
-          {/* <DayNightToggle
-            onChange={() => setIsDarkMode(!isDarkMode)}
-            checked={isDarkMode}
-          /> */}
+          <div style={{ display: "flex", alignItems: "center", height: "100%" }}>
+            <Toggle
+              defaultChecked={isDarkMode}
+              onChange={toggleTheme} // ✅ Correct function from App.js
+              icons={{ checked: "🌙", unchecked: "☀️" }}
+            />
+
+            {/* <Toggle
+              defaultChecked={isDarkMode}
+              onChange={() => setIsDarkMode(!isDarkMode)}
+              icons={{
+                checked: "🌙",
+                unchecked: "☀️",
+              }}
+            /> */}
+          </div>
           <NavItem>
             <NavLinks
               to="home"
@@ -129,6 +142,7 @@ function Navbar({ toggle }) {
               Contact Me
             </NavLinks>
           </NavItem>
+
         </NavMenu>
       </NavbarContainer>
     </Nav>

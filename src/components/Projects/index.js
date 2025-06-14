@@ -19,8 +19,17 @@ import {
 } from "./ProjectsElements";
 import { projects } from "../../Data";
 
+import styled from "styled-components";
+
+const Section = styled.section`
+  background-color: ${({ theme, alt }) => (alt ? theme.sectionAlt : theme.background)};
+  color: ${({ theme }) => theme.text};
+  padding: 2rem;
+`;
+
 function Projects() {
   return (
+     <Section alt id="projects">
     <ProjectsContainer id="projects">
       {/* <Heading>
         <Zoom>PROJECTS</Zoom>
@@ -76,6 +85,7 @@ function Projects() {
         More Projects
       </MoreButton>
     </ProjectsContainer>
+    </Section>
   );
 }
 

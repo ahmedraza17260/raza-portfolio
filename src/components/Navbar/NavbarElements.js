@@ -1,9 +1,13 @@
 import styled from "styled-components";
 import { Link } from "react-scroll";
 
+
 export const Nav = styled.nav`
   // background: #0b0c10;
-  background: ${({ $scrollNav }) => ($scrollNav ? "#1E3A82" : "transparent")};
+  // background: ${({ $scrollNav }) => ($scrollNav ? "#1E3A82" : "transparent")};
+  background: ${({ themeMode }) => (themeMode === "dark" ? "#353d47" : "#F8F8FF")};
+  color: ${({ themeMode }) => (themeMode === "dark" ? "#c5c6c7" : "#0b0c10")};
+  transition: 0.3s all ease;
   height: 80px;
   margin-top: -80px;
   display: flex;
@@ -14,7 +18,8 @@ export const Nav = styled.nav`
   top: 0;
   z-index: 10;
   overflow: hidden;
-  opacity: ${({ scrollNav }) => (scrollNav ? 1 : 0)};
+  opacity: ${({ $scrollNav }) => ($scrollNav ? 1 : 0)};
+
 
   box-shadow: -1px 7px 9px 1px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: -1px 7px 9px 1px rgba(0, 0, 0, 0.2);
@@ -75,7 +80,9 @@ export const NavItem = styled.li`
 `;
 
 export const NavLinks = styled(Link)`
-  color: #66fcf1;
+  // color: ${({ themeMode }) => (themeMode === "dark" ? "#66fcf1" : "#000000")};
+  color: ${({ theme }) => theme.text};
+  // color: #66fcf1;
   display: flex;
   font-size: 1.1rem;
   align-items: center;
@@ -85,11 +92,12 @@ export const NavLinks = styled(Link)`
   cursor: pointer;
 
   :hover {
-    color: #c5c6c7;
+    color: #c5c6c7;  
+
   }
 
   &.active {
-    border-bottom: 3px solid #45a29e;
+    border-bottom: 3px solid #c5c6c7;
     margin-top: -3px;
     font-weight: bold;
   }

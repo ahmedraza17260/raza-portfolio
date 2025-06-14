@@ -1,6 +1,6 @@
 import React from "react";
 // import ReactDOM from "react-dom";
-import "./index.css";
+import './index.css'; // must match file path and be at the top level
 // import App from "./App";
 import App from './App.js';
 // import reportWebVitals from "./reportWebVitals";
