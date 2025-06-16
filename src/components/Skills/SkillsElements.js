@@ -7,8 +7,13 @@ export const SkillsContainer = styled.div`
   padding: 20px 10px;
   height: 100%;
   // background: #0b0c1a;
-  background-color: ${({ theme, alt }) => (alt ? theme.sectionAlt : theme.background)};
+  // background-color: ${({ theme, alt }) => (alt ? theme.sectionAlt : theme.background)};
   color: ${({ theme }) => theme.text};
+  box-shadow: ${({ theme }) => 
+    theme.mode === "dark" 
+      ? "0 6px 20px rgba(255, 255, 255, 0.15)" 
+      : "0 6px 20px rgba(0, 0, 0, 0.3)"
+  };
   padding: 2rem;
   justify-content: space-around;
   /* width: 100%; */
@@ -16,13 +21,15 @@ export const SkillsContainer = styled.div`
   @media screen and (max-width: 935px) {
     flex-direction: column;
   }
+
 `;
 
 export const AllSkills = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 10px;
-  color: #c5c6c7;
+  color: ${({ theme }) => theme.text};
+  // color: #c5c6c7;
 
   align-items: left;
   justify-content: center;
@@ -44,7 +51,9 @@ export const Heading = styled.h1`
   font-size: 40px;
   font-weight: 600;
   align-items: left;
-  color: #66fcf1;
+  // color: #66fcf1;
+  color: ${({ theme }) => theme.text};
+
 
   @media screen and (max-width: 1200px) and (min-width: 935px) {
     font-size: 35px;
@@ -93,7 +102,8 @@ export const SkillIcon = styled.div`
   }
 
   :hover {
-    color: #66fcf1;
+    // color: #66fcf1;
+    color: ${({ theme }) => theme.hoverColor};  // Use predefined color from theme
     transform: scale(1.02);
   }
   @media screen and (max-width: 1200px) and (min-width: 935px) {

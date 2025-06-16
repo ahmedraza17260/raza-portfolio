@@ -5,7 +5,6 @@ export const AboutContainer = styled.div`
  background-color: ${({ theme, alt }) => (alt ? theme.sectionAlt : theme.background)};
  color: ${({ theme }) => theme.text};
   padding: 2rem;
-//  color: ${({ theme }) => theme.primary};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,7 +25,8 @@ export const AboutWrapper = styled.div`
   padding: 0 24px;
   justify-content: space-between;
   align-items: center;
-  color: #66fcf1;
+  // color: #66fcf1;
+ color: ${({ theme }) => theme.text};
   padding: 25px;
 
   @media screen and (max-width: 600px) {
@@ -35,21 +35,28 @@ export const AboutWrapper = styled.div`
 `;
 
 export const Column1 = styled.div`
-  padding: 0 15px;
+  padding: 15px 15px;
   word-spacing: 0.5rem;
   letter-spacing: 0.1rem;
-  margin-left: 10px;
+  // margin-left: 10px;
+  box-shadow: ${({ theme }) => 
+    theme.mode === "dark" 
+      ? "0 6px 20px rgba(255, 255, 255, 0.15)" 
+      : "0 6px 20px rgba(0, 0, 0, 0.3)"
+  };
   .sub {
-    color: #45a29e;
-    display: flex;
-    align-items: center;
+  //  color: #45a29e;
+      color: ${({ theme }) => theme.text};
+      display: flex;
+      align-items: center;
   }
 
   .location {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: #66fcf1;
+ color: ${({ theme }) => theme.text};
+    // color: #66fcf1;
     width: 150px;
   }
 
@@ -95,10 +102,12 @@ export const Column2 = styled.div`
 
 export const Heading = styled.h1`
   margin-bottom: 25px;
+  padding: 0;
   font-size: 40px;
   line-height: 1.1;
   font-weight: 600;
-  color: #c5c6c7;
+  color: ${({ theme }) => theme.text};
+  // color: #c5c6c7;
 
   @media screen and (max-width: 770px) {
     font-size: 32px;
@@ -111,7 +120,8 @@ export const Heading = styled.h1`
 export const Subtitle = styled.p`
   font-size: 18px;
   max-width: 800px;
-  color: #45a29e;
+ color: ${({ theme }) => theme.text};
+  // color: #45a29e;
   @media screen and (max-width: 940px) {
     text-align: justify;
   }
@@ -159,12 +169,13 @@ export const NavBtn = styled.a`
   img {
     width: 40px;
     cursor: pointer;
+    &:hover {
+      transform: scale(1.2);
+    }
     @media screen and (max-width: 770px) {
       width: 30px;
     }
-
     :hover {
-      transform: scale(1.05);
       filter: brightness(150%);
     }
   }

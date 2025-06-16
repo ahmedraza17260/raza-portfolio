@@ -33,12 +33,17 @@ export const FooterContainer = styled.div`
 
 export const FooterLink = styled.a`
   text-decoration: none;
-  color: #66fcf1;
+  // color: #66fcf1;
+  color: ${({ theme }) => theme.text};
+
 
   &:hover,
   &:active {
     text-decoration: underline;
-    color: #45a29e;
+    transform: scale(1.2);
+    // color: #45a29e;
+    color: ${({ theme }) => theme.text};
+
   }
 `;
 

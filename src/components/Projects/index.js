@@ -30,10 +30,8 @@ const Section = styled.section`
 function Projects() {
   return (
      <Section alt id="projects">
-    <ProjectsContainer id="projects">
-      {/* <Heading>
-        <Zoom>PROJECTS</Zoom>
-      </Heading> */}
+    <ProjectsContainer alt id="projects">
+      
       <Heading>
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}

@@ -17,7 +17,8 @@ export const Heading = styled.h1`
   font-size: 40px;
   line-height: 1.1;
   font-weight: 600;
-  color: #66fcf1;
+  // color: #66fcf1;
+  color: ${({ theme }) => theme.text};
 
   @media screen and (max-width: 480px) {
     font-size: 32px;
@@ -33,7 +34,12 @@ export const AllCertificate = styled.div`
 `;
 
 export const Certificate = styled.div`
-  background: #1f2833;
+  // background: #1f2833;
+  box-shadow: ${({ theme }) => 
+    theme.mode === "dark" 
+      ? "0 6px 20px rgba(255, 255, 255, 0.15)" 
+      : "0 6px 20px rgba(0, 0, 0, 0.3)"
+  };
   display: flex;
   flex-direction: column;
   align-items: left;
@@ -63,7 +69,9 @@ export const Certificate = styled.div`
 export const CertificateTitle = styled.h2`
   display: flex;
   align-items: center;
-  color: #66fcf1;
+
+  color: ${({ theme }) => theme.text};
+
 
   * {
     margin-right: 10px;
@@ -71,7 +79,8 @@ export const CertificateTitle = styled.h2`
 `;
 
 export const CertificateDesc = styled.p`
-  color: #45a29e;
+  // color: #45a29e;
+  color: ${({ theme }) => theme.text};
   margin-top: -5px;
   min-height: 50px;
 `;
@@ -86,7 +95,9 @@ export const Stacks = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: auto;
-  color: #c5c6c7;
+  // color: #c5c6c7;
+  color: ${({ theme }) => theme.text};
+
 
   > * {
     padding: 8px;
@@ -99,16 +110,21 @@ export const SourceButtons = styled.div`
   justify-content: space-between;
 
   .MuiButton-root {
-    background: #c5c6c7;
+    // background: #c5c6c7;
+    background-color: ${({ theme, alt }) => (alt ? theme.sectionAlt : theme.background)};
     padding: 8px;
     font-weight: 600;
     margin-right: 8px;
-    color: #0b0c10;
+    // color: #0b0c10;
+    color: ${({ theme }) => theme.text};
+
 
     :hover {
-      background: #45a29e;
+      // background: #45a29e;
       // filter: brightness(120%);
-      color: white;
+      // color: white;
+      background-color: ${({ theme }) => theme.text};
+      color: ${({ theme }) => theme.background};
       transform: scale(1.01);
     }
   }
@@ -121,15 +137,19 @@ export const MoreButton = styled.a`
   text-transform: uppercase;
   cursor: pointer;
   font-weight: bold;
-  color: #66fcf1;
-  background: #1f2833;
+  color: ${({ theme }) => theme.text};
+  background-color: ${({ theme, alt }) => (alt ? theme.sectionAlt : theme.background)};
+  // color: #66fcf1;
+  // background: #1f2833;
   padding: 10px 20px;
   border-radius: 20px;
   text-decoration: none;
 
   :hover {
     // filter: brightness(120%);
-    color: #c5c6c7;
+    // color: #c5c6c7;
+    background-color: ${({ theme }) => theme.text};
+    color: ${({ theme }) => theme.background};
     transform: scale(1.04);
   }
 `;

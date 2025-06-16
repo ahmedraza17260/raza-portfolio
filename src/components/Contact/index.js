@@ -10,8 +10,7 @@ import {
   SocialIcons,
   Justify,
 } from "./ContactElements";
-// import Fade from "react-reveal/Fade";
-// import Zoom from "react-reveal/Zoom";
+
 import { motion } from "framer-motion";
 import { ImLocation2 } from "react-icons/im";
 import { BiMailSend } from "react-icons/bi";
@@ -37,7 +36,9 @@ import {
   pinterestURL,
 } from "../../Data";
 
+
 import styled from "styled-components";
+import { useTheme } from 'styled-components';
 
 const Section = styled.section`
   background-color: ${({ theme, alt }) => (alt ? theme.sectionAlt : theme.background)};
@@ -48,9 +49,11 @@ const Section = styled.section`
 
 
 function Contact() {
+  const theme = useTheme(); // ✅ Now `theme` is defined
+  const isDarkMode = theme.mode === "dark"; // depends on your theme object structure
   return (
     <Section alt id="contact">
-    <AboutContainer id="contact">
+    <AboutContainer alt id="contact">
       <AboutWrapper>
       <motion.div
           initial={{ x: -50, opacity: 0 }}
@@ -80,10 +83,7 @@ function Contact() {
             <SocialIcons>
               <NavBtn href={githubURL} target="_blank" aria-label="Github_Logo">
                 <img
-                  style={{
-                    filter: "invert(100%)",
-                    WebkitFilter: "invert(100%)",
-                  }}
+                  style={{ filter: isDarkMode === "light" ? "invert(100%)" : "invert(0%)" }}
                   src={github}
                   alt="Github_Logo"
                 />

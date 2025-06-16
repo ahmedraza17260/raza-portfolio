@@ -7,8 +7,8 @@ export const SidebarContainer = styled.aside`
   z-index: 999;
   width: 100%;
   height: 100%;
-  background: #0d0d0d;
-  // background-color: ${({ theme, alt }) => (alt ? theme.sectionAlt : theme.background)};
+  // background: #0d0d0d;
+  background-color: ${({ theme, alt }) => (alt ? theme.sectionAlt : theme.background)};
   // color: ${({ theme }) => theme.text};
   // padding: 2rem;
   display: grid;
@@ -21,7 +21,8 @@ export const SidebarContainer = styled.aside`
 `;
 
 export const CloseIcon = styled(FaTimes)`
-  color: #c5c6c7;
+  color: ${({ theme }) => theme.text}; /* ✅ dynamic color */
+  // color: #c5c6c7;
 `;
 
 export const Icon = styled.div`
@@ -35,7 +36,8 @@ export const Icon = styled.div`
 `;
 
 export const SidebarWrapper = styled.div`
-  color: #c5c6c7;
+  // color: #c5c6c7;
+  color: ${({ theme }) => theme.text}; /* ✅ dynamic color */
   overflow-y: auto;
   max-height: 100vh;
   padding-bottom: 20px;
@@ -68,11 +70,13 @@ export const SidebarLink = styled(Link)`
   list-style: none;
   transition: 0.2s ease-in-out;
   text-decoration: none;
-  color: #45a29e;
+  // color: #45a29e;
+  color: ${({ theme }) => theme.text}; /* ✅ dynamic color */
   cursor: pointer;
 
   &:hover {
-    color: #c5c6c7;
+    // color: #c5c6c7;
+    color: ${({ theme }) => theme.hoverColor};  // Use predefined color from theme
     transition: 0.2s ease-in-out;
   }
 
@@ -91,10 +95,12 @@ export const SideBtnWrap = styled.div`
 
 export const SidebarRoute = styled.div`
   border-radius: 50px;
-  background: #c5c6c7 !important;
   white-space: nowrap;
   padding: 16px 64px;
-  color: #c5c6c7;
+  // background: #c5c6c7 !important;
+  // color: #c5c6c7;
+  background-color: ${({ theme, alt }) => (alt ? theme.sectionAlt : theme.background)};
+  color: ${({ theme }) => theme.text};
   font-size: 16px;
   outline: none;
   border: none;

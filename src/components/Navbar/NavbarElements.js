@@ -77,6 +77,12 @@ export const NavMenu = styled.ul`
 
 export const NavItem = styled.li`
   height: 80px;
+
+  :hover {
+    // color: #c5c6c7;  
+    color: ${({ theme }) => theme.hoverColor};  // Use predefined color from theme
+  }
+
 `;
 
 export const NavLinks = styled(Link)`
@@ -92,8 +98,8 @@ export const NavLinks = styled(Link)`
   cursor: pointer;
 
   :hover {
-    color: #c5c6c7;  
-
+    // color: #c5c6c7;  
+    color: ${({ theme }) => theme.hoverColor};  // Use predefined color from theme
   }
 
   &.active {

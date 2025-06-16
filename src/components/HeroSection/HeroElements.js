@@ -47,7 +47,7 @@ export const NavBtn = styled.a`
     height: 32px;
     transition: transform 0.3s ease;
     &:hover {
-      transform: scale(1.1);
+      transform: scale(1.2);
     }
   }
 `;
@@ -57,11 +57,37 @@ export const ResumeSection = styled.div`
   align-items: center;
   font-weight: bold;
   color: ${({ theme }) => theme.text}; /* ✅ dynamic color */
-  a {
+
+  span {
     color: ${({ theme }) => theme.text};
-    font-size: 2rem;
-    margin-left: 0.5rem;
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
   }
+
+  a {
+  color: ${({ theme }) => theme.text};
+  font-size: 2rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid ${({ theme }) => theme.text};
+  padding: 0.5rem;
+  aspect-ratio: 1/1; /* Maintain square shape */
+  border-radius: 999px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+
+  border: 2px solid ${({ theme }) => theme.text};
+  padding: 0px 0px;
+  border-radius: 999px; /* 🔁 Makes it fully rounded */
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.text};
+    color: ${({ theme }) => theme.background};
+  }
+}
 `;
 
 export const HeroTextWrapper = styled.div`

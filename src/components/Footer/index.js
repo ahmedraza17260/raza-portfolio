@@ -12,7 +12,7 @@ const Section = styled.section`
 function Footer() {
   return (
     <Section alt>
-      <FooterContainer>
+      <FooterContainer alt>
         <FooterLink
           title="Styleshout"
           aria-label="GitHub Profile"
