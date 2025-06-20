@@ -20,7 +20,6 @@ export const Nav = styled.nav`
   overflow: hidden;
   opacity: ${({ $scrollNav }) => ($scrollNav ? 1 : 0)};
 
-
   box-shadow: -1px 7px 9px 1px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: -1px 7px 9px 1px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: -1px 7px 9px 1px rgba(0, 0, 0, 0.2);
@@ -35,10 +34,12 @@ export const Nav = styled.nav`
 export const NavbarContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center; /* ✅ Center everything vertically */
+  // z-index: 1;
   height: 80px;
-  z-index: 1;
   width: 100%;
   padding: 0 24px;
+  position: relative;
 `;
 
 export const NavLogo = styled.img`
@@ -60,9 +61,12 @@ export const MobileIcon = styled.div`
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
-    color: #fff;
+    // color: #fff;
+    color: ${({ themeMode }) => (themeMode === "dark" ? "#c5c6c7" : "#0b0c10")};
+
   }
 `;
+
 export const NavMenu = styled.ul`
   display: flex;
   align-items: center;
@@ -124,5 +128,38 @@ export const NavBtn = styled.a`
     :hover {
       background-color: #224191;
     }
+  }
+`;
+
+export const ThemeToggleWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: 1.5rem;
+  height: 100%; /* ensures alignment with logo */
+
+  @media screen and (max-width: 768px) {
+    position: absolute;
+    // top: 20px;
+    right: 60px; /* move away from MobileIcon */
+    z-index: 1001;
+    transform: scale(1.2);
+  }
+
+  .react-toggle {
+    transform: scale(1.2);
+  }
+`;
+
+export const LeftGroup = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* adjust spacing between logo and toggle */
+
+  /* Force same vertical height */
+  height: 100%;
+  @media screen and (max-width: 768px) {
+    gap: 0.5rem;
   }
 `;
