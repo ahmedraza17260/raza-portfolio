@@ -24,6 +24,12 @@ import { SlChemistry } from "react-icons/sl";
 import { GiTestTubes } from "react-icons/gi";
 import { FiPackage } from "react-icons/fi";
 
+import { SiNetlify } from "react-icons/si";
+import { FcProcess } from "react-icons/fc";
+import { FcPlanner } from "react-icons/fc";
+import { MdAccountBalance } from "react-icons/md";
+
+
 import { DiMysql } from "react-icons/di";
 // import { FaNode } from "react-icons/fa";
 
@@ -79,6 +85,25 @@ export const resumeURL =
       //   "https://drive.google.com/file/d/1foVdPDuJGFtls-ociSXvZYut5hqpuBp1/view";
 
 // Skills
+
+export const Dyeing = [
+  {
+    icon: <FcPlanner className="icon" />,
+    name: "Dyeing Planning",
+  },
+  {
+    icon: <MdAccountBalance className="icon" />,
+    name: "Dyeing Costing",
+  },
+  {
+    icon: <FcProcess className="icon" />,
+    name: "Process Control",
+  },
+  
+];
+
+
+
 
 export const Quality = [
   {
@@ -153,6 +178,10 @@ export const BackendTools = [
   {
     icon: <SiGit className="icon" />,
     name: "Git",
+  },
+  {
+    icon: <SiNetlify  className="icon" />,
+    name: "Netlify",
   },
 ];
 
