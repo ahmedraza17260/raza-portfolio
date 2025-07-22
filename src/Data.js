@@ -11,6 +11,8 @@ import {
   SiTypescript,
   SiStyledcomponents,
 } from "react-icons/si";
+import { SiNextdotjs } from "react-icons/si";
+import { BsFiletypeScss } from "react-icons/bs";
 // import { SiRedux} from "react-icons/si";
 
 
@@ -400,6 +402,14 @@ export const projects = [
     stacks: [<SiReact />, <SiStyledcomponents />, <SiGithub />],
     source: "https://github.com/ahmedraza17260/react-portfolio",
     demo: "https://ahmedraza-portfolio.netlify.app/",
+  },
+  {
+    id: 2,
+    title: "Magic Portfolio",
+    desc: "Personal portfolio build using NextJS.",
+    stacks: [<SiReact />, <SiNextdotjs />, <SiStyledcomponents />, <SiTypescript />, <BsFiletypeScss />, <SiGithub />],
+    source: "https://github.com/ahmedraza17260/magic-portfolio",
+    demo: "https://m-ahmedraza-portfolio.vercel.app/",
   },
   // {
   //   id: 2,
