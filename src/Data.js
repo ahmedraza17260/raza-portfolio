@@ -299,7 +299,7 @@ export const work = [
   {
     id: 4,
     type: "work",
-    date: "Jan 2025 - Present",
+    date: "Jan 2025 - Feb 2026",
     icon: <MdWork />,
     bckgrnd: true,
     title: "Global Exports ",
