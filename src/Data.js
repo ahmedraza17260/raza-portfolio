@@ -82,8 +82,8 @@ export const twitterURL = "https://twitter.com/AhmedRaza17260";
 
 export const pinterestURL = "https://pinterest.com/ahmedraz17260/";
 
-export const resumeURL =
-           "https://drive.google.com/file/d/1V_H6p9DV_7EwtQ26MTz7pFTJBeNoRRsR/view";
+export const resumeURL = "https://drive.google.com/file/d/1QxReNRgc34TyhY5i9SUIyozU9SdgbGKy/view";
+      //   "https://drive.google.com/file/d/1V_H6p9DV_7EwtQ26MTz7pFTJBeNoRRsR/view";
       //   "https://drive.google.com/file/d/1foVdPDuJGFtls-ociSXvZYut5hqpuBp1/view";
 
 // Skills
