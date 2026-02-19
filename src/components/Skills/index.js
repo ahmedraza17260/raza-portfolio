@@ -26,92 +26,95 @@ const Section = styled.section`
 
 function Skills() {
   return (
-     <Section alt id="skills">
-    <SkillsContainer id="skills">
+    <Section alt id="skills">
+      <SkillsContainer id="skills">
 
-      <motion.div
-        initial={{ x: -80, opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-      >
-        <AllSkills>
-          <Heading>What I do</Heading>
+        <motion.div
+          initial={{ x: -80, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <AllSkills>
+            <Heading>What I do</Heading>
 
-          {/* <p>Quality Control who wants to explore every tech stack</p> */}
-          <SkillIcons>
-            Textile Sector
-            <SubPart>
-              {Dyeing.map((data) => (
-                <SkillIcon key={data.name}>
-                  {data.icon}
-                  <p>{data.name}</p>
-                </SkillIcon>
-              ))}
-            </SubPart>
-          </SkillIcons>
+            {/* <p>Quality Control who wants to explore every tech stack</p> */}
 
-          <SkillIcons>
-            Quality Control / Assurance
-            <SubPart>
-              {Quality.map((data) => (
-                <SkillIcon key={data.name}>
-                  {data.icon}
-                  <p>{data.name}</p>
-                </SkillIcon>
-              ))}
-            </SubPart>
-          </SkillIcons>
+            <SkillIcons>
+              Quality Control / Assurance
+              <SubPart>
+                {Quality.map((data) => (
+                  <SkillIcon key={data.name}>
+                    {data.icon}
+                    <p>{data.name}</p>
+                  </SkillIcon>
+                ))}
+              </SubPart>
+            </SkillIcons>
 
-          {/* <p>Frontend Developer who wants to explore every tech stack</p> */}
-          <SkillIcons>
-            Languages
-            <SubPart>
-              {Languages.map((data) => (
-                <SkillIcon key={data.name}>
-                  {data.icon}
-                  <p>{data.name}</p>
-                </SkillIcon>
-              ))}
-            </SubPart>
-            Frontend Tools
-            <SubPart>
-              {FrontendTools.map((data) => (
-                <SkillIcon key={data.name}>
-                  {data.icon}
-                  <p>{data.name}</p>
-                </SkillIcon>
-              ))}
-            </SubPart>
-            Backend Tools
-            <SubPart>
-              {BackendTools.map((data) => (
-                <SkillIcon key={data.name}>
-                  {data.icon}
-                  <p>{data.name}</p>
-                </SkillIcon>
-              ))}
-            </SubPart>
-          </SkillIcons>
+            <SkillIcons>
+              Textile Sector
+              <SubPart>
+                {Dyeing.map((data) => (
+                  <SkillIcon key={data.name}>
+                    {data.icon}
+                    <p>{data.name}</p>
+                  </SkillIcon>
+                ))}
+              </SubPart>
+            </SkillIcons>
 
-          {/* <p>
+
+
+            {/* <p>Frontend Developer who wants to explore every tech stack</p> */}
+            <SkillIcons>
+              Languages
+              <SubPart>
+                {Languages.map((data) => (
+                  <SkillIcon key={data.name}>
+                    {data.icon}
+                    <p>{data.name}</p>
+                  </SkillIcon>
+                ))}
+              </SubPart>
+              Frontend Tools
+              <SubPart>
+                {FrontendTools.map((data) => (
+                  <SkillIcon key={data.name}>
+                    {data.icon}
+                    <p>{data.name}</p>
+                  </SkillIcon>
+                ))}
+              </SubPart>
+              Backend Tools
+              <SubPart>
+                {BackendTools.map((data) => (
+                  <SkillIcon key={data.name}>
+                    {data.icon}
+                    <p>{data.name}</p>
+                  </SkillIcon>
+                ))}
+              </SubPart>
+            </SkillIcons>
+
+            {/* <p>
             ⚡ Developing high quality Front end / User Interface for web
             applications. <br />⚡ Integration of third party services such as
             Firebase. <br />
           </p> */}
-        </AllSkills>
+          </AllSkills>
         </motion.div>
-       <motion.div
-        initial={{ x: 80, opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-      >
-        <SkillElement>
-          <img src={skillElement} alt="skillImage" />
-        </SkillElement>
-      </motion.div>
-    </SkillsContainer>
+        <motion.div
+          initial={{ x: 80, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <SkillElement>
+            <img src={skillElement} alt="skillImage" />
+          </SkillElement>
+        </motion.div>
+      </SkillsContainer>
     </Section>
   );
 }

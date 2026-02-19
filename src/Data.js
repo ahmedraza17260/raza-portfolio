@@ -11,8 +11,8 @@ import {
   SiTypescript,
   SiStyledcomponents,
 } from "react-icons/si";
-import { SiNextdotjs } from "react-icons/si";
-import { BsFiletypeScss } from "react-icons/bs";
+// import { SiNextdotjs } from "react-icons/si";
+// import { BsFiletypeScss } from "react-icons/bs";
 // import { SiRedux} from "react-icons/si";
 
 
@@ -48,12 +48,14 @@ import linux from "./images/LINUX.jpg";
 import bbsydp from "./images/BBSYDP.jpg";
 import cit from "./images/NOOR.jpg";
 import sdc from "./images/SDC.jpg";
-import sdc_ms from "./images/SDC_MS.jpg";
+// import sdc_ms from "./images/SDC_MS.jpg";
 import agile from "./images/AGILESCRUM.jpg";
 // import gd from "./images/GD.jpg";
 import iso from "./images/ISO.jpg";
 import haccp_1 from "./images/HACCP Level 1.png";
 import h_v_t from "./images/HACCP,VACCP,TACCP.jpg";
+import Food_Labeling from "./images/Food Labeling.png";
+import Food_Fraud_Preventive_Approach from "./images/Food_Fraud_Preventive_Approach.png";
 
 
 
@@ -86,7 +88,33 @@ export const resumeURL = "https://drive.google.com/file/d/1QxReNRgc34TyhY5i9SUIy
       //   "https://drive.google.com/file/d/1V_H6p9DV_7EwtQ26MTz7pFTJBeNoRRsR/view";
       //   "https://drive.google.com/file/d/1foVdPDuJGFtls-ociSXvZYut5hqpuBp1/view";
 
+
+
+
 // Skills
+
+export const Quality = [
+  {
+    icon: <SlChemistry className="icon" />,
+    name: "Laboratory Skill",
+  },
+  {
+    icon: <SlChemistry className="icon" />,
+    name: "Good Laboratory Practices (GLP)",
+  },
+  {
+    icon: <GiTestTubes className="icon" />,
+    name: "Quality Control",
+  },
+  {
+    icon: <SlChemistry className="icon" />,
+    name: "Analytical Skill",
+  },
+  {
+    icon: <FiPackage className="icon" />,
+    name: "Quality Assurance",
+  },
+];
 
 export const Dyeing = [
   {
@@ -104,27 +132,6 @@ export const Dyeing = [
   
 ];
 
-
-
-
-export const Quality = [
-  {
-    icon: <SlChemistry className="icon" />,
-    name: "Laboratory Skill",
-  },
-  {
-    icon: <SlChemistry className="icon" />,
-    name: "Analytical Skill",
-  },
-  {
-    icon: <GiTestTubes className="icon" />,
-    name: "Quality Control",
-  },
-  {
-    icon: <FiPackage className="icon" />,
-    name: "Quality Assurance",
-  },
-];
 
 export const Languages = [
   {
@@ -265,7 +272,7 @@ export const work = [
     date: "20th January 2023 - 3rd March 2023",
     icon: <MdWork />,
     bckgrnd: true,
-    title: "Dalda Food",
+    title: "Dalda Foods Ltd.",
     subtitle: "Six Weeks Internship at Quality Department.",
     // desc: "Performed quality tests (FFA, Soap Content, M&I, SMP, FAME, POV, Citric Acid) on edible oil products, ensuring adherence to food safety standards.",
     // desc1: "Conducted Line and Packaging Quality Departure Inspections.",
@@ -284,7 +291,7 @@ export const work = [
     date: "26th May 2023 - Dec 2024",
     icon: <MdWork />,
     bckgrnd: true,
-    title: "Global Exports ",
+    title: "Global Exports Apparel Experts",
     subtitle: "MTO",
     // desc: "Optimized dyeing performance by analyzing real-time data.",
     // desc1: "Conducted quality control tests (Formic Acid, Acetic Acid, Caustic Soda purity; absorbency and solid content analysis), ensuring 100% compliance with industry standards.",
@@ -302,7 +309,7 @@ export const work = [
     date: "Jan 2025 - Feb 2026",
     icon: <MdWork />,
     bckgrnd: true,
-    title: "Global Exports ",
+    title: "Global Exports Apparel Experts",
     subtitle: "Ass.Manager Processing",
     // desc: "Managed production costing for dyeing operations.",
     // desc1: "Planned and scheduled dyeing operations, ensuring on-time delivery.",
@@ -315,6 +322,24 @@ export const work = [
       "Created comprehensive production performance reports."
     ],
   },
+  // {
+  //   id: 5,
+  //   type: "work",
+  //   date: "Feb 2026 - Present",
+  //   icon: <MdWork />,
+  //   bckgrnd: true,
+  //   title: "A&Z AGRO INDUSTRIES PVT LTD (Shafaq Cooking Oil)",
+  //   subtitle: "Shift Lab Chemist",
+  //   workdesc: [
+  //     "Perform analysis of raw materials, in-process, semi-finished, and finished edible oil products as per quality parameters.",
+  //     "Issue test reports and Certificates of Analysis (COA) for dispatch and internal use.",
+  //     "Ensure compliance with GLP, SOPs, and internal quality standards.",
+  //     "Conduct routine checks and audits of filling and packing lines.",
+  //     "Maintain laboratory records, logs, and documentation for traceability.",
+  //     "Coordinate with refinery & production to resolve quality issues.",
+  //     "Assist during internal and external audits and inspections"
+  //   ],
+  // },
   
 ];
 
@@ -331,65 +356,81 @@ export const certificate = [
     id: 2,
     icon: <FaCertificate />,
     bckgrnd: false,
-    title: "SDC MarkSheet",
-    image: [sdc_ms],
-  },
-  {
-    id: 3,
-    icon: <FaCertificate />,
-    bckgrnd: false,
-    title: "Linux",
-    image: [linux],
-  },
-  {
-    id: 4,
-    icon: <FaCertificate />,
-    bckgrnd: false,
-    title: "Agile Scrum",
-    image: [agile],
-  },
-  // {
-  //   id: 5,
-  //   icon: <FaCertificate />,
-  //   bckgrnd: false,
-  //   title: "Graphic Design",
-  //   image: [gd],
-  // },
-  {
-    id: 5,
-    icon: <FaCertificate />,
-    bckgrnd: false,
-    title: "CIT",
-    image: [cit],
-  },
-  {
-    id: 6,
-    icon: <FaCertificate />,
-    bckgrnd: false,
-    title: "BBSYDP",
-    image: [bbsydp],
-  },
-  {
-    id: 7,
-    icon: <FaCertificate />,
-    bckgrnd: false,
     title: "ISO 9001",
     image: [iso],
   },
   {
-    id: 8,
+    id: 3,
     icon: <FaCertificate />,
     bckgrnd: false,
     title: "HACCP VACCP TACCP",
     image: [h_v_t],
   },
   {
-    id: 9,
+    id: 4,
     icon: <FaCertificate />,
     bckgrnd: false,
     title: "HACCP LEVEL 1",
     image: [haccp_1],
   },
+  {
+    id: 5,
+    icon: <FaCertificate />,
+    bckgrnd: false,
+    title: "Food Labeling",
+    image: [Food_Labeling],
+  },
+  {
+    id: 6,
+    icon: <FaCertificate />,
+    bckgrnd: false,
+    title: "Food Fraud Preventive Approach",
+    image: [Food_Fraud_Preventive_Approach],
+  },
+  
+  {
+    id: 7,
+    icon: <FaCertificate />,
+    bckgrnd: false,
+    title: "Linux",
+    image: [linux],
+  },
+  {
+    id: 8,
+    icon: <FaCertificate />,
+    bckgrnd: false,
+    title: "Agile Scrum",
+    image: [agile],
+  },
+  
+  {
+    id: 9,
+    icon: <FaCertificate />,
+    bckgrnd: false,
+    title: "CIT",
+    image: [cit],
+  },
+  {
+    id: 10,
+    icon: <FaCertificate />,
+    bckgrnd: false,
+    title: "BBSYDP",
+    image: [bbsydp],
+  },
+//   {
+//     id: 11,
+//     icon: <FaCertificate />,
+//     bckgrnd: false,
+//     title: "Graphic Design",
+//     image: [gd],
+//   },
+// {
+//     id: 12,
+//     icon: <FaCertificate />,
+//     bckgrnd: false,
+//     title: "SDC MarkSheet",
+//     image: [sdc_ms],
+//   },
 ];
 
 // Projects
@@ -403,14 +444,14 @@ export const projects = [
     source: "https://github.com/ahmedraza17260/react-portfolio",
     demo: "https://ahmedraza-portfolio.netlify.app/",
   },
-  {
-    id: 2,
-    title: "Magic Portfolio",
-    desc: "Personal portfolio build using NextJS.",
-    stacks: [<SiReact />, <SiNextdotjs />, <SiStyledcomponents />, <SiTypescript />, <BsFiletypeScss />, <SiGithub />],
-    source: "https://github.com/ahmedraza17260/magic-portfolio",
-    demo: "https://m-ahmedraza-portfolio.vercel.app/",
-  },
+  // {
+  //   id: 2,
+  //   title: "Magic Portfolio",
+  //   desc: "Personal portfolio build using NextJS.",
+  //   stacks: [<SiReact />, <SiNextdotjs />, <SiStyledcomponents />, <SiTypescript />, <BsFiletypeScss />, <SiGithub />],
+  //   source: "https://github.com/ahmedraza17260/magic-portfolio",
+  //   demo: "https://m-ahmedraza-portfolio.vercel.app/",
+  // },
   // {
   //   id: 2,
   //   title: "Amazon Clone",

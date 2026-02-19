@@ -64,12 +64,12 @@ function Contact() {
           <Column1>
             <Heading>Reach Out to Me</Heading>
             <p className="sub">
-              DISCUSS A PROJECT? E-MAIL ME
+              DISCUSS? E-MAIL ME
               <BiMailSend size={25} />
             </p>
             <Subtitle>
               <Justify>
-                Highly motivated professional with 2+ years of experience in process control, dyeing planning, and production costing within the textile industry. Seeking a role to improve operational efficiency, minimize rework, and drive continuous improvement in manufacturing operations.             
+                Applied Chemist with experience in edible oil quality control, laboratory testing, and process monitoring across textile and food industries. Skilled in analytical testing, documentation, and compliance with quality standards. Looking to contribute to product quality, regulatory compliance, and continuous improvement in a manufacturing environment.             
               </Justify>
               <br />
               Open for opportunities: Yes
