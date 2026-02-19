@@ -1,18 +1,18 @@
 import React from "react";
-import { FooterContainer, FooterLink  } from "./FooterElements";
-
+import { FooterContainer, FooterLink } from "./FooterElements";
 import styled from "styled-components";
 
+// Use $alt so it doesn't get passed to DOM
 const Section = styled.section`
-  background-color: ${({ theme, alt }) => (alt ? theme.sectionAlt : theme.background)};
+  background-color: ${({ theme, $alt }) => ($alt ? theme.sectionAlt : theme.background)};
   color: ${({ theme }) => theme.text};
   padding: 2rem;
 `;
 
 function Footer() {
   return (
-    <Section alt>
-      <FooterContainer alt>
+    <Section $alt>
+      <FooterContainer>
         <FooterLink
           title="Styleshout"
           aria-label="GitHub Profile"
@@ -23,18 +23,6 @@ function Footer() {
       </FooterContainer>
     </Section>
   );
-  // return (
-  //    <Section alt >
-  //   <FooterContainer>
-  //     <div className="">
-  //         <a title="Styleshout" aria-label="Link" href="https://github.com/ahmedraza17260">
-  //           &#169; Ahmed Raza
-  //         </a>{" "}
-  //         {new Date().getFullYear()}
-  //     </div>
-  //   </FooterContainer>
-  //   </Section>
-  // );
 }
 
 export default Footer;

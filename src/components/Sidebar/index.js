@@ -8,21 +8,20 @@ import {
   SidebarWrapper,
 } from "./SidebarElements";
 
-// import styled from "styled-components";
+import styled from "styled-components";
 
-
-// const Section = styled.section`
-//   background-color: ${({ theme, alt }) => (alt ? theme.sectionAlt : theme.background)};
-//   color: ${({ theme }) => theme.text};
-//   padding: 2rem;
-// `;
+// Optional wrapper for theme styling
+const Section = styled.section`
+  background-color: ${({ theme, alt }) => (alt ? theme.sectionAlt : theme.background)};
+  color: ${({ theme }) => theme.text};
+  padding: 2rem;
+`;
 
 function Sidebar({ isOpen, toggle }) {
-  // console.log("SidebarElements loaded"); // move here
-
   return (
-    // <Section alt>
-      <SidebarContainer isOpen={isOpen} onClick={toggle}>
+    <Section alt>
+      {/* Pass $isOpen as transient prop to avoid React warnings */}
+      <SidebarContainer $isOpen={isOpen} onClick={toggle}>
         <Icon onClick={toggle}>
           <CloseIcon />
         </Icon>
@@ -50,7 +49,7 @@ function Sidebar({ isOpen, toggle }) {
           </SidebarMenu>
         </SidebarWrapper>
       </SidebarContainer>
-    // </Section>
+    </Section>
   );
 }
 

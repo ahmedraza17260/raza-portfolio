@@ -10,28 +10,28 @@ import {
   getTimelineContentStyle,
   getTimelineArrowStyle,
   getTimelineIconStyle,
+  ExperienceContainer,
+  Heading,
 } from "./ExperienceElements";
 
 import { motion } from "framer-motion";
-
-import { ExperienceContainer, Heading } from "./ExperienceElements";
-import { experience } from "../../Data";
-import { work } from "../../Data";
+import { experience, work } from "../../Data";
 
 import styled from "styled-components";
 
+// Transient prop $alt avoids unknown DOM prop warning
 const Section = styled.section`
-  background-color: ${({ theme, alt }) => (alt ? theme.sectionAlt : theme.background)};
+  background-color: ${({ theme, $alt }) => ($alt ? theme.sectionAlt : theme.background)};
   color: ${({ theme }) => theme.text};
   padding: 2rem;
 `;
 
-
 function Experience() {
-  const theme = useTheme(); // ⬅️ Grab current theme
+  const theme = useTheme();
+
   return (
-    <Section alt id="experience">
-      <ExperienceContainer alt id="experience">
+    <Section $alt id="experience">
+      <ExperienceContainer>
         <Heading>
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
@@ -42,10 +42,10 @@ function Experience() {
           </motion.div>
         </Heading>
 
-        <VerticalTimeline alt>
+        <VerticalTimeline>
           {work.slice().reverse().map((values) => (
             <VerticalTimelineElement
-              key={values.title + values.date} // Added key for better list rendering
+              key={`${values.title}-${values.date}`} // unique key
               className={`vertical-timeline-element--${values.type}`}
               contentStyle={getTimelineContentStyle(theme)}
               contentArrowStyle={getTimelineArrowStyle(theme)}
@@ -58,7 +58,7 @@ function Experience() {
               <h4 className="vertical-timeline-element-subtitle">{values.subtitle}</h4>
               <ul>
                 {values.workdesc.map((item, index) => (
-                  <li key={index}>{item}<br /></li>
+                  <li key={index}>{item}</li>
                 ))}
               </ul>
             </VerticalTimelineElement>
@@ -74,66 +74,41 @@ function Experience() {
             EDUCATION
           </motion.div>
         </Heading>
+
         <VerticalTimeline>
-          {experience
-            .slice()
-            .reverse()
-            .map((values) => (
-              <VerticalTimelineElement
-                key={values.title + values.date} // Added key for better list rendering
-                className={`vertical-timeline-element--${values.type}`}
-                contentStyle={getTimelineContentStyle(theme)}
-                contentArrowStyle={getTimelineArrowStyle(theme)}
-                // contentStyle={
-                //   values.bckgrnd
-                //     ? { background: "#0b0c10", color: "#66fcf1" }
-                //     : { background: "#0b0c10", color: "#66fcf1" }
-                // }
-                // contentArrowStyle={
-                //   values.bckgrnd
-                //     ? { borderRight: "7px solid  #45a29e" }
-                //     : { borderRight: "7px solid  #45a29e" }
-                // }
-                date={values.date}
-                dateClassName="dateClass"
-                iconStyle={getTimelineIconStyle(theme)}
-                // iconStyle={{
-                //   background: "#c5c6c7",
-                //   color: "#0b0c10",
-                //   border: "3px solid  #0b0c10",
-                // }}
-                icon={values.icon}
-              >
-                <h3 className="vertical-timeline-element-title">
-                  {values.title}
-                </h3>
-
-                <h4 className="vertical-timeline-element-subtitle">
-                  {values.subtitle}
-                </h4>
-
-                <p>
-                  <ul>
-                    <li>{values.desc}<br /></li>
-                  </ul>
-                  {values.workdesc.length > 0 ? (
-                    <ul>
-                      {values.workdesc.map((work) => (
-                        <li key={work}>{work}</li>
-                      ))}
-                    </ul>
-                  ) : (
-                    <></>
-                  )}
-                </p>
-              </VerticalTimelineElement>
-            ))}
+          {experience.slice().reverse().map((values) => (
+            <VerticalTimelineElement
+              key={`${values.title}-${values.date}`}
+              className={`vertical-timeline-element--${values.type}`}
+              contentStyle={getTimelineContentStyle(theme)}
+              contentArrowStyle={getTimelineArrowStyle(theme)}
+              date={values.date}
+              dateClassName="dateClass"
+              iconStyle={getTimelineIconStyle(theme)}
+              icon={values.icon}
+            >
+              <h3 className="vertical-timeline-element-title">{values.title}</h3>
+              <h4 className="vertical-timeline-element-subtitle">{values.subtitle}</h4>
+              
+              {/* Education/Work description */}
+              {values.desc && (
+                <ul>
+                  <li>{values.desc}</li>
+                </ul>
+              )}
+              {values.workdesc?.length > 0 && (
+                <ul>
+                  {values.workdesc.map((work, idx) => (
+                    <li key={idx}>{work}</li>
+                  ))}
+                </ul>
+              )}
+            </VerticalTimelineElement>
+          ))}
         </VerticalTimeline>
       </ExperienceContainer>
     </Section>
-
   );
 }
-
 
 export default Experience;

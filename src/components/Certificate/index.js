@@ -17,15 +17,15 @@ import { certificate } from "../../Data";
 import styled from "styled-components";
 
 const Section = styled.section`
-  background-color: ${({ theme, alt }) => (alt ? theme.sectionAlt : theme.background)};
+  background-color: ${({ theme, $alt }) => ($alt ? theme.sectionAlt : theme.background)};
   color: ${({ theme }) => theme.text};
   padding: 2rem;
 `;
 
 function Certificates() {
   return (
-    <Section alt id="Certificate">
-      <CertificateContainer alt id="Certificate">
+    <Section $alt id="Certificate">
+      <CertificateContainer $alt id="Certificate">
         <Heading>
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
@@ -40,6 +40,7 @@ function Certificates() {
           {certificate.map((values) => (
 
             <motion.div
+              key={values.id}
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.6 }}
@@ -49,7 +50,7 @@ function Certificates() {
                   <GoRepo />
                   {values.title}
                 </CertificateTitle>
-                <img src={values.image} alt="certificates" />
+                <img src={values.image} alt={values.title} />
               </Certificate>
             </motion.div>
 

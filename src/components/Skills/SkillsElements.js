@@ -96,7 +96,7 @@ export const SkillIcon = styled.div`
     font-size: 3rem;
   }
 
-  p {
+  span {
     margin-top: 15px;
     font-size: 0.6rem;
   }
@@ -110,7 +110,7 @@ export const SkillIcon = styled.div`
     .icon {
       font-size: 2.5rem;
     }
-    p {
+    span {
       margin-top: 10px;
       font-size: 0.5rem;
     }
@@ -119,7 +119,7 @@ export const SkillIcon = styled.div`
     .icon {
       font-size: 2.5rem;
     }
-    p {
+    span {
       margin-top: 10px;
       font-size: 0.5rem;
     }

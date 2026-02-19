@@ -1,11 +1,8 @@
 import React from "react";
-// import Typical from "react-typical";
 import { Typewriter } from "react-simple-typewriter";
-// import Fade from "react-reveal/Fade";
 import { BsArrowRightShort } from "react-icons/bs";
-
 import { motion } from "framer-motion";
-
+import styled, { useTheme } from "styled-components";
 
 import {
   HeroContainer,
@@ -18,6 +15,7 @@ import {
   ResumeSection,
   HeroTextWrapper,
 } from "./HeroElements";
+
 import homeElement from "../../images/6.gif";
 import github from "../../images/github.png";
 import gmail from "../../images/gmail.png";
@@ -40,89 +38,102 @@ import {
   pinterestURL,
 } from "../../Data";
 
-import styled from "styled-components";
-import { useTheme } from 'styled-components';
-
-
+// Styled section with transient prop $alt
 const Section = styled.section`
-  background-color: ${({ theme, alt }) => (alt ? theme.sectionAlt : theme.background)};
+  background-color: ${({ theme, $alt }) => ($alt ? theme.sectionAlt : theme.background)};
   color: ${({ theme }) => theme.text};
   padding: 2rem;
 `;
 
-  
-
 function HeroSection() {
-  const theme = useTheme(); // ✅ Now `theme` is defined
-  const isDarkMode = theme.mode === "dark"; // depends on your theme object structure
-  return (
-    <header>
-     <Section alt id="home">
-    <HeroContainer>
-  <HeroContent>
-    <motion.div
-      initial={{ opacity: 0, x: 100 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.6 }}
-    >
-      <HeroTextWrapper>
-        <HeroH1>
-          Hey!, I'm <br />
-          {Name}
-        </HeroH1>
-        <HeroP>
-          I'm{" "}
-          <span style={{ color: "", fontWeight: "bold" }}>
-            <Typewriter
-              words={MainSkills}
-              loop={Infinity}
-              cursor
-              cursorStyle="_"
-              typeSpeed={70}
-              deleteSpeed={50}
-              delaySpeed={1000}
-            />
-          </span>
-        </HeroP>
-        <br />
-        <SocialIcons>
-          <NavBtn href={githubURL} target="_blank" aria-label="Github_Logo">
-            <img style={{ filter: isDarkMode === "light" ? "invert(100%)" : "invert(0%)" }} src={github} alt="Visit my GitHub profile" />
-          </NavBtn>
-          <NavBtn href={linkedinURL} target="_blank" aria-label="Linkedin_Logo">
-            <img src={linkedin} alt="Linkedin" />
-          </NavBtn>
-          <NavBtn href={mailtoURL} target="_blank" aria-label="Gmail_Logo">
-            <img src={gmail} alt="Gmail" />
-          </NavBtn>
-          <NavBtn href={twitterURL} target="_blank" aria-label="Twitter_Logo">
-            <img src={twitter} alt="Twitter" />
-          </NavBtn>
-          <NavBtn href={fbURL} target="_blank" aria-label="Facebook_Logo">
-            <img src={facebook} alt="Facebook" />
-          </NavBtn>
-          <NavBtn href={instagramURL} target="_blank" aria-label="Instagram_Logo">
-            <img src={instagram} alt="Instagram" />
-          </NavBtn>
-          <NavBtn href={pinterestURL} target="_blank" aria-label="Pinterest_Logo">
-            <img src={pinterest} alt="Pinterest" />
-          </NavBtn>
-        </SocialIcons>
-        <br />
-        <ResumeSection>
-          <span> See my Resume</span>
-          <a href={resumeURL} target="_blank" rel="noopener noreferrer" aria-label="Cv Preview">
-            <BsArrowRightShort />
-          </a>
-        </ResumeSection>
-      </HeroTextWrapper>
-    </motion.div>
+  const theme = useTheme();
+  const isDarkMode = theme.mode === "dark";
 
-    <HomeElement src={homeElement} alt="image" />
-  </HeroContent>
-</HeroContainer>
-</Section>
-</header>
+  return (
+    <Section $alt id="home">
+      <HeroContainer>
+        <HeroContent>
+
+          {/* Text Section */}
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <HeroTextWrapper>
+              <HeroH1>
+                Hey!, I'm <br /> {Name}
+              </HeroH1>
+
+              <HeroP>
+                I'm{" "}
+                <span style={{ fontWeight: "bold" }}>
+                  <Typewriter
+                    words={MainSkills}
+                    loop={Infinity}
+                    cursor
+                    cursorStyle="_"
+                    typeSpeed={70}
+                    deleteSpeed={50}
+                    delaySpeed={1000}
+                  />
+                </span>
+              </HeroP>
+
+              <SocialIcons>
+                <NavBtn href={githubURL} target="_blank" aria-label="Github_Logo">
+                  <img
+                    src={github}
+                    alt="Visit my GitHub profile"
+                    style={{ filter: isDarkMode ? "invert(100%)" : "invert(25%)" }}
+                  />
+                </NavBtn>
+                <NavBtn href={linkedinURL} target="_blank" aria-label="Linkedin_Logo">
+                  <img src={linkedin} alt="LinkedIn profile" />
+                </NavBtn>
+                <NavBtn href={mailtoURL} target="_blank" aria-label="Gmail_Logo">
+                  <img src={gmail} alt="Gmail" />
+                </NavBtn>
+                <NavBtn href={twitterURL} target="_blank" aria-label="Twitter_Logo">
+                  <img src={twitter} alt="Twitter profile" />
+                </NavBtn>
+                <NavBtn href={fbURL} target="_blank" aria-label="Facebook_Logo">
+                  <img src={facebook} alt="Facebook profile" />
+                </NavBtn>
+                <NavBtn href={instagramURL} target="_blank" aria-label="Instagram_Logo">
+                  <img src={instagram} alt="Instagram profile" />
+                </NavBtn>
+                <NavBtn href={pinterestURL} target="_blank" aria-label="Pinterest_Logo">
+                  <img src={pinterest} alt="Pinterest profile" />
+                </NavBtn>
+              </SocialIcons>
+
+              <ResumeSection>
+                <span> See my Resume</span>
+                <a
+                  href={resumeURL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="CV Preview"
+                >
+                  <BsArrowRightShort />
+                </a>
+              </ResumeSection>
+            </HeroTextWrapper>
+          </motion.div>
+
+          {/* Image Section */}
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <HomeElement src={homeElement} alt="Hero Animation" />
+          </motion.div>
+
+        </HeroContent>
+      </HeroContainer>
+    </Section>
   );
 }
 

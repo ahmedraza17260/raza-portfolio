@@ -1,8 +1,6 @@
 import React from "react";
 import { GoRepo } from "react-icons/go";
-// import { Button } from "@material-ui/core";
 import { Button } from "@mui/material";
-
 import { motion } from "framer-motion";
 
 import {
@@ -29,60 +27,62 @@ const Section = styled.section`
 
 function Projects() {
   return (
-     <Section alt id="projects">
-    <ProjectsContainer alt id="projects">
-      
-      <Heading>
-        <motion.div
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.6 }}
-        >
-          PROJECTS
-        </motion.div>
-      </Heading>
-
-      <AllProject>
-        {projects.map((values) => (
+    <Section alt id="projects">
+      <ProjectsContainer alt id="projects">
+        <Heading>
           <motion.div
-            initial={{ y: -50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.6 }}
           >
-            <Project id={values.id}>
-              <PrjTitle>
-                <GoRepo />
-                {values.title}
-              </PrjTitle>
-              <ProjectDesc>{values.desc}</ProjectDesc>
-              <PrjDetails>
-                <SourceButtons>
-                  <Button href={values.source} target="_blank">
-                    Source
-                  </Button>
-                  <Button href={values.demo} target="_blank">
-                    Demo
-                  </Button>
-                </SourceButtons>
-              </PrjDetails>{" "}
-              <br />
-              <Stacks>
-                {values.stacks.map((stack) => (
-                  <>{stack}</>
-                ))}
-              </Stacks>
-            </Project>
+            PROJECTS
           </motion.div>
-        ))}
-      </AllProject>
-      <MoreButton
-        href="https://github.com/ahmedraza17260?tab=repositories"
-        target="_blank"
-        aria-label="More Repositories"
-      >
-        More Projects
-      </MoreButton>
-    </ProjectsContainer>
+        </Heading>
+
+        <AllProject>
+          {projects.map((project) => (
+            <motion.div
+              key={project.id} // ✅ Unique key for each project
+              initial={{ y: -50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <Project id={project.id}>
+                <PrjTitle>
+                  <GoRepo /> {project.title}
+                </PrjTitle>
+
+                <ProjectDesc>{project.desc}</ProjectDesc>
+
+                <PrjDetails>
+                  <SourceButtons>
+                    <Button href={project.source} target="_blank" variant="outlined">
+                      Source
+                    </Button>
+                    <Button href={project.demo} target="_blank" variant="outlined">
+                      Demo
+                    </Button>
+                  </SourceButtons>
+                </PrjDetails>
+
+                <Stacks>
+                  {project.stacks.map((stack, index) => (
+                    <span key={index}>{stack}</span> // ✅ Keys for stack items
+                  ))}
+                </Stacks>
+              </Project>
+            </motion.div>
+          ))}
+        </AllProject>
+
+        <MoreButton
+          href="https://github.com/ahmedraza17260?tab=repositories"
+          target="_blank"
+          aria-label="More Repositories"
+        >
+          More Projects
+        </MoreButton>
+      </ProjectsContainer>
     </Section>
   );
 }

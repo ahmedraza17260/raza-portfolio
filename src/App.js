@@ -56,11 +56,11 @@ function App() {
       <Container>
         <Sidebar isOpen={isOpen} toggle={toggle} />
         <Navbar toggle={toggle} isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
-        <HeroSection alt />
+        <HeroSection $alt />
         <Skills />
-        <Experience alt />
+        <Experience $alt />
         <Certificates />
-        <Projects alt />
+        <Projects $alt />
         <Contact />
         <Footer />
       </Container>
