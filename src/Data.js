@@ -322,24 +322,24 @@ export const work = [
       "Created comprehensive production performance reports."
     ],
   },
-  // {
-  //   id: 5,
-  //   type: "work",
-  //   date: "Feb 2026 - Present",
-  //   icon: <MdWork />,
-  //   bckgrnd: true,
-  //   title: "A&Z AGRO INDUSTRIES PVT LTD (Shafaq Cooking Oil)",
-  //   subtitle: "Shift Lab Chemist",
-  //   workdesc: [
-  //     "Perform analysis of raw materials, in-process, semi-finished, and finished edible oil products as per quality parameters.",
-  //     "Issue test reports and Certificates of Analysis (COA) for dispatch and internal use.",
-  //     "Ensure compliance with GLP, SOPs, and internal quality standards.",
-  //     "Conduct routine checks and audits of filling and packing lines.",
-  //     "Maintain laboratory records, logs, and documentation for traceability.",
-  //     "Coordinate with refinery & production to resolve quality issues.",
-  //     "Assist during internal and external audits and inspections"
-  //   ],
-  // },
+   {
+     id: 5,
+     type: "work",
+     date: "Feb 2026 - Present",
+     icon: <MdWork />,
+     bckgrnd: true,
+     title: "A&Z AGRO INDUSTRIES PVT LTD (Shafaq Cooking Oil)",
+     subtitle: "Shift Lab Chemist",
+     workdesc: [
+       "Perform analysis of raw materials, in-process, semi-finished, and finished edible oil products as per quality parameters.",
+       "Issue test reports and Certificates of Analysis (COA) for dispatch and internal use.",
+       "Ensure compliance with GLP, SOPs, and internal quality standards.",
+       "Conduct routine checks and audits of filling and packing lines.",
+       "Maintain laboratory records, logs, and documentation for traceability.",
+       "Coordinate with refinery & production to resolve quality issues.",
+       "Assist during internal and external audits and inspections"
+     ],
+   },
   
 ];
 
