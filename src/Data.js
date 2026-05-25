@@ -1,5 +1,4 @@
 import {
-  SiCss3,
   SiFirebase,
   SiHtml5,
   SiJavascript,
@@ -11,7 +10,11 @@ import {
   SiTypescript,
   SiStyledcomponents,
 } from "react-icons/si";
-// import { SiNextdotjs } from "react-icons/si";
+import { SiCss } from "react-icons/si";
+import { AiOutlineAudit } from "react-icons/ai";
+
+
+// import { SiNextdotjs, SiCss3 } from "react-icons/si";
 // import { BsFiletypeScss } from "react-icons/bs";
 // import { SiRedux} from "react-icons/si";
 
@@ -114,6 +117,11 @@ export const Quality = [
     icon: <FiPackage className="icon" />,
     name: "Quality Assurance",
   },
+  {
+    icon: <AiOutlineAudit className="icon" />,
+    name: "Internal Audits",
+  },
+  
 ];
 
 export const Dyeing = [
@@ -128,6 +136,14 @@ export const Dyeing = [
   {
     icon: <FcProcess className="icon" />,
     name: "Process Control",
+  },
+  {
+    icon: <FiPackage className="icon" />,
+    name: "Quality Assurance",
+  },
+    {
+    icon: <GiTestTubes className="icon" />,
+    name: "Quality Control",
   },
   
 ];
@@ -158,8 +174,8 @@ export const FrontendTools = [
     name: "HTML5",
   },
   {
-    icon: <SiCss3 className="icon" />,
-    name: "Css3",
+    icon: <SiCss className="icon" />,
+    name: "Css",
   },
   {
     icon: <SiReact className="icon" />,
