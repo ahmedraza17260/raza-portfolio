@@ -259,11 +259,10 @@ export const work = [
     // desc4: "Managing Accounts",
     
     workdesc: [
-      "Worked under Management to achieve sales targets and drive revenue growth",
-      "Learning Sales Processes and Strategies",
-      "Analyze Sales Data",
-      "Invoicing, Sales Reports",
-      "Managing Accounts"
+      "Managed daily commercial operations, overseeing client ledger accounting, processing accurate invoicing, and maintaining systematic financial records.",
+      "Compiled and structured comprehensive daily and monthly sales performance reports to evaluate target achievements and pipeline health.",
+      "Actively studied and implemented modern sales processes and corporate negotiation strategies to improve B2B client acquisition and retention rates.",
+      "Collaborated directly with upper management to streamline regional sales operations, analyze performance metrics, and execute strategic growth initiatives to consistently meet corporate revenue targets."
     ],
   },
   {
@@ -280,9 +279,8 @@ export const work = [
     // desc3: "",
     // desc4: "",
     workdesc: [
-      "Performed quality tests (FFA, Soap Content, M&I, SMP, FAME, POV, Citric Acid) on edible oil products, ensuring adherence to food safety standards.",
-      "Conducted Line and Packaging Quality Departure Inspections.",
-      "Collaborated with QA team to document findings."
+      "Conducted daily floor visits, line inspections, and Finished Goods Stores (FGS) audits to verify quality stock, storage practices, and packaging integrity.",
+      "Performed analytical food safety testing (FFA, Soap Content, POV, SMP) on edible oil products, collaborating with the core QA team to document findings against food safety benchmarks."
     ],
   },
   {
@@ -299,8 +297,8 @@ export const work = [
     // desc3: "",
     // desc4: "",
     workdesc: [
-      "Optimized dyeing performance by analyzing real-time data.",
-      "Conducted quality control tests (Formic Acid, Acetic Acid, Caustic Soda purity; absorbency and solid content analysis), ensuring 100% compliance with industry standards."
+      "Conducted analytical quality control testing and chemical purity analysis (Formic Acid, Acetic Acid, Caustic Soda), ensuring 100% compliance with raw material specifications and standard operating procedures.",
+      "Provided basic training to floor staff on process controls, workplace organization (5S), and operational safety standards."
     ],
   },
   {
@@ -317,9 +315,8 @@ export const work = [
     // desc3: "",
     // desc4: "",
     workdesc: [
-      "Managed production costing for dyeing operations.",
-      "Planned and scheduled dyeing operations, ensuring on-time delivery.",
-      "Created comprehensive production performance reports."
+      "Coordinated extensively with cross-functional units (Production, Supply Chain, Operation, and Engineering) to optimize dyeing schedules, monitor costing parameters, and ensure on-time delivery.",
+      "Analyze process system gaps using real-time data, compiling comprehensive production performance and trend reports to drive efficiency and reduce chemical waste."
     ],
   },
    {
@@ -330,14 +327,20 @@ export const work = [
      bckgrnd: true,
      title: "A&Z AGRO INDUSTRIES PVT LTD (Shafaq Cooking Oil)",
      subtitle: "Shift Lab Chemist",
+     // desc: "Perform analysis of raw materials, in-process, semi-finished, and finished edible oil products as per quality parameters.",
+    // desc1: "Issue test reports and Certificates of Analysis (COA) for dispatch and internal use.",
+    // desc2: "Ensure compliance with GLP, SOPs, and internal quality standards.",
+    // desc3: "Conduct routine checks and audits of filling and packing lines.",
+    // desc4: "Maintain laboratory records, logs, and documentation for traceability.",
+    // desc4: "Coordinate with refinery & production to resolve quality issues.",
+    // desc4: "Assist during internal and external audits and inspections",
+    
      workdesc: [
-       "Perform analysis of raw materials, in-process, semi-finished, and finished edible oil products as per quality parameters.",
-       "Issue test reports and Certificates of Analysis (COA) for dispatch and internal use.",
-       "Ensure compliance with GLP, SOPs, and internal quality standards.",
-       "Conduct routine checks and audits of filling and packing lines.",
-       "Maintain laboratory records, logs, and documentation for traceability.",
-       "Coordinate with refinery & production to resolve quality issues.",
-       "Assist during internal and external audits and inspections"
+       "Oversee daily activities of the QA laboratory, managing consumable chemical inventory, and ensuring calibration verification tracking, and documentation of analytical equipment.",
+       "Perform daily floor visits to verify implemented Quality Assurance (QA) checks, cross-verify laboratory reports, and enforce strict GMP, hygiene, and safety compliance across filling and packing lines.",
+       "Perform trend analysis and compile comprehensive reports on GMP compliance, Process Controls, and Non-Conformances (NCs) to identify operational system gaps and propose solutions for continuous improvement.",
+       "Manage and support shift-based laboratory analysts and line inspectors, ensuring seamless analytical testing (FFA, Moisture, SMP, POV, Color) of raw, in-process, and finished edible oil products.",
+       "Coordinate with refinery and production stakeholders to resolve batch deviations and assist directly in maintaining documentation traceability for internal and external regulatory audits."
      ],
    },
   
