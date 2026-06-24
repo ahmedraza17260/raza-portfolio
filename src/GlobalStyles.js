@@ -1,15 +1,15 @@
-// src/GlobalStyles.js
+"use client";
+
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    background: ${({ theme }) =>
-      theme === "dark" ? "#0b0c10" : "#ffffff"};
-    color: ${({ theme }) =>
-      theme === "dark" ? "#c5c6c7" : "#0b0c10"};
+    /* Dynamically read values from your theme objects */
+    background: ${({ theme }) => theme.background};
+    color: ${({ theme }) => theme.text};
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    transition: all 0.3s ease-in-out;
+    transition: background-color 0.4s ease, color 0.4s ease;
   }
 `;

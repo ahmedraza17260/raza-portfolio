@@ -1,29 +1,31 @@
 import styled from "styled-components";
 
 export const ExperienceContainer = styled.div`
-  // background: #1f2833;
-  // color: #66fcf1;
   max-width: 1200px;
   margin: auto;
-  padding: 20px;
-  background-color: ${({ theme, alt }) => (alt ? theme.sectionAlt : theme.background)};
+  /* Fixed: Changed 'alt' to '$alt' and replaced invalid '0%' with 'none' */
+  background-color: ${({ theme, $alt }) => ($alt ? theme.sectionAlt : theme.background)};
   color: ${({ theme }) => theme.text};
-  padding: 2rem;
+  padding: 2rem 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
-  padding: 20px 10px;
-  box-shadow: 0%;
+  box-shadow: none;
+
+  .vertical-timeline-element-content li {
+    text-align: justify !important;
+    margin-bottom: 8px;
+    padding: 8px;
+  }
+
+
   .vertical-timeline::before {
-  // background-color: ${({ theme, alt }) => (alt ? theme.sectionAlt : theme.background)};
     background: #c5c6c7;
   }
 
   .vertical-timeline::after {
     background: #c5c6c7;
-  // background-color: ${({ theme, alt }) => (alt ? theme.sectionAlt : theme.background)};
-
   }
 
   .dateClass {
@@ -32,40 +34,55 @@ export const ExperienceContainer = styled.div`
 `;
 
 export const Heading = styled.h1`
-   margin-bottom: 24px;
+  display: block !important;
+  margin: 40px auto !important; 
   font-size: 40px;
-  line-height: 1.1;
   font-weight: 600;
-  // color: ${({ theme }) => theme.accent || "#66fcf1"};
   color: ${({ theme }) => theme.text};
-
+  position: relative;
+  z-index: 100 !important; /* Forces it above the timeline canvas */
+  text-align: center;
+  width: 100%;
 
   @media screen and (max-width: 480px) {
     font-size: 32px;
   }
 `;
 
-export const VerticalTimeline = styled.div`
-  background-color: ${({ theme, alt }) => (alt ? theme.sectionAlt : theme.background)};
-  color: ${({ theme }) => theme.text};
-`;
-
-
+/* Dynamic Object style injection for React-Vertical-Timeline components */
 export const getTimelineContentStyle = (theme) => ({
   background: theme.sectionAlt,
   color: theme.text,
   borderRadius: "10px",
-  // boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
-  boxShadow: `0 6px 20px ${theme.mode === "dark" ? "rgba(255, 255, 255, 0.15)" : "rgba(0, 0, 0, 0.3)"}`,
+  boxShadow: `0 6px 20px ${theme.background === "#0b0c1a" ? "rgba(255, 255, 255, 0.15)" : "rgba(0, 0, 0, 0.3)"}`,
   padding: "1.5rem",
 });
 
 export const getTimelineArrowStyle = (theme) => ({
-  borderRight: `7px solid ${theme.colorAlt}`,
+  borderRight: `7px solid ${theme.sectionAlt}`, /* Point matching background color edge */
 });
 
 export const getTimelineIconStyle = (theme) => ({
-  background: theme.colorAlt,
-  color: theme.sectionAlt,
+  background: theme.text,
+  color: theme.background,
   border: `3px solid ${theme.text}`,
+  boxShadow: `0 0 0 4px ${theme.sectionAlt}`,
 });
+
+
+export const ExperienceList = styled.ul`
+  &.vertical-timeline-element-content ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+
+  li {
+    text-align: justify !important;
+    text-justify: inter-word !important;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    display: list-item !important;
+  }
+`;

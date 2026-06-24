@@ -2,70 +2,54 @@
 <html lang="en">
 
 <head>
-  <!-- Charset -->
+  <!-- Technical Configurations -->
   <meta charset="utf-8" />
-
-  <!-- Favicon -->
-  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-
-  <!-- Viewport for responsive design -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- Primary Title & Meta Title -->
-  <title>Ahmed Raza | Chemist Portfolio</title>
-  <meta name="title" content="Ahmed Raza | Chemist Portfolio" />
-
-  <!-- Description -->
-  <meta name="description"
-    content="Professional portfolio of Ahmed Raza, Chemist showcasing research, experiments, and certifications." />
-
-  <!-- Author & Theme -->
-  <meta name="author" content="Ahmed Raza" />
-  <meta name="msapplication-TileColor" content="#603cba" />
-  <meta name="theme-color" content="#6c63ff" />
-
-  <!-- Robots for SEO indexing -->
-  <meta name="robots" content="index, follow" />
-
-  <!-- Keywords (optional, not very useful anymore but harmless) -->
-  <meta name="keywords" content="Ahmed Raza, Chemist, Chemistry Portfolio, Research, Science Resume, Lab Work" />
-
-  <!-- Canonical URL -->
+  <link rel="icon" href="/favicon.ico" />
   <link rel="canonical" href="https://ahmedrazaportfolio.netlify.app/" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
-  <!-- Open Graph / Facebook -->
+  <!-- Primary Indexing Metadata -->
+  <title>Ahmed Raza | Applied Chemist & Full-Stack Developer Portfolio</title>
+  <meta name="title" content="Ahmed Raza | Applied Chemist & Full-Stack Developer Portfolio" />
+  <meta name="description" content="Professional portfolio of Muhammad Ahmed Raza. Showcasing an MSc in Applied Chemistry alongside production-ready web infrastructure built with React, Next.js, Node.js, and automated industrial dashboards." />
+  <meta name="author" content="Muhammad Ahmed Raza" />
+  
+  <!-- High-Density SEO Keywords (Optimized for Modern Search Crawler Graphing) -->
+  <meta name="keywords" content="Muhammad Ahmed Raza, Ahmed Raza Chemist, Chemical Engineering Dashboard, Web Developer Karachi, Applied Chemistry University of Karachi, React Nextjs Portfolio, Node.js Industrial Automation, Operational Excellence Software, Excel Payroll Automation, Software Developer Pakistan" />
+
+  <!-- Verification Tags -->
+  <meta name="google-site-verification" content="huLhKeVIUKVJa3fLMnpkfIJV_-57Ag-6AtE96KRbSko" />
+  <meta name="msvalidate.01" content="B20E6545027DF38512DC4464CD643A97" />
+
+  <!-- Open Graph / Facebook / LinkedIn -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://ahmedrazaportfolio.netlify.app/" />
-  <meta property="og:title" content="Ahmed Raza | Chemist Portfolio" />
-  <meta property="og:description"
-    content="Professional portfolio of Ahmed Raza, Chemist showcasing research, experiments, and certifications." />
+  <meta property="og:title" content="Ahmed Raza | Applied Chemist & Full-Stack Developer Portfolio" />
+  <meta property="og:description" content="Explore technical projects spanning chemical processing tool automation, full-stack software dashboards (Next.js, Node.js), and operational excellence management models by Ahmed Raza." />
   <meta property="og:image" content="https://ahmedrazaportfolio.netlify.app/preview.png" />
+  <meta property="og:locale" content="en_US" />
 
-  <!-- Twitter -->
+  <!-- Twitter / X Card Optimization -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content="https://ahmedrazaportfolio.netlify.app/" />
-  <meta name="twitter:title" content="Ahmed Raza | Chemist Portfolio" />
-  <meta name="twitter:description"
-    content="Professional portfolio of Ahmed Raza, Chemist showcasing research, experiments, and certifications." />
+  <meta name="twitter:title" content="Ahmed Raza | Applied Chemist & Full-Stack Developer Portfolio" />
+  <meta name="twitter:description" content="Explore technical projects spanning chemical processing tool automation, full-stack software dashboards (Next.js, Node.js), and operational excellence management models by Ahmed Raza." />
   <meta name="twitter:image" content="https://ahmedrazaportfolio.netlify.app/preview.png" />
 
-  <!-- Manifest & Apple Touch Icon -->
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <!-- Mobile Progressive Web App Configurations -->
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="apple-touch-icon" href="/logo192.png" />
+  <meta name="msapplication-TileColor" content="#0b0c10" />
+  <meta name="theme-color" content="#1e3a82" />
 
-  <!-- Optional: Loading CSS (your custom) -->
-  <link rel="stylesheet" href="loading.css" />
-
-  <!-- Google Site Verification -->
-  <meta name="google-site-verification" content="huLhKeVIUKVJa3fLMnpkfIJV_-57Ag-6AtE96KRbSko" />
-
-  <meta name="msvalidate.01" content="B20E6545027DF38512DC4464CD643A97" />
-  
+  <!-- Inline Native Loader Core Layout Styles -->
   <style>
     body {
       margin: 0;
       padding: 0;
       height: 100%;
+      background-color: #0b0c10;
     }
 
     .loader-wrapper {
@@ -74,7 +58,7 @@
       position: fixed;
       top: 0;
       left: 0;
-      background-color: #5D3FD3;
+      background-color: #0b0c10;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -82,6 +66,7 @@
       padding: 20px;
       box-sizing: border-box;
       text-align: center;
+      z-index: 99999;
     }
 
     .loader {
@@ -89,111 +74,70 @@
       width: 40px;
       height: 40px;
       position: relative;
-      border: 6px solid #fff;
-      animation: loader 3s infinite ease;
-      margin-bottom: 20px;
+      border: 4px solid #ffffff;
+      animation: loaderSpin 2.5s infinite ease;
+      margin-bottom: 25px;
     }
 
     .loader-inner {
       vertical-align: top;
       display: inline-block;
       width: 100%;
-      background-color: #fff;
-      animation: loader-inner 3s infinite ease-in;
+      background-color: #66fcf1;
+      animation: loaderFill 2.5s infinite ease-in;
     }
 
-    h1 {
-      color: white;
-      font-size: 24px;
+    .loader-text {
+      color: #ffffff;
+      font-family: 'Poppins', sans-serif;
+      font-size: 22px;
+      font-weight: 500;
+      letter-spacing: 0.05rem;
       margin: 0;
-      padding: 0 10px;
       word-wrap: break-word;
     }
 
     @media screen and (max-width: 480px) {
       .loader {
-        width: 30px;
-        height: 30px;
-        border-width: 4px;
+        width: 32px;
+        height: 32px;
+        border-width: 3px;
       }
-
-      h1 {
-        font-size: 18px;
-      }
-    }
-
-    @keyframes loader {
-      0% {
-        transform: rotate(0deg);
-      }
-
-      25% {
-        transform: rotate(180deg);
-      }
-
-      50% {
-        transform: rotate(360deg);
-      }
-
-      75% {
-        transform: rotate(540deg);
-      }
-
-      100% {
-        transform: rotate(720deg);
+      .loader-text {
+        font-size: 16px;
       }
     }
 
-    @keyframes loader-inner {
-      0% {
-        height: 0%;
-      }
+    @keyframes loaderSpin {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(180deg); }
+      50% { transform: rotate(360deg); }
+      75% { transform: rotate(540deg); }
+      100% { transform: rotate(720deg); }
+    }
 
-      25% {
-        height: 0%;
-      }
-
-      50% {
-        height: 100%;
-      }
-
-      75% {
-        height: 100%;
-      }
-
-      100% {
-        height: 0%;
-      }
+    @keyframes loaderFill {
+      0%, 25%, 100% { height: 0%; }
+      50%, 75% { height: 100%; }
     }
   </style>
 
-  <!-- Google Ads -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9004285372762378"
-    crossorigin="anonymous">
-    </script>
-  <!-- End Google Ads -->
+  <!-- Google Monetization Scripts -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9004285372762378" crossorigin="anonymous"></script>
 
-  <!-- J-Query Replacement -->
+  <!-- High-Performance Micro Loader Controller Script -->
   <script>
     window.addEventListener("load", function () {
       const loader = document.querySelector(".loader-wrapper");
       if (loader) {
-        loader.style.transition = "opacity 0.6s ease";
+        loader.style.transition = "opacity 0.4s ease, transform 0.4s ease";
         loader.style.opacity = "0";
         setTimeout(() => {
           loader.style.display = "none";
-        }, 600); // match the transition duration
+        }, 400);
       }
     });
   </script>
-  <!-- End J-Query Replacement -->
-
-  <!-- <script src="jquery-2.1.4.js"></script>
-    <script>
-      $(window).on("load", function () {
-        $(".loader-wrapper").fadeOut("slow");
-      });
-    </script> -->
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KDFWX9ZQT8"></script>
@@ -201,153 +145,38 @@
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
-    gtag('config', 'G-KDFWX9ZQT8');
+    gtag('config', 'G-KDFWX9ZQT8', { 'anonymize_ip': true });
   </script>
-  <!-- End Global site tag (gtag.js) - Google Analytics -->
 
-  <!-- Google Tag Manager -->
-  <script>(function (w, d, s, l, i) {
-      w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-          new Date().getTime(), event: 'gtm.js'
-      }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-KSC9W6J');</script>
-  <!-- End Google Tag Manager -->
-
+  <!-- Google Tag Manager Architecture Container -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KSC9W6J');
+  </script>
 </head>
 
 <body>
-  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <!-- Fallback Accessibility Prompt -->
+  <noscript>You need to enable JavaScript to verify and interact with this application.</noscript>
+
+  <!-- Master Application Mounting Entry Frame -->
   <div id="root">
+    <!-- Fluid Micro Loader Canvas -->
     <div class="loader-wrapper">
       <div class="loader">
         <span class="loader-inner"></span>
       </div>
-      <h1 style="color: white"> Please Recite Darood Shareef </h1>
+      <h1 class="loader-text">Please Recite Darood Shareef</h1>
     </div>
+  </div>
 
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KSC9W6J" height="0" width="0"
-        style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
-
+  <!-- Google Tag Manager Native Document Shadow Fallback -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KSC9W6J" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
 </body>
 
 </html>
-
-
-<!-- <meta name="theme-color" content="#000000" /> -->
-<!-- <meta
-      name="description"
-      content="Web site created using create-react-app"
-    /> -->
-<!-- <title>AhmedRazaPortfolio 🚀 || Ahmed Raza Portfolio Template</title> -->
-<!-- <meta name="title" content="AhmedRazaPortfolio | Ahmed Raza Portfolio Template" /> -->
-<!-- <meta name="description" content="Web Developer Portfolio Template that show your work & skills" /> -->
-<!-- <link rel="icon" href="%PUBLIC_URL%/logo.ico" /> -->
-
-
-<!-- <link rel="stylesheet" href="loading.css.map" /> -->
-
-<!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-<!-- <title>Ahmed Raza Portfolio</title>-->
-
-<!-- <meta name="keywords" content="BestPortfolio ,HTML, CSS, JavaScript, Portfolio, FreeWebPortfolio" /> -->
-
-<!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-
-<!-- Google Analytics -->
-<!-- <script>
-    (function (i, s, o, g, r, a, m) {
-      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-        (i[r].q = i[r].q || []).push(arguments)
-      }, i[r].l = 1 * new Date(); a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
-    ga('create', 'UA-XXXXX-Y', 'auto');
-    ga('send', 'pageview');
-  </script> -->
-<!-- End Google Analytics -->
-
-
-<!-- <meta charset="utf-8" />
-  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ahmed Raza | Chemist Portfolio</title>
-  <meta name="title" content="Ahmed Raza | Chemist Portfolio" />
-  <meta name="description" content="Professional portfolio of Ahmed Raza, Web Developer showcasing skills, projects, and certifications." />
-  <meta name="msapplication-TileColor" content="#603cba" />
-  <meta name="theme-color" content="#6c63ff" />
-  <meta name="author" content="Ahmed Raza" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="index, follow" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://ahmedrazaportfolio.netlify.app/" />
-  <meta property="og:title" content="Ahmed Raza | Chemist Portfolio" />
-  <meta property="og:description"
-    content="Professional portfolio of Ahmed Raza, Web Developer showcasing skills, projects, and certifications." />
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://ahmedrazaportfolio.netlify.app/" />
-  <meta property="twitter:title" content="Ahmed Raza | Chemist Portfolio" />
-  <meta property="twitter:description"
-    content="Professional portfolio of Ahmed Raza, Web Developer showcasing skills, projects, and certifications." />
-  
-  <meta property="og:image" content="https://ahmedrazaportfolio.netlify.app/" />
-  <meta property="twitter:image" content="https://ahmedrazaportfolio.netlify.app/preview.png" />
-  <link rel="canonical" href="https://ahmedrazaportfolio.netlify.app/" />
-
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <link rel="stylesheet" href="loading.css" />
-  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" /> -->
-
-
-<!-- <div className="centerContent">
-        <div className="sk-circle">
-          <div className="sk-circle1 sk-child"></div>
-          <div className="sk-circle2 sk-child"></div>
-          <div className="sk-circle3 sk-child"></div>
-          <div className="sk-circle4 sk-child"></div>
-          <div className="sk-circle5 sk-child"></div>
-          <div className="sk-circle6 sk-child"></div>
-          <div className="sk-circle7 sk-child"></div>
-          <div className="sk-circle8 sk-child"></div>
-          <div className="sk-circle9 sk-child"></div>
-          <div className="sk-circle10 sk-child"></div>
-          <div className="sk-circle11 sk-child"></div>
-          <div className="sk-circle12 sk-child"></div>
-        </div>
-      </div>
-    </div> -->
-<!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-
-<!-- <script src="jquery-2.1.4.js"></script>
-  <script>
-    $(window).on("load", function () {
-      $(".loader-wrapper").fadeOut("slow");
-    });
-  </script> -->

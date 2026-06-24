@@ -1,92 +1,73 @@
-# raza-portfolio
-To view a live example,
-<a href="https://ahmedrazaportfolio.netlify.app/">CLICK HERE</a>
+# 🚀 Ahmed Raza | Personal Portfolio
 
-## Getting Started
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+![Portfolio Preview](./public/preview.png)
 
-You'll need Git and Node.js (which comes with npm) installed on your computer
+[![Portfolio](https://img.shields.io/badge/Live-View-brightgreen)](https://ahmedrazaportfolio.netlify.app/)
+...
 
-```## How To Use
-From your command line
+## 📝 Description
 
-# Clone this repository
+A professional personal portfolio website showcasing my journey as an Applied Chemist and Web Developer. Recently migrated from a standard React (CRA) architecture to **Next.js 15+** to significantly improve SEO performance, loading speeds, and server-side rendering capabilities.
+
+## 🛠️ Tech Stack
+
+* **Framework:** [Next.js](https://nextjs.org/)
+* **Styling:** [Styled-Components](https://styled-components.com/)
+* **Animations:** [Framer Motion](https://www.framer.com/motion/)
+* **Package Manager:** [Yarn](https://yarnpkg.com/)
+* **Deployment:** [Netlify](https://www.netlify.com/)
+
+## 🚀 Key Features
+
+* **Optimized Performance:** Leveraged Next.js to ensure lightning-fast page loads and better search engine indexing.
+* **Dynamic Content:** Used structured data objects to manage projects and experience, making it easy to add new entries.
+* **Interactive UI:** Responsive design with fluid animations powered by Framer Motion.
+* **Dark/Light Mode:** Seamless theme switching integrated across all components.
+
+## 📦 Getting Started
+
+### Prerequisites
+
+Make sure you have [Node.js](https://nodejs.org/) and [Yarn](https://yarnpkg.com/) installed on your machine.
+
+### Installation
+
+1. Clone the repository:
+```bash
 git clone https://github.com/ahmedraza17260/raza-portfolio.git
 
-# Go into the repository
+```
+
+
+2. Navigate to the project directory:
+```bash
 cd raza-portfolio
 
-# Install dependencies
-npm install
-
-# Start a local dev server
-npm start
 ```
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+3. Install dependencies using Yarn:
+```bash
+yarn install
 
-### `yarn start`
+```
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+4. Start the development server:
+```bash
+yarn dev
 
-### `yarn test`
+```
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🌐 Live Preview
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Visit the live site: [https://ahmedrazaportfolio.netlify.app/](https://ahmedrazaportfolio.netlify.app/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 👨‍💻 Author
 
-### `yarn eject`
+**Ahmed Raza**
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+* [GitHub](https://github.com/ahmedraza17260)
+* [LinkedIn](https://www.linkedin.com/in/ahmedraza17260/)

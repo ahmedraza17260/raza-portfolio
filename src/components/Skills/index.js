@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React from 'react';
 import { motion } from "framer-motion";
 
 import {
@@ -9,9 +10,12 @@ import {
   SkillIcons,
   SkillIcon,
   SubPart,
+  SkillCategoryTitle,
+  SkillsMainWrapper,
+  SkillsGrid,
+  SkillCard
 } from "./SkillsElements";
 
-import skillElement from "../../images/5.gif";
 import { BackendTools, Dyeing, FrontendTools, Languages, Quality } from "../../Data";
 
 import styled from "styled-components";
@@ -25,93 +29,58 @@ const Section = styled.section`
 function Skills() {
   return (
     <Section $alt={true} id="skills">
-      <SkillsContainer id="skills">
-        {/* Left side: skill lists */}
-        <motion.div
-          initial={{ x: -80, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <AllSkills>
-            <Heading>What I Do</Heading>
+      <SkillsMainWrapper> {/* This restricts width to 1100px */}
+        <Heading style={{ textAlign: 'center' }}>What I Do</Heading>
+        
+        <SkillsGrid>
+          {/* Group 1: Industrial Skills */}
+          <SkillCard>
+            <SkillCategoryTitle>Quality Control / Assurance</SkillCategoryTitle>
+            <SubPart>
+              {Quality.map((data) => (
+                <SkillIcon key={data.name}>
+                  {data.icon}
+                  <span>{data.name}</span>
+                </SkillIcon>
+              ))}
+            </SubPart>
+          </SkillCard>
 
-            {/* Quality Control */}
-            <SkillIcons>
-              Quality Control / Assurance
-              <SubPart>
-                {Quality.map((data) => (
-                  <SkillIcon key={data.name}>
-                    {data.icon}
-                    {/* <p>{data.name}</p> */}
-                    <span>{data.name}</span>
-                  </SkillIcon>
-                ))}
-              </SubPart>
-            </SkillIcons>
+          <SkillCard>
+            <SkillCategoryTitle>Textile Sector</SkillCategoryTitle>
+            <SubPart>
+              {Dyeing.map((data) => (
+                <SkillIcon key={data.name}>
+                  {data.icon}
+                  <span>{data.name}</span>
+                </SkillIcon>
+              ))}
+            </SubPart>
+          </SkillCard>
 
-            {/* Textile Sector */}
-            <SkillIcons>
-              Textile Sector
-              <SubPart>
-                {Dyeing.map((data) => (
-                  <SkillIcon key={data.name}>
-                    {data.icon}
-                    <span>{data.name}</span>
-                  </SkillIcon>
-                ))}
-              </SubPart>
-            </SkillIcons>
+          {/* Group 2: Tech Skills */}
+          <SkillCard>
+            <SkillCategoryTitle>Development</SkillCategoryTitle>
+            <SubPart>
+              {Languages.map((data, index) => (
+                <SkillIcon key={`lang-${data.name}-${index}`}>{data.icon}<span>{data.name}</span></SkillIcon>
+              ))}
+              {FrontendTools.map((data, index) => (
+                <SkillIcon key={`frontend-${data.name}-${index}`}>{data.icon}<span>{data.name}</span></SkillIcon>
+              ))}
+              {BackendTools.map((data, index) => (
+                <SkillIcon key={`backend-${data.name}-${index}`}>{data.icon}<span>{data.name}</span></SkillIcon>
+              ))}
+            </SubPart>
+          </SkillCard>
+        </SkillsGrid>
 
-            {/* Development Skills */}
-            <SkillIcons>
-              Languages
-              <SubPart>
-                {Languages.map((data) => (
-                  <SkillIcon key={data.name}>
-                    {data.icon}
-                    <span>{data.name}</span>
-                  </SkillIcon>
-                ))}
-              </SubPart>
-
-              Frontend Tools
-              <SubPart>
-                {FrontendTools.map((data) => (
-                  <SkillIcon key={data.name}>
-                    {data.icon}
-                    <span>{data.name}</span>
-                  </SkillIcon>
-                ))}
-              </SubPart>
-
-              Backend Tools
-              <SubPart>
-                {BackendTools.map((data) => (
-                  <SkillIcon key={data.name}>
-                    {data.icon}
-                    <span>{data.name}</span>
-                  </SkillIcon>
-                ))}
-              </SubPart>
-            </SkillIcons>
-          </AllSkills>
-        </motion.div>
-
-        {/* Right side: image/visual */}
-        <motion.div
-          initial={{ x: 80, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <SkillElement>
-            <img src={skillElement} alt="Skill Illustration" />
-          </SkillElement>
-        </motion.div>
-      </SkillsContainer>
+        {/* Decorative GIF moved to a smaller, centered position */}
+        <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+          <img src="/images/5.gif" alt="Showcase" style={{ maxWidth: '300px', height: 'auto' }} />
+        </div>
+      </SkillsMainWrapper>
     </Section>
   );
 }
-
 export default Skills;

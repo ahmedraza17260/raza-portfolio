@@ -2,68 +2,39 @@ import {
   SiFirebase,
   SiHtml5,
   SiJavascript,
-  SiReact,
   SiBootstrap,
   SiC,
   SiGit,
   SiGithub,
-  SiTypescript,
-  SiStyledcomponents,
+  SiCss,
+  SiReact, SiNextdotjs, SiTailwindcss, SiStyledcomponents, SiFramer, SiNodedotjs, SiTypescript,SiVercel, 
+  SiNetlify,
+  SiNetlify as FcProcess, // Fallback alias if missing
+  SiNetlify as FcPlanner  // Fallback alias if missing
 } from "react-icons/si";
-import { SiCss } from "react-icons/si";
+
+import { DiMysql } from "react-icons/di";
 import { AiOutlineAudit } from "react-icons/ai";
-
-
-// import { SiNextdotjs, SiCss3 } from "react-icons/si";
-// import { BsFiletypeScss } from "react-icons/bs";
-// import { SiRedux} from "react-icons/si";
-
-
 import { TbBrandCSharp } from "react-icons/tb";
-// SiCplusplus, SiPython, SiPostman, SiMongodb, SiHeroku, SiNextDotJs, SiApollographql, DiSass, SiNodeRed,
-// import { SiStyledcomponents } from "react-icons/si";
-// import { GrTest } from "react-icons/gr";
-// import { IoLogoPwa } from "react-icons/io5";
-
 import { SlChemistry } from "react-icons/sl";
 import { GiTestTubes } from "react-icons/gi";
 import { FiPackage } from "react-icons/fi";
-
-import { SiNetlify } from "react-icons/si";
-import { FcProcess } from "react-icons/fc";
-import { FcPlanner } from "react-icons/fc";
-import { MdAccountBalance } from "react-icons/md";
-
-
-import { DiMysql } from "react-icons/di";
-// import { FaNode } from "react-icons/fa";
-
+import { MdAccountBalance, MdSchool, MdWork } from "react-icons/md";
 import { FaSchool, FaCertificate } from "react-icons/fa";
-import { MdSchool, MdWork } from "react-icons/md";
 
-// import { SiMaterialui } from "react-icons/si";
-// import { DiVisualstudio } from "react-icons/di";
-// import { SiMui } from 'react-icons/si';
+// Next.js static asset routes (Images now live inside public/images/)
+const linux = "/images/LINUX.jpg";
+const bbsydp = "/images/BBSYDP.jpg";
+const cit = "/images/NOOR.jpg";
+const sdc = "/images/SDC.jpg";
+const agile = "/images/AGILESCRUM.jpg";
+const iso = "/images/ISO.jpg";
+const haccp_1 = "/images/HACCP Level 1.png";
+const h_v_t = "/images/HACCP,VACCP,TACCP.jpg";
+const Food_Labeling = "/images/Food Labeling.png";
+const Food_Fraud_Preventive_Approach = "/images/Food_Fraud_Preventive_Approach.png";
 
-
-// Certificates
-import linux from "./images/LINUX.jpg";
-import bbsydp from "./images/BBSYDP.jpg";
-import cit from "./images/NOOR.jpg";
-import sdc from "./images/SDC.jpg";
-// import sdc_ms from "./images/SDC_MS.jpg";
-import agile from "./images/AGILESCRUM.jpg";
-// import gd from "./images/GD.jpg";
-import iso from "./images/ISO.jpg";
-import haccp_1 from "./images/HACCP Level 1.png";
-import h_v_t from "./images/HACCP,VACCP,TACCP.jpg";
-import Food_Labeling from "./images/Food Labeling.png";
-import Food_Fraud_Preventive_Approach from "./images/Food_Fraud_Preventive_Approach.png";
-
-
-
-// HeroSection
-
+// HeroSection Data
 export const Name = "Ahmed Raza";
 
 export const MainSkills = [
@@ -74,144 +45,55 @@ export const MainSkills = [
 ];
 
 export const githubURL = "https://github.com/ahmedraza17260";
-
 export const linkedinURL = "https://www.linkedin.com/in/ahmedraza17260/";
-
 export const mailtoURL = "mailto:ahmedraza17260@gmail.com";
-
 export const fbURL = "https://www.facebook.com/ahmedraza1726";
-
 export const instagramURL = "https://www.instagram.com/ahmedraza17260/";
-
 export const twitterURL = "https://twitter.com/AhmedRaza17260";
-
 export const pinterestURL = "https://pinterest.com/ahmedraz17260/";
-
 export const resumeURL = "https://drive.google.com/file/d/1QxReNRgc34TyhY5i9SUIyozU9SdgbGKy/view";
-      //   "https://drive.google.com/file/d/1V_H6p9DV_7EwtQ26MTz7pFTJBeNoRRsR/view";
-      //   "https://drive.google.com/file/d/1foVdPDuJGFtls-ociSXvZYut5hqpuBp1/view";
 
-
-
-
-// Skills
-
+// Skills Sections
 export const Quality = [
-  {
-    icon: <SlChemistry className="icon" />,
-    name: "Laboratory Skill",
-  },
-  {
-    icon: <SlChemistry className="icon" />,
-    name: "Good Laboratory Practices (GLP)",
-  },
-  {
-    icon: <GiTestTubes className="icon" />,
-    name: "Quality Control",
-  },
-  {
-    icon: <SlChemistry className="icon" />,
-    name: "Analytical Skill",
-  },
-  {
-    icon: <FiPackage className="icon" />,
-    name: "Quality Assurance",
-  },
-  {
-    icon: <AiOutlineAudit className="icon" />,
-    name: "Internal Audits",
-  },
-  
+  { icon: <SlChemistry className="icon" />, name: "Laboratory Skill" },
+  { icon: <SlChemistry className="icon" />, name: "Good Laboratory Practices (GLP)" },
+  { icon: <GiTestTubes className="icon" />, name: "Quality Control" },
+  { icon: <SlChemistry className="icon" />, name: "Analytical Skill" },
+  { icon: <FiPackage className="icon" />, name: "Quality Assurance" },
+  { icon: <AiOutlineAudit className="icon" />, name: "Internal Audits" }
 ];
 
 export const Dyeing = [
-  {
-    icon: <FcPlanner className="icon" />,
-    name: "Dyeing Planning",
-  },
-  {
-    icon: <MdAccountBalance className="icon" />,
-    name: "Dyeing Costing",
-  },
-  {
-    icon: <FcProcess className="icon" />,
-    name: "Process Control",
-  },
-  {
-    icon: <FiPackage className="icon" />,
-    name: "Quality Assurance",
-  },
-    {
-    icon: <GiTestTubes className="icon" />,
-    name: "Quality Control",
-  },
-  
+  { icon: <FcPlanner className="icon" />, name: "Dyeing Planning" },
+  { icon: <MdAccountBalance className="icon" />, name: "Dyeing Costing" },
+  { icon: <FcProcess className="icon" />, name: "Process Control" },
+  { icon: <FiPackage className="icon" />, name: "Quality Assurance" },
+  { icon: <GiTestTubes className="icon" />, name: "Quality Control" }
 ];
 
-
 export const Languages = [
-  {
-    icon: <SiC className="icon" />,
-    name: "C",
-  },
-  {
-    icon: <TbBrandCSharp className="icon" />,
-    name: "C#",
-  },
-  {
-    icon: <SiJavascript className="icon" />,
-    name: "Javascript",
-  },
-  {
-    icon: <SiTypescript className="icon" />,
-    name: "Typescript",
-  },
+  { icon: <SiC className="icon" />, name: "C" },
+  { icon: <TbBrandCSharp className="icon" />, name: "C#" },
+  { icon: <SiJavascript className="icon" />, name: "Javascript" },
+  { icon: <SiTypescript className="icon" />, name: "Typescript" }
 ];
 
 export const FrontendTools = [
-  {
-    icon: <SiHtml5 className="icon" />,
-    name: "HTML5",
-  },
-  {
-    icon: <SiCss className="icon" />,
-    name: "Css",
-  },
-  {
-    icon: <SiReact className="icon" />,
-    name: "ReactJS",
-  },
-  {
-    icon: <SiStyledcomponents className="icon" />,
-    name: "Styled-components",
-  },
-  {
-    icon: <SiBootstrap className="icon" />,
-    name: "Bootstrap",
-  },
+  { icon: <SiHtml5 className="icon" />, name: "HTML5" },
+  { icon: <SiCss className="icon" />, name: "Css" },
+  { icon: <SiReact className="icon" />, name: "ReactJS" },
+  { icon: <SiStyledcomponents className="icon" />, name: "Styled-components" },
+  { icon: <SiBootstrap className="icon" />, name: "Bootstrap" }
 ];
 
 export const BackendTools = [
-  {
-    icon: <SiFirebase className="icon" />,
-    name: "Firebase",
-  },
-  {
-    icon: <DiMysql className="icon" />,
-    name: "MySQL",
-  },
-  {
-    icon: <SiGit className="icon" />,
-    name: "Git",
-  },
-  {
-    icon: <SiNetlify  className="icon" />,
-    name: "Netlify",
-  },
+  { icon: <SiFirebase className="icon" />, name: "Firebase" },
+  { icon: <DiMysql className="icon" />, name: "MySQL" },
+  { icon: <SiGit className="icon" />, name: "Git" },
+  { icon: <SiNetlify className="icon" />, name: "Netlify" }
 ];
 
-// Experience
-
+// Education Timeline Data
 export const experience = [
   {
     id: 1,
@@ -222,7 +104,7 @@ export const experience = [
     title: "Academy of Islamic and Modern Studies",
     subtitle: "Secondary Education",
     desc: "Obtained: 78.%",
-    workdesc: [],
+    workdesc: []
   },
   {
     id: 2,
@@ -233,7 +115,7 @@ export const experience = [
     title: "Sir Adamjee Institute Karachi, Pakistan",
     subtitle: "Higher Secondary Education",
     desc: "Obtained: 66%",
-    workdesc: [],
+    workdesc: []
   },
   {
     id: 3,
@@ -242,9 +124,9 @@ export const experience = [
     icon: <MdSchool />,
     bckgrnd: false,
     title: "Karachi University",
-    subtitle: "BSC. HONS. APPLIED CHEMISTRY ",
+    subtitle: "BSC. HONS. APPLIED CHEMISTRY",
     desc: "Obtained: 58.31 %",
-    workdesc: [],
+    workdesc: []
   },
   {
     id: 4,
@@ -253,12 +135,13 @@ export const experience = [
     icon: <MdSchool />,
     bckgrnd: false,
     title: "Karachi University",
-    subtitle: "MSC. HONS. APPLIED CHEMISTRY ",
+    subtitle: "MSC. HONS. APPLIED CHEMISTRY",
     desc: "Obtained: 55.10 %",
-    workdesc: [],
-  },
+    workdesc: []
+  }
 ];
 
+// Professional Work Experience Data
 export const work = [
   {
     id: 1,
@@ -268,18 +151,12 @@ export const work = [
     bckgrnd: true,
     title: "Ayaan Corporation",
     subtitle: "Sale Supervisor",
-    // desc: "Worked under Management to achieve sales targets and drive revenue growth",
-    // desc1: "Learning Sales Processes and Strategies",
-    // desc2: "Analyze Sales Data",
-    // desc3: "Invoicing, Sales Reports",
-    // desc4: "Managing Accounts",
-    
     workdesc: [
       "Managed daily commercial operations, overseeing client ledger accounting, processing accurate invoicing, and maintaining systematic financial records.",
       "Compiled and structured comprehensive daily and monthly sales performance reports to evaluate target achievements and pipeline health.",
       "Actively studied and implemented modern sales processes and corporate negotiation strategies to improve B2B client acquisition and retention rates.",
       "Collaborated directly with upper management to streamline regional sales operations, analyze performance metrics, and execute strategic growth initiatives to consistently meet corporate revenue targets."
-    ],
+    ]
   },
   {
     id: 2,
@@ -289,15 +166,10 @@ export const work = [
     bckgrnd: true,
     title: "Dalda Foods Ltd.",
     subtitle: "Six Weeks Internship at Quality Department.",
-    // desc: "Performed quality tests (FFA, Soap Content, M&I, SMP, FAME, POV, Citric Acid) on edible oil products, ensuring adherence to food safety standards.",
-    // desc1: "Conducted Line and Packaging Quality Departure Inspections.",
-    // desc2: "Collaborated with QA team to document findings.",
-    // desc3: "",
-    // desc4: "",
     workdesc: [
       "Conducted daily floor visits, line inspections, and Finished Goods Stores (FGS) audits to verify quality stock, storage practices, and packaging integrity.",
       "Performed analytical food safety testing (FFA, Soap Content, POV, SMP) on edible oil products, collaborating with the core QA team to document findings against food safety benchmarks."
-    ],
+    ]
   },
   {
     id: 3,
@@ -307,15 +179,10 @@ export const work = [
     bckgrnd: true,
     title: "Global Exports Apparel Experts",
     subtitle: "MTO",
-    // desc: "Optimized dyeing performance by analyzing real-time data.",
-    // desc1: "Conducted quality control tests (Formic Acid, Acetic Acid, Caustic Soda purity; absorbency and solid content analysis), ensuring 100% compliance with industry standards.",
-    // desc2: "",
-    // desc3: "",
-    // desc4: "",
     workdesc: [
       "Conducted analytical quality control testing and chemical purity analysis (Formic Acid, Acetic Acid, Caustic Soda), ensuring 100% compliance with raw material specifications and standard operating procedures.",
       "Provided basic training to floor staff on process controls, workplace organization (5S), and operational safety standards."
-    ],
+    ]
   },
   {
     id: 4,
@@ -325,259 +192,75 @@ export const work = [
     bckgrnd: true,
     title: "Global Exports Apparel Experts",
     subtitle: "Ass.Manager Processing",
-    // desc: "Managed production costing for dyeing operations.",
-    // desc1: "Planned and scheduled dyeing operations, ensuring on-time delivery.",
-    // desc2: "Created comprehensive production performance reports.",
-    // desc3: "",
-    // desc4: "",
     workdesc: [
       "Coordinated extensively with cross-functional units (Production, Supply Chain, Operation, and Engineering) to optimize dyeing schedules, monitor costing parameters, and ensure on-time delivery.",
       "Analyze process system gaps using real-time data, compiling comprehensive production performance and trend reports to drive efficiency and reduce chemical waste."
-    ],
-  },
-   {
-     id: 5,
-     type: "work",
-     date: "Feb 2026 - Present",
-     icon: <MdWork />,
-     bckgrnd: true,
-     title: "A&Z AGRO INDUSTRIES PVT LTD (Shafaq Cooking Oil)",
-     subtitle: "Shift Lab Chemist",
-     // desc: "Perform analysis of raw materials, in-process, semi-finished, and finished edible oil products as per quality parameters.",
-    // desc1: "Issue test reports and Certificates of Analysis (COA) for dispatch and internal use.",
-    // desc2: "Ensure compliance with GLP, SOPs, and internal quality standards.",
-    // desc3: "Conduct routine checks and audits of filling and packing lines.",
-    // desc4: "Maintain laboratory records, logs, and documentation for traceability.",
-    // desc4: "Coordinate with refinery & production to resolve quality issues.",
-    // desc4: "Assist during internal and external audits and inspections",
-    
-     workdesc: [
-       "Oversee daily activities of the QA laboratory, managing consumable chemical inventory, and ensuring calibration verification tracking, and documentation of analytical equipment.",
-       "Perform daily floor visits to verify implemented Quality Assurance (QA) checks, cross-verify laboratory reports, and enforce strict GMP, hygiene, and safety compliance across filling and packing lines.",
-       "Perform trend analysis and compile comprehensive reports on GMP compliance, Process Controls, and Non-Conformances (NCs) to identify operational system gaps and propose solutions for continuous improvement.",
-       "Manage and support shift-based laboratory analysts and line inspectors, ensuring seamless analytical testing (FFA, Moisture, SMP, POV, Color) of raw, in-process, and finished edible oil products.",
-       "Coordinate with refinery and production stakeholders to resolve batch deviations and assist directly in maintaining documentation traceability for internal and external regulatory audits."
-     ],
-   },
-  
-];
-
-// Certificate
-export const certificate = [
-  {
-    id: 1,
-    icon: <FaCertificate />,
-    bckgrnd: false,
-    title: "Skill Development Council",
-    image: [sdc],
-  },
-  {
-    id: 2,
-    icon: <FaCertificate />,
-    bckgrnd: false,
-    title: "ISO 9001",
-    image: [iso],
-  },
-  {
-    id: 3,
-    icon: <FaCertificate />,
-    bckgrnd: false,
-    title: "HACCP VACCP TACCP",
-    image: [h_v_t],
-  },
-  {
-    id: 4,
-    icon: <FaCertificate />,
-    bckgrnd: false,
-    title: "HACCP LEVEL 1",
-    image: [haccp_1],
+    ]
   },
   {
     id: 5,
-    icon: <FaCertificate />,
-    bckgrnd: false,
-    title: "Food Labeling",
-    image: [Food_Labeling],
-  },
-  {
-    id: 6,
-    icon: <FaCertificate />,
-    bckgrnd: false,
-    title: "Food Fraud Preventive Approach",
-    image: [Food_Fraud_Preventive_Approach],
-  },
-  
-  {
-    id: 7,
-    icon: <FaCertificate />,
-    bckgrnd: false,
-    title: "Linux",
-    image: [linux],
-  },
-  {
-    id: 8,
-    icon: <FaCertificate />,
-    bckgrnd: false,
-    title: "Agile Scrum",
-    image: [agile],
-  },
-  
-  {
-    id: 9,
-    icon: <FaCertificate />,
-    bckgrnd: false,
-    title: "CIT",
-    image: [cit],
-  },
-  {
-    id: 10,
-    icon: <FaCertificate />,
-    bckgrnd: false,
-    title: "BBSYDP",
-    image: [bbsydp],
-  },
-//   {
-//     id: 11,
-//     icon: <FaCertificate />,
-//     bckgrnd: false,
-//     title: "Graphic Design",
-//     image: [gd],
-//   },
-// {
-//     id: 12,
-//     icon: <FaCertificate />,
-//     bckgrnd: false,
-//     title: "SDC MarkSheet",
-//     image: [sdc_ms],
-//   },
+    type: "work",
+    date: "Feb 2026 - Present",
+    icon: <MdWork />,
+    bckgrnd: true,
+    title: "A&Z AGRO INDUSTRIES PVT LTD (Shafaq Cooking Oil)",
+    subtitle: "Shift Lab Chemist",
+    workdesc: [
+      "Oversee daily activities of the QA laboratory, managing consumable chemical inventory, and ensuring calibration verification tracking, and documentation of analytical equipment.",
+      "Perform daily floor visits to verify implemented Quality Assurance (QA) checks, cross-verify laboratory reports, and enforce strict GMP, hygiene, and safety compliance across filling and packing lines.",
+      "Perform trend analysis and compile comprehensive reports on GMP compliance, Process Controls, and Non-Conformances (NCs) to identify operational system gaps and propose solutions for continuous improvement.",
+      "Manage and support shift-based laboratory analysts and line inspectors, ensuring seamless analytical testing (FFA, Moisture, SMP, POV, Color) of raw, in-process, and finished edible oil products.",
+      "Coordinate with refinery and production stakeholders to resolve batch deviations and assist directly in maintaining documentation traceability for internal and external regulatory audits."
+    ]
+  }
 ];
 
-// Projects
+// Certificates UI Grid Data
+export const certificate = [
+  { id: 1, icon: <FaCertificate />, bckgrnd: false, title: "Skill Development Council", image: [sdc] },
+  { id: 2, icon: <FaCertificate />, bckgrnd: false, title: "ISO 9001", image: [iso] },
+  { id: 3, icon: <FaCertificate />, bckgrnd: false, title: "HACCP VACCP TACCP", image: [h_v_t] },
+  { id: 4, icon: <FaCertificate />, bckgrnd: false, title: "HACCP LEVEL 1", image: [haccp_1] },
+  { id: 5, icon: <FaCertificate />, bckgrnd: false, title: "Food Labeling", image: [Food_Labeling] },
+  { id: 6, icon: <FaCertificate />, bckgrnd: false, title: "Food Fraud Preventive Approach", image: [Food_Fraud_Preventive_Approach] },
+  { id: 7, icon: <FaCertificate />, bckgrnd: false, title: "Linux", image: [linux] },
+  { id: 8, icon: <FaCertificate />, bckgrnd: false, title: "Agile Scrum", image: [agile] },
+  { id: 9, icon: <FaCertificate />, bckgrnd: false, title: "CIT", image: [cit] },
+  { id: 10, icon: <FaCertificate />, bckgrnd: false, title: "BBSYDP", image: [bbsydp] }
+];
 
+// Projects Grid Data
 export const projects = [
   {
-    id: 1,
-    title: "My Portfolio",
-    desc: "Personal portfolio build using ReactJS.",
-    stacks: [<SiReact />, <SiStyledcomponents />, <SiGithub />],
-    source: "https://github.com/ahmedraza17260/react-portfolio",
-    demo: "https://ahmedraza-portfolio.netlify.app/",
+    id: "b2b-portal",
+    title: "B2B Trading Portal Template",
+    desc: "A highly optimized, premium B2B e-commerce and trading portal built for seamless supplier-to-buyer transactions.",
+    source: "https://ahmedraza17260.gumroad.com/l/epoaay",
+    demo: "https://b2b-trading-portal.vercel.app/",
+    stacks: [<SiNextdotjs />, <SiNodedotjs />, <SiTailwindcss />, <SiTypescript />, <SiVercel/>]
   },
-  // {
-  //   id: 2,
-  //   title: "Magic Portfolio",
-  //   desc: "Personal portfolio build using NextJS.",
-  //   stacks: [<SiReact />, <SiNextdotjs />, <SiStyledcomponents />, <SiTypescript />, <BsFiletypeScss />, <SiGithub />],
-  //   source: "https://github.com/ahmedraza17260/magic-portfolio",
-  //   demo: "https://m-ahmedraza-portfolio.vercel.app/",
-  // },
-  // {
-  //   id: 2,
-  //   title: "Amazon Clone",
-  //   desc: "Clone of famous E-comm site Amazon with basic functionalities signup/login using mail and purchasing product.",
-  //   stacks: [<SiReact />, <SiCss3 />, <SiFirebase />, <SiMui />],
-  //   source: "https://github.com/ahmedraza17260/amazon-clone",
-  //   demo: "https://clone-76219.web.app/",
-  // },
-
-  // {
-  //   id: 3,
-  //   title: "Linkedin Clone",
-  //   desc: "Linkedin Clone with React Javascript & Redux",
-  //   stacks: [
-  //     <SiReact />,
-  //     <SiCss3 />,
-  //     <SiFirebase />,
-  //     <SiMui />,
-  //     <SiRedux />,
-  //   ],
-  //   source: "https://github.com/ahmedraza17260/linkedin-clone",
-  //   demo: "https://linkedin-clone-874a2.web.app/",
-  // },
-  // {
-  //   id: 4,
-  //   title: "Ahmed Raza Electronics",
-  //   desc: "Ahmed Raza Electronics with React Javascript ",
-  //   stacks: [<SiReact />, <SiStyledcomponents />, <SiFirebase />],
-  //   source: "https://github.com/ahmedraza17260/ahmedrazaelectronics",
-  //   demo: "https://ahmedrazaelectronics-17.web.app/",
-  // },
-
-  // {
-  //   id: 5,
-  //   title: "Ecommerce Shopping Basket",
-  //   desc: "Ecommerce Shopping Basket using React and Redux Toolkit with TypeScript ",
-  //   stacks: [
-  //     <SiReact />,
-  //     <SiStyledComponents />,
-  //     <SiFirebase />,
-  //     <SiRedux />,
-  //     <SiTypescript />,
-  //   ],
-  //   source: "https://github.com/ahmedraza17260/shopping-basket",
-  //   demo: "https://shopping-basket-raza-app.netlify.app/",
-  // },
-  // {
-  //   id: 6,
-  //   title: "Space X React App",
-  //   desc: "Space X Client Application with React, TypeScript, Apollo Client 3, and SpaceX API using Test-Driven Development (TDD) and deployed as a PWA ",
-  //   stacks: [
-  //     <SiReact />,
-  //     <SiStyledComponents />,
-  //     <SiTypescript />,
-  //     <SiApollographql />,
-  //   ],
-  //   source: "https://github.com/ahmedraza17260/spacex-launches-app",
-  //   demo: "https://spaces-x-react-app.netlify.app/",
-  // },
-  // {
-  //   id: 7,
-  //   title: "Quiz App",
-  //   desc: "Quiz App with React/TypeScript it should be a Progressive Web App (PWA) with Offline Capability and Push Notifications",
-  //   stacks: [
-  //     <SiReact />,
-  //     <SiStyledComponents />,
-  //     <SiFirebase />,
-  //     <SiTypescript />,
-  //     <IoLogoPwa />,
-  //   ],
-  //   source: "https://github.com/ahmedraza17260/quiz-app-pwa",
-  //   demo: "https://react-quiz-pwa.web.app/",
-  // },
-  // {
-  //   id: 8,
-  //   title: "Expense Tracker",
-  //   desc: "Expense Tracker App with React/TypeScript it should be a Progressive Web App (PWA) with Offline Capability and Push Notifications",
-  //   stacks: [
-  //     <SiReact />,
-  //     <SiStyledComponents />,
-  //     <SiFirebase />,
-  //     <SiTypescript />,
-  //     <IoLogoPwa />,
-  //   ],
-  //   source: "https://github.com/ahmedraza17260/expense-tracker-pwa",
-  //   demo: "https://expense-tracker-pwa-2fee8.web.app/",
-  // },
-  // {
-  //   id: 9,
-  //   title: "OLX Clone",
-  //   desc: "OLX Clone with React Javascript ",
-  //   stacks: [<SiReact />, <SiStyledComponents />, <SiFirebase />],
-  //   source: "https://github.com/ahmedraza17260/olx-clone",
-  //   demo: "https://olx-clone-raza-app.netlify.app/",
-  // },
-  // {
-  //   id: 10,
-  //   title: "COVID-19 Tracker",
-  //   desc: "Case tracker for covid-19 showing active cases, deaths & recovery for whole world, with graph & map representation.",
-  //   stacks: [
-  //     <SiReact />,
-  //     <SiStyledComponents />,
-  //     <SiFirebase />,
-  //     <SiMui />,
-  //   ],
-  //   source: "https://github.com/ahmedraza17260/covid-19-raza-app",
-  //   // "https://github.com/phoenixx1/website-clones/tree/master/covid-19-tracker",
-  //   demo: "http://covid-19-raza-app.surge.sh/",
-  // },
+  {
+    id: "qc-console",
+    title: "Refinery QC Console",
+    desc: "A specialized full-stack SaaS platform engineered for automated laboratory calculations and industrial quality control.",
+    source: "#",
+    demo: "https://oil-quality-guardian.lovable.app/",
+    stacks: [<SiReact/>, <SiNodedotjs />, <SiTailwindcss />, <SiTypescript />]
+  },
+  {
+    id: "email-gen",
+    title: "Email Signature Generator",
+    desc: "Premium responsive email signature generator with real-time preview and one-click HTML copy-to-clipboard engine.",
+    source: "#",
+    demo: "https://email-signaturegenerator.vercel.app/",
+    stacks: [<SiNodedotjs />, <SiTailwindcss />, <SiTypescript />, <SiVercel/>]
+  },
+  {
+    id: "raza-portfolio-next",
+  title: "Ahmed Raza | Personal Portfolio",
+  desc: "Personal portfolio website migrated to Next.js for optimized performance and SEO. Features professional project showcases, resume integration, and a responsive dark/light mode interface.",
+  source: "https://github.com/ahmedraza17260/raza-portfolio",
+  demo: "https://ahmedrazaportfolio.netlify.app/",
+  stacks: [<SiNextdotjs />, <SiReact />, <SiStyledcomponents />, <SiFramer />, <SiNetlify/>]
+  },
 ];

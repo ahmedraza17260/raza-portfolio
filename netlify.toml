@@ -1,2 +1,12 @@
+[build]
+  command = "next build"
+  publish = ".next"
+
 [build.environment]
-  NODE_VERSION = "24.2.0"
+  # Synchronized to match your active target engine profile perfectly
+  NODE_VERSION = "22.22.3"
+  # Ensures Next.js caching optimization runs flawlessly inside Netlify containers
+  NEXT_DISABLE_SOURCEMAPS = "true"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"

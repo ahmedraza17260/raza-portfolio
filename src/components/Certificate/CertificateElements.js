@@ -1,15 +1,42 @@
 import styled from "styled-components";
 
+export const CertificateImage = styled.img`
+  width: 100%;
+  height: 200px; /* Fixed height for uniformity */
+  object-fit: cover; /* Ensures image fills the area without stretching */
+  border-radius: 8px;
+  margin-bottom: 15px;
+`;
+
+export const CertificateGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)).
+  gap: 20px;
+  max-width: 1100px; /* Constrains the grid */
+  margin: 0 auto;    /* Centers it */
+  padding: 20px;
+`;
+
+
+
 export const CertificateContainer = styled.div`
-  // background: #0b0c10;
-  background-color: ${({ theme, alt }) => (alt ? theme.sectionAlt : theme.background)};
+  // background-color: ${({ theme, $alt }) => ($alt ? theme.sectionAlt : theme.background)};
+  // color: ${({ theme }) => theme.text};
+  // padding: 40px 20px;
+  // width: 100%;
+  // /* Removed fixed max-width on mobile, use box-sizing to keep it contained */
+  // box-sizing: border-box; 
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // overflow-x: hidden; /* Stops horizontal scrollbar */
+  background-color: ${({ theme, $alt }) => ($alt ? theme.sectionAlt : theme.background)};
   color: ${({ theme }) => theme.text};
-  padding: 2rem;
+  padding: 40px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow-x: hidden;
-  padding: 20px 10px;
+
 `;
 
 export const Heading = styled.h1`
@@ -17,8 +44,7 @@ export const Heading = styled.h1`
   font-size: 40px;
   line-height: 1.1;
   font-weight: 600;
-  // color: #66fcf1;
-  color: ${({ theme }) => theme.text};
+  text-align: center;
 
   @media screen and (max-width: 480px) {
     font-size: 32px;
@@ -26,52 +52,60 @@ export const Heading = styled.h1`
 `;
 
 export const AllCertificate = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  max-width: 1500px;
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: center;
+  // align-items: flex-start;
+  // gap: 30px;
+  // width: 100%; /* Changed from max-width: 1500px to 100% */
+  // margin: 0 auto;
+  // padding: 20px;
+  // box-sizing: border-box;
+
+  display: grid;
+  /* This creates a responsive grid that stays neat */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+
 `;
 
 export const Certificate = styled.div`
-  // background: #1f2833;
+  // width: 400px;
+  // display: flex;
+  // flex-direction: column;
+  // padding: 20px;
+  // border-radius: 10px;
+  // box-sizing: border-box; /* IMPORTANT: Keeps padding inside the width */
+  // background-color: ${({ theme }) => theme.sectionAlt}; /* Use sectionAlt to make cards pop */
+  // flex-shrink: 0; 
+
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: ${({ theme }) => theme.background}; /* Use background color for card contrast */
+  width: 100%; /* Fill the grid cell */
+  box-sizing: border-box; /* Ensures padding doesn't push the card out of the grid */
   box-shadow: ${({ theme }) => 
-    theme.mode === "dark" 
+    theme.background === "#0b0c1a" || theme.mode === "dark"
       ? "0 6px 20px rgba(255, 255, 255, 0.15)" 
       : "0 6px 20px rgba(0, 0, 0, 0.3)"
   };
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  justify-content: center;
-  padding: 5px 20px;
-  padding-bottom: 20px;
-  margin: 0px 20px;
-  width: 400px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  //height: 500px;
-  // box-shadow: 3px 3px 0px -1px rgba(141, 121, 121, 0.75);
-  // -webkit-box-shadow: 3px 3px 0px -1px rgba(141, 121, 121, 0.75);
-  // -moz-box-shadow: 3px 3px 0px -1px rgba(141, 121, 121, 0.75);
-
-  :hover {
-    -webkit-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
-    box-shadow: 10px 10px 26px -8px rgba(0, 0, 0, 0.75);
-  }
-
-  @media screen and (max-width: 460px) {
-    width: 300px;
-  }
+  
+  // @media screen and (max-width: 460px) {
+  //   width: 100%; /* Makes card fill 100% of mobile screen width */
+  //   max-width: 320px; /* Prevents it from getting too wide */
+  // }
 `;
 
 export const CertificateTitle = styled.h2`
   display: flex;
   align-items: center;
-
   color: ${({ theme }) => theme.text};
-
 
   * {
     margin-right: 10px;
@@ -79,7 +113,6 @@ export const CertificateTitle = styled.h2`
 `;
 
 export const CertificateDesc = styled.p`
-  // color: #45a29e;
   color: ${({ theme }) => theme.text};
   margin-top: -5px;
   min-height: 50px;
@@ -95,9 +128,7 @@ export const Stacks = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: auto;
-  // color: #c5c6c7;
   color: ${({ theme }) => theme.text};
-
 
   > * {
     padding: 8px;
@@ -110,19 +141,14 @@ export const SourceButtons = styled.div`
   justify-content: space-between;
 
   .MuiButton-root {
-    // background: #c5c6c7;
-    background-color: ${({ theme, alt }) => (alt ? theme.sectionAlt : theme.background)};
+    background-color: ${({ theme, $alt }) => ($alt ? theme.sectionAlt : theme.background)};
     padding: 8px;
     font-weight: 600;
     margin-right: 8px;
-    // color: #0b0c10;
     color: ${({ theme }) => theme.text};
 
-
-    :hover {
-      // background: #45a29e;
-      // filter: brightness(120%);
-      // color: white;
+    /* Fixed: Added '&' context selector */
+    &:hover {
       background-color: ${({ theme }) => theme.text};
       color: ${({ theme }) => theme.background};
       transform: scale(1.01);
@@ -138,16 +164,13 @@ export const MoreButton = styled.a`
   cursor: pointer;
   font-weight: bold;
   color: ${({ theme }) => theme.text};
-  background-color: ${({ theme, alt }) => (alt ? theme.sectionAlt : theme.background)};
-  // color: #66fcf1;
-  // background: #1f2833;
+  background-color: ${({ theme, $alt }) => ($alt ? theme.sectionAlt : theme.background)};
   padding: 10px 20px;
   border-radius: 20px;
   text-decoration: none;
 
-  :hover {
-    // filter: brightness(120%);
-    // color: #c5c6c7;
+  /* Fixed: Added '&' context selector */
+  &:hover {
     background-color: ${({ theme }) => theme.text};
     color: ${({ theme }) => theme.background};
     transform: scale(1.04);

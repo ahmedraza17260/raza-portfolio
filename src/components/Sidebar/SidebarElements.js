@@ -7,22 +7,20 @@ export const SidebarContainer = styled.aside`
   z-index: 999;
   width: 100%;
   height: 100%;
-  // background: #0d0d0d;
-  background-color: ${({ theme, alt }) => (alt ? theme.sectionAlt : theme.background)};
-  // color: ${({ theme }) => theme.text};
-  // padding: 2rem;
+  /* Fixed: Converted 'alt' and 'isOpen' to secure transient prop formats */
+  background-color: ${({ theme, $alt }) => ($alt ? theme.sectionAlt : theme.background)};
   display: grid;
   align-items: center;
-  top: 0;
   left: 0;
-  transition: 0.3s ease-in-out;
-  opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
-  top: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
+  transition: all 0.3s ease-in-out;
+  
+  /* Fixed: Corrected string percentage value to numeric standard scale */
+  opacity: ${({ $isOpen }) => ($isOpen ? 1 : 0)};
+  top: ${({ $isOpen }) => ($isOpen ? "0" : "-100%")};
 `;
 
 export const CloseIcon = styled(FaTimes)`
-  color: ${({ theme }) => theme.text}; /* ✅ dynamic color */
-  // color: #c5c6c7;
+  color: ${({ theme }) => theme.text};
 `;
 
 export const Icon = styled.div`
@@ -36,29 +34,22 @@ export const Icon = styled.div`
 `;
 
 export const SidebarWrapper = styled.div`
-  // color: #c5c6c7;
-  color: ${({ theme }) => theme.text}; /* ✅ dynamic color */
+  color: ${({ theme }) => theme.text};
   overflow-y: auto;
   max-height: 100vh;
   padding-bottom: 20px;
 `;
+
 export const SidebarMenu = styled.ul`
-  // display: grid;
+  list-style: none;
   text-align: center;
-  grid-template-rows: repeat(6, 70px);
-  justify-content: center;
-  align-items: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 20px;
-
-
-  @media screen and (max-width: 280px) {
-  grid-template-rows: repeat(6, 50px);
-}
-
+  padding: 0;
+  margin: 0;
 `;
 
 export const SidebarLink = styled(Link)`
@@ -68,16 +59,12 @@ export const SidebarLink = styled(Link)`
   font-size: 1.5rem;
   text-decoration: none;
   list-style: none;
-  transition: 0.2s ease-in-out;
-  text-decoration: none;
-  // color: #45a29e;
-  color: ${({ theme }) => theme.text}; /* ✅ dynamic color */
+  transition: color 0.2s ease-in-out;
+  color: ${({ theme }) => theme.text};
   cursor: pointer;
 
   &:hover {
-    // color: #c5c6c7;
-    color: ${({ theme }) => theme.hoverColor};  // Use predefined color from theme
-    transition: 0.2s ease-in-out;
+    color: ${({ theme }) => theme.hoverColor || "#c5c6c7"};
   }
 
   @media screen and (max-width: 600px) {
@@ -97,58 +84,22 @@ export const SidebarRoute = styled.div`
   border-radius: 50px;
   white-space: nowrap;
   padding: 16px 64px;
-  // background: #c5c6c7 !important;
-  // color: #c5c6c7;
-  background-color: ${({ theme, alt }) => (alt ? theme.sectionAlt : theme.background)};
+  background-color: ${({ theme, $alt }) => ($alt ? theme.sectionAlt : theme.background)};
   color: ${({ theme }) => theme.text};
   font-size: 16px;
   outline: none;
   border: none;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
   text-decoration: none;
 
   &:hover {
-    transition: all 0.2s ease-in-out;
-    // background: #c5c6c7;
-    // color: #c5c6c7;
+    background-color: ${({ theme }) => theme.text};
+    color: ${({ theme }) => theme.background};
   }
 
   @media screen and (max-width: 400px) {
-  padding: 12px 32px;
-  font-size: 14px;
-}
+    padding: 12px 32px;
+    font-size: 14px;
+  }
 `;
-
-
-
-// background: hsla(223, 62%, 31%, 1);
-  // background: linear-gradient(
-  //   315deg,
-  //   hsla(228, 19%, 5%, 1) 7%,
-  //   hsla(228, 19%, 5%, 1) 23%,
-  //   hsla(228, 19%, 5%, 1) 45%,
-  //   hsla(228, 19%, 5%, 1) 66%,
-  //   hsla(228, 19%, 5%, 1) 81%,
-  //   hsla(228, 19%, %, 1) 98%
-  // );
-
-  // background: -moz-linear-gradient(
-  //   315deg,
-  //   hsla(223, 62%, 31%, 1) 7%,
-  //   hsla(224, 61%, 33%, 1) 23%,
-  //   hsla(225, 55%, 39%, 1) 45%,
-  //   hsla(228, 50%, 49%, 1) 66%,
-  //   hsla(229, 62%, 57%, 1) 81%,
-  //   hsla(230, 90%, 68%, 1) 98%
-  // );
-
-  // background: -webkit-linear-gradient(
-  //   315deg,
-  //   hsla(223, 62%, 31%, 1) 7%,
-  //   hsla(224, 61%, 33%, 1) 23%,
-  //   hsla(225, 55%, 39%, 1) 45%,
-  //   hsla(228, 50%, 49%, 1) 66%,
-  //   hsla(229, 62%, 57%, 1) 81%,
-  //   hsla(230, 90%, 68%, 1) 98%
-  // );

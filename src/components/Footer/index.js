@@ -1,8 +1,8 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect } from 'react';
 import { FooterContainer, FooterLink } from "./FooterElements";
 import styled from "styled-components";
 
-// Use $alt so it doesn't get passed to DOM
 const Section = styled.section`
   background-color: ${({ theme, $alt }) => ($alt ? theme.sectionAlt : theme.background)};
   color: ${({ theme }) => theme.text};
@@ -10,6 +10,13 @@ const Section = styled.section`
 `;
 
 function Footer() {
+  // Fixed: Initialize state to prevent server/client timestamp mismatch
+  const [year, setYear] = useState(2026);
+
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
+
   return (
     <Section $alt>
       <FooterContainer>
@@ -18,7 +25,7 @@ function Footer() {
           aria-label="GitHub Profile"
           href="https://github.com/ahmedraza17260"
         >
-          &#169; Ahmed Raza {new Date().getFullYear()}
+          &#169; Ahmed Raza {year}
         </FooterLink>
       </FooterContainer>
     </Section>

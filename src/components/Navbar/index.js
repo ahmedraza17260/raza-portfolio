@@ -1,8 +1,8 @@
+"use client";
 import React, { useEffect, useState } from "react";
 import { animateScroll as scroll } from "react-scroll";
 import { FaBars } from "react-icons/fa";
 import Toggle from "react-toggle";
-import "react-toggle/style.css";
 
 import {
   Nav,
@@ -17,19 +17,24 @@ import {
 
 function Navbar({ toggle, isDarkMode, toggleTheme }) {
   const [scrollNav, setScrollNav] = useState(true);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    let prevScrollPos = window.pageYOffset;
+    setMounted(true);
+    let prevScrollPos = window.scrollY;
+
     const handleScroll = () => {
-      const currentScrollPos = window.pageYOffset;
-      setScrollNav(prevScrollPos > currentScrollPos);
+      const currentScrollPos = window.scrollY;
+      setScrollNav(prevScrollPos > currentScrollPos || currentScrollPos < 10);
       prevScrollPos = currentScrollPos;
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toggleHome = () => {
+  const toggleHome = (e) => {
+    e.preventDefault();
     scroll.scrollToTop();
   };
 
@@ -39,7 +44,7 @@ function Navbar({ toggle, isDarkMode, toggleTheme }) {
         {/* Left Group: Logo + Theme Toggle */}
         <LeftGroup>
           <NavLinks as="a" href="#home" onClick={toggleHome}>
-            <b style={{ fontSize: "2.5rem" }}>PORTFOLIO</b>
+            <b style={{ fontSize: "clamp(1.5rem, 8vw, 2.5rem)" }}>PORTFOLIO</b>
           </NavLinks>
 
           <ThemeToggleWrapper>
@@ -58,7 +63,7 @@ function Navbar({ toggle, isDarkMode, toggleTheme }) {
 
         {/* Navigation Menu */}
         <NavMenu>
-          {[
+          {mounted && [
             { name: "Home", href: "home" },
             { name: "Skills", href: "skills" },
             { name: "Experience", href: "experience" },

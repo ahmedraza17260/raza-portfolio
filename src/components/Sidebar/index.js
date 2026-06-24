@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React from 'react';
 import {
   CloseIcon,
   Icon,
@@ -10,16 +11,16 @@ import {
 
 import styled from "styled-components";
 
-// Optional wrapper for theme styling
 const Section = styled.section`
-  background-color: ${({ theme, alt }) => (alt ? theme.sectionAlt : theme.background)};
+  /* Fixed: Swapped custom alt parameter to safe transient prop format */
+  background-color: ${({ theme, $alt }) => ($alt ? theme.sectionAlt : theme.background)};
   color: ${({ theme }) => theme.text};
-  padding: 2rem;
+  padding: 0; /* Clear padding so the overlay container fills the absolute layout bounds correctly */
 `;
 
 function Sidebar({ isOpen, toggle }) {
   return (
-    <Section alt>
+    <Section $alt>
       {/* Pass $isOpen as transient prop to avoid React warnings */}
       <SidebarContainer $isOpen={isOpen} onClick={toggle}>
         <Icon onClick={toggle}>
@@ -28,22 +29,22 @@ function Sidebar({ isOpen, toggle }) {
 
         <SidebarWrapper>
           <SidebarMenu>
-            <SidebarLink to="home" onClick={toggle}>
+            <SidebarLink to="home" onClick={toggle} smooth={true} duration={500} offset={-80}>
               Home
             </SidebarLink>
-            <SidebarLink to="skills" onClick={toggle}>
+            <SidebarLink to="skills" onClick={toggle} smooth={true} duration={500} offset={-80}>
               Skills
             </SidebarLink>
-            <SidebarLink to="experience" onClick={toggle}>
+            <SidebarLink to="experience" onClick={toggle} smooth={true} duration={500} offset={-80}>
               Experience
             </SidebarLink>
-            <SidebarLink to="Certificate" onClick={toggle}>
+            <SidebarLink to="Certificate" onClick={toggle} smooth={true} duration={500} offset={-80}>
               Certificates
             </SidebarLink>
-            <SidebarLink to="projects" onClick={toggle}>
+            <SidebarLink to="projects" onClick={toggle} smooth={true} duration={500} offset={-80}>
               Projects
             </SidebarLink>
-            <SidebarLink to="contact" onClick={toggle}>
+            <SidebarLink to="contact" onClick={toggle} smooth={true} duration={500} offset={-80}>
               Contact Me
             </SidebarLink>
           </SidebarMenu>

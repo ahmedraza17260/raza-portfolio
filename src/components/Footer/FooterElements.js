@@ -1,25 +1,18 @@
 import styled from "styled-components";
 
 export const FooterContainer = styled.div`
-  // background: linear-gradient(90deg, #74ebd5 0%, #9face6 100%) !important;
-  // background: #0b0c10;
-  // background: #1f2833;
-  // color: #66fcf1 !important;
-  background-color: ${({ theme, alt }) => (alt ? theme.sectionAlt : theme.background)};
+  /* Fixed: Swapped custom 'alt' prop to safe transient '$alt' token */
+  background-color: ${({ theme, $alt }) => ($alt ? theme.sectionAlt : theme.background)};
   color: ${({ theme }) => theme.text};
-  padding: 2rem;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
   justify-content: center;
-  padding: 10px;
   text-decoration: none !important;
   text-align: center;
   font-size: 1.4rem;
-  // font-weight: bolder;
-  // font-family: "BioRhyme", cursive, Pangolin, serif !important;
-  // box-shadow: black 5px 5px 5px 5px !important;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 
   @media screen and (max-width: 600px) {
@@ -33,53 +26,14 @@ export const FooterContainer = styled.div`
 
 export const FooterLink = styled.a`
   text-decoration: none;
-  // color: #66fcf1;
   color: ${({ theme }) => theme.text};
-
+  display: inline-block; /* Essential to allow CSS transform animations to scale smoothly */
+  transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
 
   &:hover,
   &:active {
     text-decoration: underline;
-    transform: scale(1.2);
-    // color: #45a29e;
+    transform: scale(1.05); /* Softened from 1.2 to keep text clear and prevent layout overlap */
     color: ${({ theme }) => theme.text};
-
   }
 `;
-
-
-
-  // a:link {
-  //   text-decoration: none;
-  //   color: #66fcf1;
-  // }
-
-  // a:visited {
-  //   text-decoration: none;
-  //   color: #66fcf1;
-  // }
-
-  // a:hover {
-  //   text-decoration: underline;
-  //   color: #45a29e;
-  // }
-
-  // a:active {
-  //   text-decoration: underline;
-  //   color: #45a29e;
-  // }
-
-  // p {
-  //   letter-spacing: 0.04rem;
-
-  //   @media screen and (max-width: 700px) {
-  //     font-size: 1.1rem;
-  //   }
-  //   @media screen and (max-width: 350px) {
-  //     font-size: 1rem;
-  //   }
-  //   @media screen and (max-width: 300px) {
-  //     font-size: 0.6rem;
-  //   }
-  // }
-

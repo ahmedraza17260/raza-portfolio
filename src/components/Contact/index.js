@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React from 'react';
 import {
   Column1,
   Column2,
@@ -15,14 +16,16 @@ import { motion } from "framer-motion";
 import { ImLocation2 } from "react-icons/im";
 import { BiMailSend } from "react-icons/bi";
 
-import profile from "../../images/profile1.jpg";
-import github from "../../images/github.png";
-import gmail from "../../images/gmail.png";
-import instagram from "../../images/instagram.png";
-import linkedin from "../../images/linkedin.png";
-import facebook from "../../images/facebook.png";
-import twitter from "../../images/twitter.png";
-import pinterest from "../../images/pinterest.png";
+// REMOVED: Old standard relative imports
+// FIXED: Using absolute routes mapping directly to public/images/
+const profile = "/images/profile1.jpg";
+const github = "/images/github.png";
+const gmail = "/images/gmail.png";
+const instagram = "/images/instagram.png";
+const linkedin = "/images/linkedin.png";
+const facebook = "/images/facebook.png";
+const twitter = "/images/twitter.png";
+const pinterest = "/images/pinterest.png";
 
 import {
   fbURL,
@@ -36,7 +39,6 @@ import {
 
 import styled, { useTheme } from "styled-components";
 
-// Use transient prop $alt to avoid unknown prop warnings
 const Section = styled.section`
   background-color: ${({ theme, $alt }) => ($alt ? theme.sectionAlt : theme.background)};
   color: ${({ theme }) => theme.text};
@@ -45,7 +47,9 @@ const Section = styled.section`
 
 function Contact() {
   const theme = useTheme();
-  const isDarkMode = theme.mode === "dark"; // check your theme structure
+  
+  // Safe theme mode fallback logic
+  const isDarkMode = theme?.mode === "dark" || theme?.background === "#0b0c1a"; 
 
   return (
     <Section $alt={true} id="contact">
@@ -57,7 +61,7 @@ function Contact() {
             transition={{ duration: 0.8 }}
           >
             <Column1>
-              <Heading as="h2">Reach Out to Me</Heading>
+              <Heading>Reach Out to Me</Heading>
               <span className="sub">
                 DISCUSS? E-MAIL ME <BiMailSend size={25} />
               </span>

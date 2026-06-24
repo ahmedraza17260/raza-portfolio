@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect } from 'react';
 import { Typewriter } from "react-simple-typewriter";
 import { BsArrowRightShort } from "react-icons/bs";
 import { motion } from "framer-motion";
@@ -16,15 +17,6 @@ import {
   HeroTextWrapper,
 } from "./HeroElements";
 
-import homeElement from "../../images/6.gif";
-import github from "../../images/github.png";
-import gmail from "../../images/gmail.png";
-import linkedin from "../../images/linkedin.png";
-import facebook from "../../images/facebook.png";
-import twitter from "../../images/twitter.png";
-import instagram from "../../images/instagram.png";
-import pinterest from "../../images/pinterest.png";
-
 import {
   fbURL,
   githubURL,
@@ -38,7 +30,6 @@ import {
   pinterestURL,
 } from "../../Data";
 
-// Styled section with transient prop $alt
 const Section = styled.section`
   background-color: ${({ theme, $alt }) => ($alt ? theme.sectionAlt : theme.background)};
   color: ${({ theme }) => theme.text};
@@ -47,7 +38,15 @@ const Section = styled.section`
 
 function HeroSection() {
   const theme = useTheme();
-  const isDarkMode = theme.mode === "dark";
+   const isDarkMode = theme?.mode === "dark" || theme?.background === "#0b0c1a"; 
+  
+  // const isDarkMode = theme?.mode === "dark";
+  const [mounted, setMounted] = useState(false);
+
+  // Prevent dynamic third-party text animations from breaking SSR layout streams
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <Section $alt id="home">
@@ -68,43 +67,47 @@ function HeroSection() {
               <HeroP>
                 I'm{" "}
                 <span style={{ fontWeight: "bold" }}>
-                  <Typewriter
-                    words={MainSkills}
-                    loop={Infinity}
-                    cursor
-                    cursorStyle="_"
-                    typeSpeed={70}
-                    deleteSpeed={50}
-                    delaySpeed={1000}
-                  />
+                  {mounted ? (
+                    <Typewriter
+                      words={MainSkills}
+                      loop={Infinity}
+                      cursor
+                      cursorStyle="_"
+                      typeSpeed={70}
+                      deleteSpeed={50}
+                      delaySpeed={1000}
+                    />
+                  ) : (
+                    MainSkills[0] || ""
+                  )}
                 </span>
               </HeroP>
 
               <SocialIcons>
-                <NavBtn href={githubURL} target="_blank" aria-label="Github_Logo">
+                <NavBtn href={githubURL} target="_blank" rel="noopener noreferrer" aria-label="Github Profile">
                   <img
-                    src={github}
+                    src="/images/github.png"
                     alt="Visit my GitHub profile"
-                    style={{ filter: isDarkMode ? "invert(100%)" : "invert(25%)" }}
+                    style={{ filter: isDarkMode ? "brightness(0) invert(1)" : "brightness(1) invert(0)" }}
                   />
                 </NavBtn>
-                <NavBtn href={linkedinURL} target="_blank" aria-label="Linkedin_Logo">
-                  <img src={linkedin} alt="LinkedIn profile" />
+                <NavBtn href={linkedinURL} target="_blank" rel="noopener noreferrer" aria-label="Linkedin Profile">
+                  <img src="/images/linkedin.png" alt="LinkedIn profile" />
                 </NavBtn>
-                <NavBtn href={mailtoURL} target="_blank" aria-label="Gmail_Logo">
-                  <img src={gmail} alt="Gmail" />
+                <NavBtn href={mailtoURL} target="_blank" rel="noopener noreferrer" aria-label="Gmail Contact">
+                  <img src="/images/gmail.png" alt="Gmail contact link" />
                 </NavBtn>
-                <NavBtn href={twitterURL} target="_blank" aria-label="Twitter_Logo">
-                  <img src={twitter} alt="Twitter profile" />
+                <NavBtn href={twitterURL} target="_blank" rel="noopener noreferrer" aria-label="Twitter Profile">
+                  <img src="/images/twitter.png" alt="Twitter profile" />
                 </NavBtn>
-                <NavBtn href={fbURL} target="_blank" aria-label="Facebook_Logo">
-                  <img src={facebook} alt="Facebook profile" />
+                <NavBtn href={fbURL} target="_blank" rel="noopener noreferrer" aria-label="Facebook Profile">
+                  <img src="/images/facebook.png" alt="Facebook profile" />
                 </NavBtn>
-                <NavBtn href={instagramURL} target="_blank" aria-label="Instagram_Logo">
-                  <img src={instagram} alt="Instagram profile" />
+                <NavBtn href={instagramURL} target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile">
+                  <img src="/images/instagram.png" alt="Instagram profile" />
                 </NavBtn>
-                <NavBtn href={pinterestURL} target="_blank" aria-label="Pinterest_Logo">
-                  <img src={pinterest} alt="Pinterest profile" />
+                <NavBtn href={pinterestURL} target="_blank" rel="noopener noreferrer" aria-label="Pinterest Profile">
+                  <img src="/images/pinterest.png" alt="Pinterest profile" />
                 </NavBtn>
               </SocialIcons>
 
@@ -114,7 +117,7 @@ function HeroSection() {
                   href={resumeURL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="CV Preview"
+                  aria-label="CV Preview File"
                 >
                   <BsArrowRightShort />
                 </a>
@@ -128,7 +131,7 @@ function HeroSection() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <HomeElement src={homeElement} alt="Hero Animation" />
+            <HomeElement src="/images/6.gif" alt="Hero decorative animated graphic" />
           </motion.div>
 
         </HeroContent>
@@ -138,76 +141,3 @@ function HeroSection() {
 }
 
 export default HeroSection;
-
-
-//  <HeroContainer id="home">
-//       <HeroContent>
-//         <motion.div
-//           initial={{ opacity: 0, x: 100 }}
-//           animate={{ opacity: 1, x: 0 }}
-//           transition={{ duration: 0.6 }}
-//         >
-//           <div style={{}}>
-//             <div>
-//               <HeroH1>
-//                 Hey!, I'm <br />
-//                 {Name}
-//               </HeroH1>
-//               <HeroP>
-//                 I'm{" "}
-//                 <span style={{ color: "#00FFAB", fontWeight: "bold" }}>
-//                   <Typewriter
-//                     words={MainSkills}
-//                     loop={Infinity}
-//                     cursor
-//                     cursorStyle="_"
-//                     typeSpeed={70}
-//                     deleteSpeed={50}
-//                     delaySpeed={1000}
-//                   />
-//                 </span>
-//               </HeroP>
-          
-//               <SocialIcons>
-//                 <NavBtn href={githubURL} target="_blank" aria-label="Github_Logo">
-//                   <img
-//                     style={{
-//                       filter: "invert(100%)",
-//                       WebkitFilter: "invert(100%)",
-//                     }}
-//                     src={github}
-//                     alt="Github"
-//                   />
-//                 </NavBtn>
-//                 <NavBtn href={linkedinURL} target="_blank" aria-label="Linkedin_Logo" >
-//                   <img src={linkedin} alt="Linkedin" />
-//                 </NavBtn>
-//                 <NavBtn href={mailtoURL} target="_blank" aria-label="Gmail_Logo">
-//                   <img src={gmail} alt="Gmail" />
-//                 </NavBtn>
-//                 <NavBtn href={twitterURL} target="_blank" aria-label="Twitter_Logo">
-//                   <img src={twitter} alt="Twitter" />
-//                 </NavBtn>
-//                 <NavBtn href={fbURL} target="_blank" aria-label="Facebook_Logo">
-//                   <img src={facebook} alt="Facebook" />
-//                 </NavBtn>
-//                 <NavBtn href={instagramURL} target="_blank" aria-label="Instagram_Logo">
-//                   <img src={instagram} alt="Instagram" />
-//                 </NavBtn>
-//                 <NavBtn href={pinterestURL} target="_blank" aria-label="Pinterest_Logo">
-//                   <img src={pinterest} alt="Pinterest" />
-//                 </NavBtn>
-//               </SocialIcons>
-
-//               <ResumeSection>
-//                 <span> See my Resume</span>
-//                 <a href={resumeURL} target="__blank" alt="Cv Preview" aria-label="Cv Preview">
-//                   <BsArrowRightShort />
-//                 </a>
-//               </ResumeSection>
-//             </div>
-//             <HomeElement src={homeElement} alt="image" />
-//           </div>
-//         </motion.div>
-//       </HeroContent>
-//     </HeroContainer>

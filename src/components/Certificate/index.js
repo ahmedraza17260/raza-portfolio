@@ -1,7 +1,6 @@
-import React from "react";
-
+"use client";
+import React from 'react';
 import { motion } from "framer-motion";
-
 import { GoRepo } from "react-icons/go";
 
 import {
@@ -24,7 +23,7 @@ const Section = styled.section`
 
 function Certificates() {
   return (
-    <Section $alt id="Certificate">
+    // <Section $alt id="Certificate">
       <CertificateContainer $alt id="Certificate">
         <Heading>
           <motion.div
@@ -38,7 +37,6 @@ function Certificates() {
 
         <AllCertificate>
           {certificate.map((values) => (
-
             <motion.div
               key={values.id}
               initial={{ scale: 0.8, opacity: 0 }}
@@ -50,10 +48,13 @@ function Certificates() {
                   <GoRepo />
                   {values.title}
                 </CertificateTitle>
-                <img src={values.image} alt={values.title} />
+                {/* Fixed: Grab the first element of the image array explicitly */}
+                <img src={values.image[0]} 
+                alt={values.title} 
+                style={{ width: '100%', height: 'auto', borderRadius: '5px', marginTop: '10px' }}
+                />
               </Certificate>
             </motion.div>
-
           ))}
         </AllCertificate>
         <MoreButton
@@ -64,7 +65,7 @@ function Certificates() {
           More Certificates
         </MoreButton>
       </CertificateContainer>
-    </Section>
+    // </Section>
   );
 }
 
